@@ -1,0 +1,65 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: auto;
+    padding: 100px;
+    background: linear-gradient(to bottom, darkmagenta, darkviolet, hotpink, deeppink, darkmagenta);
+}
+
+header {
+    margin: auto;
+    padding: 50px;
+    width: 250px;
+}
+
+#cv_body {
+    background: white;
+    margin: auto;
+    padding: 50px;
+    border-radius: 10px;
+}
+
+#cv_header {
+    background-color: darkmagenta;
+    color: white;
+    border-radius: 15px;
+}
+
+#cv_header_photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#cv_header_photo img {
+    border-radius: 10%;
+}
+
+#cv_header_text {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+/*div{
+    border-style: solid;
+    border-color: red;
+}*/
+.cv_body_container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: left;
+}
+
+.cv_h2 {
+    text-align: center;
+    background-color: darkmagenta;
+    color: white;
+}
+
+.cv_container {
+    border-radius: 20px;
+    box-shadow: inset 0px 0px 5px gray;
+    padding: 10px;
+    margin: 10px;
+}
