@@ -1,7 +1,7 @@
 .titulo-seccion {
     color: rgb(3, 22, 46);
     font-size: 18px;
-     font-family: 'Lucida Sans Regular';
+     font-family: 'Lucida Sans Regular' , sans-serif;
      
 }
 .imagen{
@@ -19,7 +19,7 @@
 }
 
 .seccion{
-    font-family:  'Lucida Sans Regular'  ;
+    font-family:  'Lucida Sans Regular' , sans-serif ;
     line-height: 1.8;
     width: 100%-10px;
     border-style: solid;
@@ -33,19 +33,19 @@
 
 .titulo-nombre{
     font-size:37px;
-    font-family:  'Lucida Sans Regular'  ;
+    font-family:  'Lucida Sans Regular' , sans-serif ;
     border-color: rgb(3, 22, 46);
 }
 
 .titulo-profesion{
     font-size: 30px;
-    font-family:  'Lucida Sans Regular'  ;
+    font-family:  'Lucida Sans Regular', sans-serif  ;
     border-color: rgb(3, 22, 46);
 }
 
  
 ul li{
-    font-family: 'Lucida Sans Regular';
+    font-family: 'Lucida Sans Regular', sans-serif;
     margin-top: 15px;
     line-height: 1.8;
 }
