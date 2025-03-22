@@ -1,0 +1,129 @@
+h1 {
+    font-size: 4rem;
+    margin: 0.2em 0rem;
+    color: #fff;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+body {
+    display: block;
+    margin: 0;
+    height: 100%;
+    background-color: #383354;
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 100%;
+    font-weight: 400;
+    -webkit-tap-highlight-color: #0000;
+}
+
+header {
+    text-align: center;
+    border-bottom: 3px solid #faa5a5;
+    padding-bottom: 15px;
+}
+
+.contenedor {
+    width: 1010px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar__cv {
+    flex-basis: 30%;
+    -ms-flex: auto;
+    position: relative;
+    box-sizing: border-box;
+    padding: 10px;
+    border-right: 3px solid #faa5a5;
+    min-height: 1160px;
+}
+
+@media (max-width: 767px) {
+    .contenedor {
+        width: 100%;
+        margin: 0 auto;
+        display: block;
+
+    }
+
+    .sidebar__cv {
+        width: 100%;
+        margin: 0 auto;
+        display: block;
+        padding: 10px;
+        border-right: 3px solid #faa5a5;
+        min-height: auto;
+    }
+}
+
+#resume__education p,
+#resume__habilidades p {
+    font-weight: bold;
+}
+
+#resume__education span {
+    font-size: 13px;
+}
+
+.content__cv {
+    flex-basis: 70%;
+    position: relative;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.resume__cv {
+    display: block;
+    min-height: 150px;
+}
+
+.resume__info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.resume__info>p {
+    margin: 0em 0.75rem;
+    color: #fff;
+}
+
+.resume__title {
+    font-size: 2rem;
+    display: block;
+    text-transform: uppercase;
+    margin: 0.5em 0em;
+    color: #fff;
+}
+
+.resume__card {
+    border-radius: 0.35rem;
+    border: 1px solid #e3e6f0;
+    background-color: #fff;
+    margin: 0.8em 0em;
+    padding: 0px 10px;
+    -webkit-box-shadow: 0 0 15px 1px rgb(0 0 0 / 28%);
+    box-shadow: 0 0 15px 1px rgb(0 0 0 / 28%);
+}
+
+#resume__main__img {
+    width: 260px;
+    height: 230px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+footer{
+    background: #333 !important;
+    padding: 1.5em;
+}
