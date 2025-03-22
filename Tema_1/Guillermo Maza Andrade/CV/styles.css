@@ -34,9 +34,7 @@ h2{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;    
-    background-color: rgba(0, 68, 255, 0.733);
-    background: rgb(0,68,255);
+    align-items: center;      
     background: linear-gradient(155deg, rgba(0,68,255,0.772128919927346) 0%, rgba(0,65,255,0.7889356426164216) 47%, rgba(0,0,0,0.7945378835127801) 91%);
     padding: 2%;
     border-radius: 0px 0px 50px;
