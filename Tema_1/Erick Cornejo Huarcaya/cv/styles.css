@@ -1,0 +1,51 @@
+.titulo-seccion {
+    color: rgb(3, 22, 46);
+    font-size: 18px;
+     font-family: 'Lucida Sans Regular' , sans-serif;
+     
+}
+.imagen{
+    height: 250px;
+    border-radius: 100%;
+}
+.invertir{
+    background-color: rgb(3, 22, 46);
+    color: white;
+}
+
+.centro
+{
+    text-align: center;
+}
+
+.seccion{
+    font-family:  'Lucida Sans Regular' , sans-serif ;
+    line-height: 1.8;
+    width: 100%-10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(3, 22, 46);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+
+}
+
+.titulo-nombre{
+    font-size:37px;
+    font-family:  'Lucida Sans Regular' , sans-serif ;
+    border-color: rgb(3, 22, 46);
+}
+
+.titulo-profesion{
+    font-size: 30px;
+    font-family:  'Lucida Sans Regular', sans-serif  ;
+    border-color: rgb(3, 22, 46);
+}
+
+ 
+ul li{
+    font-family: 'Lucida Sans Regular', sans-serif;
+    margin-top: 15px;
+    line-height: 1.8;
+}
