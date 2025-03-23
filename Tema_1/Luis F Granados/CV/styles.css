@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#cv{
+    width: auto;
+    height: auto;
+    border: 2px solid black;
+    box-sizing: border-box;
+    margin: 10px;
+}
+
+header {
+    background-color: aquamarine;
+    padding: 10px;
+    text-align: center;
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+}
+
+header p, h1 {
+    font-style: italic;
+    color: darkblue;
+}
+
+.datos {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    padding: 10px;
+    border: 3px solid lightgrey;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+strong {
+    font-weight: bold;
+}
+
+.titulo {
+    color: blue;
+    font-weight: bold;
+    display: block;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.valor {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: justify;
+}
