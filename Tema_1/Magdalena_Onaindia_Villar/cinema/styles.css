@@ -65,9 +65,7 @@
 .cinema__seat--occupied {
     width: 35px;
     height: 35px;
-    background-color: #6a0dad;
     border-radius: 5px;
-    cursor: pointer;
     transition: 0.3s;
     background-color: #333;
     cursor: not-allowed;
