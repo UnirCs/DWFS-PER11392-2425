@@ -1,0 +1,157 @@
+html {
+    font-family: "Roboto", sans-serif;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    margin: 0;
+    flex-direction: row;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.17rem;
+    margin-bottom: 0.75rem;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+li {
+    list-style-type: disc;
+    margin-bottom: 0.5rem;
+}
+
+.cv {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cv__sidebar {
+    width: 35%;
+    padding: 2rem;
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+}
+
+.cv__image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    border: 4px solid white;
+    object-fit: cover;
+}
+
+.cv__section {
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.cv__section--contact p,
+.cv__section--skills ul {
+    margin: 0;
+    padding: 0;
+}
+
+.cv__list {
+    padding-left: 1.5rem;
+}
+
+.cv__list-item {
+    margin-bottom: 0.5rem;
+}
+
+.cv__content {
+    width: 65%;
+    padding: 2rem;
+}
+
+.cv__header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.cv__name {
+    color: #333;
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+.cv__section--experience .cv__list {
+    padding-left: 0;
+}
+
+.cv__list-item {
+    margin-bottom: 1.5rem;
+}
+
+.cv__subtitle {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.cv__text {
+    color: #555;
+}
+
+.cv__section--contact .cv__text {
+    color: white;
+    font-size: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+@media (max-width: 992px) {
+    body {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .cv {
+        flex-direction: column;
+        max-width: 100%;
+    }
+    .cv__sidebar {
+        width: 100%;
+        padding: 2rem;
+    }
+    .cv__content {
+        width: 100%;
+        padding: 2rem;
+    }
+    h1 {
+        font-size: 1.75rem;
+    }
+    h2 {
+        font-size: 1.25rem;
+    }
+    h3 {
+        font-size: 1rem;
+    }
+    p {
+        font-size: 0.875rem;
+    }
+}
