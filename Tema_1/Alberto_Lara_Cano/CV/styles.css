@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.sidebar {
+    width: 25%;
+    background-color: lightsteelblue;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.sidebar-content {
+    width: 100%;
+    text-align: left;
+}
+
+.sidebar-content ul {
+    padding-left: 20px;
+}
+
+.sidebar-content h2 {
+    margin: 10px 0;
+}
+
+.page-header{
+    margin-bottom: 15px;
+}
+
+
+.content header {
+    color: darkblue;
+}
+
+.content {
+    width: 75%;
+    padding: 20px;
+}
+
+.profile h2{
+    margin-bottom: 15px;
+}
+
+.profile h3{
+    margin-bottom: 10px;
+    color: darkblue;
+    margin-top: 10px;
+}
+
+.profile h4{
+    margin-bottom: 5px;
+}
+
+.profile ul{
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    background-color: #0073e6;
+    margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 3px solid #0073e6;
+    }
+
+    .content {
+        width: 100%;
+
