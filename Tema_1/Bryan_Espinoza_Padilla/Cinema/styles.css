@@ -122,12 +122,6 @@ body {
     cursor: not-allowed;
 }
 
-.colorAceptar {
-    background-color: #268654;
-    cursor: not-allowed;
-}
-
-
 .seat.selected {
     background-color: #ffc107;
     color: #212529;
@@ -191,7 +185,4 @@ body {
         height: 30px;
         font-size: 0.9rem;
     }
-
-
 }
-
