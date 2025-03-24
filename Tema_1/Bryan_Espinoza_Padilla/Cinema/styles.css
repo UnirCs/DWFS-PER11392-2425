@@ -127,6 +127,7 @@ body {
     cursor: not-allowed;
 }
 
+
 .seat.selected {
     background-color: #ffc107;
     color: #212529;
