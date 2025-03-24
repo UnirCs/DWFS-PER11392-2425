@@ -1,0 +1,63 @@
+.normal_text{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 10px;
+}
+
+p[textType="type1"] {
+    color: white;
+    font-weight: 300;
+    text-align: center;
+    font-size: x-large;
+}
+
+p[textType="type2"] {
+    color: white;
+    font-weight: 300;
+    text-align: center;
+    font-size:medium;
+}
+
+h1[textType="type3"] {
+    color: rgb(85, 140, 235);
+    font-weight: 600;
+    text-align:left;
+    font-size: large;
+}
+
+p[textType="type4"], ul li{
+    color: black;
+    font-weight: 150;
+    text-align: left;
+    font-size:small;
+}
+
+.encabezado_foto--picture{
+    margin: auto;
+    margin-top: 10px;
+    display: block;
+    height: 250px;
+    border-radius: 10px;
+
+}
+
+.encabezado_foto--texto{
+    color: whitesmoke;
+    text-align: center;
+    margin: 0;
+
+}
+
+.encabezado{
+    background-color: rgb(6, 59, 85);
+    margin: auto;
+}
+.body{
+    margin: 8;
+}
+
+.box{
+    border: solid rgb(210, 208, 208) 1px;
+    border-radius: 5px;
+    margin-top: 5px;
+    box-shadow: 2px 2px rgb(221, 220, 220);
+}
