@@ -1,0 +1,54 @@
+
+.encabezado{
+    border: 2px solid grey;
+}
+
+.Titulo-1{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.Titulo-2{
+    text-decoration: underline;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 3px;
+    margin-bottom: 10px;
+}
+
+.Titulo-3{
+    text-decoration: underline;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.Titulo-4{
+    margin-top: 1px;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.bloque{
+    border-top: 2px solid grey;
+    border-bottom: 2px solid grey;
+    background-color: rgb(235, 235, 235);
+}
+
+header{
+    border-bottom: 2px solid grey;
+    background-color: rgb(177, 177, 177);
+    text-align: center;
+    font-size: 24px;
+}
+
+ul{
+    margin-top:1px;
+    margin-bottom:10px;
+}
+
+p{    
+    margin-top: 2px;
+    margin-bottom: 2px;}
+
