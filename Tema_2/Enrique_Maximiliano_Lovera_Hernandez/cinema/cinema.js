@@ -30,10 +30,10 @@ function suggest(seatsToReserve) {
   const size = butacas.length;
   const lastRow = size - 1;
   const maxStartColumn = size - seatsToReserve;
-
+  let reservedSeats = new Set();
   // Si el número de asientos solicitados excede el tamaño máximo de la fila, la función debe devolver un set vacío.
   if (seatsToReserve > size || seatsToReserve <= 0) {
-    return new Set();
+    return reservedSeats;
   }
 
   const checkConsecutiveSeats = (row, startCol) => {
@@ -46,15 +46,14 @@ function suggest(seatsToReserve) {
   // Buscamos desde la ultima fila, asi aseguramos que devolveremos lo más alejado de la pantalla
   for (let row = lastRow; row >= 0; row--) {
     for (let col = 0; col <= maxStartColumn; col++) {
-      if (checkConsecutiveSeats(row, col)) {
-        return new Set(
+      if (checkConsecutiveSeats(row, col) && reservedSeats.size == 0) {
+        reservedSeats = new Set(
           butacas[row].slice(col, col + seatsToReserve).map((seat) => seat.id)
         );
       }
     }
   }
-
-  return new Set();
+  return reservedSeats;
 }
 
 // modifico la ultima fila para reservar un asiento y probar el funcionamiento
