@@ -43,6 +43,12 @@ function redConverter() {
   let pixels = handler.getPixels();
 
   //Aqui tu codigo
+  for (let a = 0; a < pixels.length; a ++) {   
+     for (let l = 0; l < pixels[a].length; l ++) {  
+      let rojo=pixels[a][l][0] //capturando el tono del canal R
+       pixels[a][l]=[rojo,0,0]; //agregando el tono R y G, B en 0
+    }
+  }
 
   handler.savePixels(pixels, outputPath);
 }
@@ -57,6 +63,12 @@ function greenConverter() {
   let pixels = handler.getPixels();
 
   //Aqui tu codigo
+  for (let a = 0; a < pixels.length; a ++) {   
+     for (let l = 0; l < pixels[a].length; l ++) {  
+      let verde=pixels[a][l][1] //capturando el tono del canal g
+       pixels[a][l]=[0,verde,0];  
+    }
+  }
 
   handler.savePixels(pixels, outputPath);
 }
@@ -71,6 +83,12 @@ function blueConverter() {
   let pixels = handler.getPixels();
 
   //Aqui tu codigo
+  for (let a = 0; a < pixels.length; a ++) {   
+      for (let l = 0; l < pixels[a].length; l ++) {  
+      let azul=pixels[a][l][0] //capturando el tono del canal g
+        pixels[a][l]=[0,0,azul];  
+    }
+  }
 
   handler.savePixels(pixels, outputPath);
 }
@@ -89,6 +107,15 @@ function greyConverter() {
   let pixels = handler.getPixels();
 
   //Aqui tu codigo
+  for (let a = 0; a < pixels.length; a ++) {   
+      for (let l = 0; l < pixels[a].length; l ++) {  
+          let R=pixels[a][l][0];
+          let G=pixels[a][l][1];
+          let B=pixels[a][l][2];
+          let media= (R+G+B)/3
+        pixels[a][l]=[media,media,media];  
+    }
+  }
 
   handler.savePixels(pixels, outputPath);
 }
@@ -105,6 +132,18 @@ function blackAndWhiteConverter() {
   let pixels = handler.getPixels();
 
   //Aqui tu codigo
+  for (let a = 0; a < pixels.length; a ++) {   
+    for (let l = 0; l < pixels[a].length; l ++) {  
+        let R=pixels[a][l][0];
+        let G=pixels[a][l][1];
+        let B=pixels[a][l][2];
+        let media= (R+G+B)/3
+        if (media<128)
+          pixels[a][l]=[0,0,0];  
+        else
+          pixels[a][l]=[255,255,255]; 
+     }
+  }
 
   handler.savePixels(pixels, outputPath);
 }
@@ -120,6 +159,15 @@ function scaleDown() {
   let pixels = handler.getPixels();
 
   //Aqui tu codigo
+  let pixelesReducido  =[];
+    for (let a = 0; a < pixels.length; a+=2) {   
+      let fila =[];
+      for (let l = 0; l < pixels[a].length; l +=2) {            
+            fila.push(pixels[a][l]);         
+    }
+    pixelesReducido.push(fila);
+  }
+  pixels=pixelesReducido;
 
   handler.savePixels(pixels, outputPath, handler.getShape()[0] / 2, handler.getShape()[1] / 2);
 }
@@ -134,6 +182,15 @@ function dimBrightness(dimFactor) {
   let pixels = handler.getPixels();
 
   //Aqui tu codigo
+  for (let a = 0; a < pixels.length; a ++) {   
+    for (let l = 0; l < pixels[a].length; l ++) {  
+        let R=pixels[a][l][0];
+        let G=pixels[a][l][1];
+        let B=pixels[a][l][2];
+        let media= (R+G+B)/3
+        pixels[a][l]=[R/dimFactor,G/dimFactor,B/dimFactor]; 
+     }
+  }
 
   handler.savePixels(pixels, outputPath);
 }
@@ -150,6 +207,15 @@ function invertColors() {
   let pixels = handler.getPixels();
 
   //Aqui tu codigo
+  for (let a = 0; a < pixels.length; a ++) {   
+    for (let l = 0; l < pixels[a].length; l ++) {  
+        let R=pixels[a][l][0];
+        let G=pixels[a][l][1];
+        let B=pixels[a][l][2];
+        let media= (R+G+B)/3
+        pixels[a][l]=[255-R,255-G,255-B]; 
+     }
+  }
 
   handler.savePixels(pixels, outputPath);
 }
@@ -171,6 +237,20 @@ function merge(alphaFirst, alphaSecond) {
   let pixels = [];
 
   //Aqui tu codigo
+  for (let a = 0; a < catPixels.length; a ++) {   
+    let fila=[]
+    for (let l = 0; l < catPixels[a].length; l ++) {  
+        let cR=catPixels[a][l][0]*alphaSecond;
+        let cG=catPixels[a][l][1]*alphaSecond;
+        let cB=catPixels[a][l][2]*alphaSecond;
+
+        let dR=dogPixels[a][l][0]*alphaFirst;
+        let dG=dogPixels[a][l][1]*alphaFirst;
+        let dB=dogPixels[a][l][2]*alphaFirst;
+        fila.push([cR+dR , cG+dG, cB+dB]); 
+     }
+     pixels.push(fila);
+  }
 
   dogHandler.savePixels(pixels, outputPath);
 }
