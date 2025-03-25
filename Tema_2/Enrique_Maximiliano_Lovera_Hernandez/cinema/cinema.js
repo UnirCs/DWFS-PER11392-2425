@@ -44,9 +44,9 @@ function suggest(seatsToReserve) {
   };
 
   // Buscamos desde la ultima fila, asi aseguramos que devolveremos lo más alejado de la pantalla
-  for (let row = lastRow; row >= 0; row--) {
+  for (let row = lastRow; row >= 0 && reservedSeats.size == 0; row--) {
     for (let col = 0; col <= maxStartColumn; col++) {
-      if (checkConsecutiveSeats(row, col) && reservedSeats.size == 0) {
+      if (checkConsecutiveSeats(row, col)) {
         reservedSeats = new Set(
           butacas[row].slice(col, col + seatsToReserve).map((seat) => seat.id)
         );
@@ -59,7 +59,7 @@ function suggest(seatsToReserve) {
 // modifico la ultima fila para reservar un asiento y probar el funcionamiento
 butacas[butacas.length - 1][
   butacas[butacas.length - 1].length - 1
-].estado = true;
+].estado = false;
 
 console.log(butacas);
-console.log(suggest(10));
+console.log(suggest(1));
