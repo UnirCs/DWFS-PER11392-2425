@@ -187,7 +187,6 @@ function dimBrightness(dimFactor) {
         let R=pixels[a][l][0];
         let G=pixels[a][l][1];
         let B=pixels[a][l][2];
-        let media= (R+G+B)/3
         pixels[a][l]=[R/dimFactor,G/dimFactor,B/dimFactor]; 
      }
   }
@@ -212,7 +211,6 @@ function invertColors() {
         let R=pixels[a][l][0];
         let G=pixels[a][l][1];
         let B=pixels[a][l][2];
-        let media= (R+G+B)/3
         pixels[a][l]=[255-R,255-G,255-B]; 
      }
   }
