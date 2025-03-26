@@ -34,7 +34,6 @@ body {
     font-family: 'Krub', sans-serif;
     font-size: 16px; /* 1rem = 10px */
     line-height: 1.6;
-    color: var(--text-color);
     background-color: var(--background-color);
     padding: 20px;
 }
@@ -245,7 +244,13 @@ ul {
     border-radius: 4px;
     transition: width 0.5s ease;
 }
+.progress-bar--100 {
+    width: 100%;
+}
 
+.progress-bar--55 {
+    width: 55%;
+}
 
 /*
  * Contenido principal del CV

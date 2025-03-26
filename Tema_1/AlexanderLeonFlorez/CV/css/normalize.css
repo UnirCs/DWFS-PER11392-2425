@@ -84,7 +84,6 @@ a {
 
 abbr[title] {
     border-bottom: none; /* 1 */
-    text-decoration: underline; /* 2 */
     text-decoration: underline dotted; /* 2 */
 }
 
@@ -196,6 +195,8 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
+    -webkit-appearance: button; /* For Safari */
+    -moz-appearance: button; /* For Firefox */
     appearance: button;
 }
 
