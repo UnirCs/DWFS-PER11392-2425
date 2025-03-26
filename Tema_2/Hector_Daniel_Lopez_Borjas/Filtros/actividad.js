@@ -169,6 +169,14 @@ function dimBrightness(dimFactor) {
     let pixels = handler.getPixels();
 
     //Aqui tu codigo
+    for (let i = 0; i < pixels.length; i++) {
+        for (let j = 0; j < pixels[i].length; j++) {
+            const R = Math.round(pixels[i][j][0] / dimFactor);
+            const G = Math.round(pixels[i][j][1] / dimFactor);
+            const B = Math.round(pixels[i][j][2] / dimFactor);
+            pixels[i][j] = [R, G, B];
+        }
+    }
 
     handler.savePixels(pixels, outputPath);
 }
@@ -185,6 +193,14 @@ function invertColors() {
     let pixels = handler.getPixels();
 
     //Aqui tu codigo
+    for (let i = 0; i < pixels.length; i++) {
+        for (let j = 0; j < pixels[i].length; j++) {
+            const R = 255 - pixels[i][j][0];
+            const G = 255 - pixels[i][j][1];
+            const B = 255 - pixels[i][j][2];
+            pixels[i][j] = [R, G, B];
+        }
+    }
 
     handler.savePixels(pixels, outputPath);
 }
@@ -229,7 +245,7 @@ function merge(alphaFirst, alphaSecond) {
  *     Negativo: 8
  *     Fusion de imagenes: 9
  */
-let optionN = 6;
+let optionN = 8;
 
 switch (optionN) {
     case 1:
