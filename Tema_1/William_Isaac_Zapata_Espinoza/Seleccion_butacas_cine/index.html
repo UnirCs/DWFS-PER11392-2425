@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cinema Seat Selection</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-light">
+    <div class="container py-4">
+      <!-- Header Section -->
+      <div class="row mb-4">
+        <div class="col-12">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <div class="row align-items-center">
+                <div class="col-md-8">
+                  <h1 class="fs-2 fw-bold">Dune: Part Two</h1>
+                  <div class="mb-2">
+                    <span class="badge bg-dark me-2">Sci-Fi</span>
+                    <span class="badge bg-dark me-2">Adventure</span>
+                    <span class="badge bg-dark me-2">PG-13</span>
+                    <span class="text-secondary">166 min</span>
+                  </div>
+                  <div>
+                    <p class="mb-1"><strong>Date:</strong> March 24, 2025</p>
+                    <p class="mb-1"><strong>Time:</strong> 19:30</p>
+                    <p class="mb-0"><strong>Theater:</strong> Screen 3</p>
+                  </div>
+                </div>
+                <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                  <img
+                    src="https://via.placeholder.com/120x180"
+                    alt="Movie Poster"
+                    class="rounded shadow-sm"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Screen Section -->
+      <div class="row mb-5">
+        <div class="col-12 text-center">
+          <div class="screen mx-auto mb-5">
+            <p class="mb-0 fw-bold text-secondary">SCREEN</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Seat Selection Section -->
+      <div class="row mb-4">
+        <div class="col-12">
+          <div class="table-responsive">
+            <table
+              class="table table-borderless text-center mx-auto"
+              style="max-width: 800px"
+            >
+              <thead>
+                <tr>
+                  <th width="40"></th>
+                  <th>1</th>
+                  <th>2</th>
+                  <th>3</th>
+                  <th>4</th>
+                  <th>5</th>
+                  <th>6</th>
+                  <th>7</th>
+                  <th>8</th>
+                  <th>9</th>
+                  <th>10</th>
+                  <th>11</th>
+                  <th>12</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="fw-bold">A</td>
+                  <td>
+                    <button class="btn btn-sm btn-success seat">A1</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-success seat">A2</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-danger seat" disabled>
+                      A3
+                    </button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-danger seat" disabled>
+                      A4
+                    </button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-success seat">A5</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-success seat">A6</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-success seat">A7</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-success seat">A8</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-success seat">A9</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-success seat">A10</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-success seat">A11</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-success seat">A12</button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="fw-bold">B</td>
+                  <td>
+                    <button class="btn btn-sm btn-success seat">B1</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-success seat">B2</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-success seat">B3</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-success seat">B4</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-danger seat" disabled>
+                      B5
+                    </button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-danger seat" disabled>
+                      B6
+                    </button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-danger seat" disabled>
+                      B7
+                    </button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-danger seat" disabled>
+                      B8
+                    </button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-success seat">B9</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-success seat">B10</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-success seat">B11</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-success seat">B12</button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="fw-bold">C</td>
+                  <td>
+                    <button class="btn btn-sm btn-success seat">C1</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-success seat">C2</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-success seat">C3</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-success seat">C4</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-success seat">C5</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-success seat">C6</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-success seat">C7</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-success seat">C8</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-success seat">C9</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-success seat">C10</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-success seat">C11</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-success seat">C12</button>
+                  </td>
+                </tr>
+
+                <!-- Row D -->
+                <tr>
+                  <td class="fw-bold">D</td>
+                  <td>
+                    <button class="btn btn-sm btn-success seat">D1</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-success seat">D2</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-success seat">D3</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-success seat">D4</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-success seat">D5</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-primary seat">D6</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-primary seat">D7</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-success seat">D8</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-success seat">D9</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-success seat">D10</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-success seat">D11</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-success seat">D12</button>
+                  </td>
+                </tr>
+
+                <!-- Row E -->
+                <tr>
+                  <td class="fw-bold">E</td>
+                  <td>
+                    <button class="btn btn-sm btn-success seat">E1</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-success seat">E2</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-danger seat" disabled>
+                      E3
+                    </button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-danger seat" disabled>
+                      E4
+                    </button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-success seat">E5</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-success seat">E6</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-success seat">E7</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-success seat">E8</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-danger seat" disabled>
+                      E9
+                    </button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-danger seat" disabled>
+                      E10
+                    </button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-success seat">E11</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-success seat">E12</button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="fw-bold">F</td>
+                  <td><button class="btn btn-sm btn-purple seat">F1</button></td>
+                  <td><button class="btn btn-sm btn-purple seat">F2</button></td>
+                  <td><button class="btn btn-sm btn-purple seat">F3</button></td>
+                  <td>
+                    <button class="btn btn-sm btn-danger seat" disabled>
+                      F4
+                    </button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-danger seat" disabled>
+                      F5
+                    </button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-danger seat" disabled>
+                      F6
+                    </button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-danger seat" disabled>
+                      F7
+                    </button>
+                  </td>
+                  <td><button class="btn btn-sm btn-purple seat">F8</button></td>
+                  <td><button class="btn btn-sm btn-purple seat">F9</button></td>
+                  <td>
+                    <button class="btn btn-sm btn-purple seat">F10</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-purple seat">F11</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-purple seat">F12</button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="fw-bold">G</td>
+                  <td><button class="btn btn-sm btn-purple seat">G1</button></td>
+                  <td><button class="btn btn-sm btn-purple seat">G2</button></td>
+                  <td><button class="btn btn-sm btn-purple seat">G3</button></td>
+                  <td><button class="btn btn-sm btn-purple seat">G4</button></td>
+                  <td>
+                    <button class="btn btn-sm btn-primary seat">G5</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-primary seat">G6</button>
+                  </td>
+                  <td><button class="btn btn-sm btn-purple seat">G7</button></td>
+                  <td><button class="btn btn-sm btn-purple seat">G8</button></td>
+                  <td><button class="btn btn-sm btn-purple seat">G9</button></td>
+                  <td>
+                    <button class="btn btn-sm btn-purple seat">G10</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-purple seat">G11</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-purple seat">G12</button>
+                  </td>
+                </tr>
+
+                <!-- Row H - VIP Row -->
+                <tr>
+                  <td class="fw-bold">H</td>
+                  <td><button class="btn btn-sm btn-purple seat">H1</button></td>
+                  <td><button class="btn btn-sm btn-purple seat">H2</button></td>
+                  <td><button class="btn btn-sm btn-purple seat">H3</button></td>
+                  <td><button class="btn btn-sm btn-purple seat">H4</button></td>
+                  <td><button class="btn btn-sm btn-purple seat">H5</button></td>
+                  <td><button class="btn btn-sm btn-purple seat">H6</button></td>
+                  <td><button class="btn btn-sm btn-purple seat">H7</button></td>
+                  <td><button class="btn btn-sm btn-purple seat">H8</button></td>
+                  <td><button class="btn btn-sm btn-purple seat">H9</button></td>
+                  <td>
+                    <button class="btn btn-sm btn-purple seat">H10</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-purple seat">H11</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-purple seat">H12</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mb-4">
+        <div class="col-12">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Seat Legend</h5>
+              <div class="d-flex flex-wrap gap-4 mt-3">
+                <div class="d-flex align-items-center">
+                  <button class="btn btn-sm btn-success me-2 seat"></button>
+                  <span>Available</span>
+                </div>
+                <div class="d-flex align-items-center">
+                  <button class="btn btn-sm btn-primary me-2 seat"></button>
+                  <span>Selected</span>
+                </div>
+                <div class="d-flex align-items-center">
+                  <button
+                    class="btn btn-sm btn-danger me-2 seat"
+                    disabled
+                  ></button>
+                  <span>Occupied</span>
+                </div>
+                <div class="d-flex align-items-center">
+                  <button class="btn btn-sm btn-purple me-2 seat"></button>
+                  <span>VIP ($15.00)</span>
+                </div>
+                <div class="d-flex align-items-center">
+                  <button class="btn btn-sm btn-success me-2 seat"></button>
+                  <span>Regular ($10.00)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

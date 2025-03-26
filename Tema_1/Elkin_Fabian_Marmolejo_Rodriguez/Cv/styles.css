@@ -1,0 +1,64 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+.header-presentacion {
+    background-color: rgba(34, 65, 49, 0.363);
+    padding: 50px;
+}
+
+img {
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.1);
+    border-radius: 10px;
+}
+
+.section {
+    text-align: left;
+    margin-top: 5px;
+    padding: 5px;
+}
+
+.section:hover {
+    border-radius: 5px;
+    border: 2px solid rgba(71, 71, 71, 0.699);
+    box-shadow: 2px 2px 5px rgba(94, 94, 94, 0.781);
+}
+
+h2{
+    color: rgb(15, 43, 15) !important;
+}
+
+strong{
+    color: rgb(41, 59, 41) !important;
+}
+
+h3{
+    color: rgb(44, 54, 44) !important;
+}
+
+.experience{
+    margin-top: 20px;
+}
+
+div h3 {
+    margin: 5px 0;
+}
+
+div ul {
+    margin: 5px 0;
+    padding-left: 15px;
+}
+
+div li {
+    margin-bottom: 3px;
+}
+
