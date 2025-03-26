@@ -1,9 +1,7 @@
 const ImageHandler = require('./ImageHandler.js')
 
-
 let path = 'input/tucan.jpg';
 let handler = new ImageHandler(path);
-
 
 /**
  * Ejemplo de construccion de una imagen
@@ -41,9 +39,12 @@ function ejemplo() {
 function redConverter() {
     let outputPath = 'output/tucan_red.jpg';
     let pixels = handler.getPixels();
-
     //Aqui tu codigo
-
+    for (let i = 0; i < pixels.length; i++) {
+        for (let j = 0; j < pixels[i].length; j++) {
+            pixels[i][j] = [pixels[i][j][0], 0, 0];
+        }
+    }
     handler.savePixels(pixels, outputPath);
 }
 
@@ -57,7 +58,11 @@ function greenConverter() {
     let pixels = handler.getPixels();
 
     //Aqui tu codigo
-
+    for (let i = 0; i < pixels.length; i++) {
+        for (let j = 0; j < pixels[i].length; j++) {
+            pixels[i][j] = [0, pixels[i][j][1], 0];
+        }
+    }
     handler.savePixels(pixels, outputPath);
 }
 
@@ -71,6 +76,11 @@ function blueConverter() {
     let pixels = handler.getPixels();
 
     //Aqui tu codigo
+    for (let i = 0; i < pixels.length; i++) {
+        for (let j = 0; j < pixels[i].length; j++) {
+            pixels[i][j] = [0, 0, pixels[i][j][2]];
+        }
+    }
 
     handler.savePixels(pixels, outputPath);
 }
@@ -89,6 +99,12 @@ function greyConverter() {
     let pixels = handler.getPixels();
 
     //Aqui tu codigo
+    for (let i = 0; i < pixels.length; i++) {
+        for (let j = 0; j < pixels[i].length; j++) {
+            const media = Math.round((pixels[i][j][0] + pixels[i][j][1] + pixels[i][j][2]) / 3);
+            pixels[i][j] = [media, media, media];
+        }
+    }
 
     handler.savePixels(pixels, outputPath);
 }
@@ -194,7 +210,7 @@ function merge(alphaFirst, alphaSecond) {
  *     Negativo: 8
  *     Fusion de imagenes: 9
  */
-let optionN = 0;
+let optionN = 4;
 
 switch (optionN) {
     case 1:
