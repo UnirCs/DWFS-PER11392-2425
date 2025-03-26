@@ -1,0 +1,52 @@
+header{
+    align-items: center;
+}
+
+.main{
+    border: 2px solid yellow;
+    background-color: black;
+}
+
+#cuadro_negro{
+    height: 150px;
+    background-color: dimgray;
+}
+
+#unir_cinema{
+    height: 150px;
+    background-color: grey;
+    border: 2px solid grey;
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+
+.btn-custom {
+    background-color: black;
+    border: 2px solid yellow;
+    color: white;
+    padding: 10px 20px;
+  }
+  
+  .btn-custom:hover {
+    background-color: yellow;
+    color: black;
+  }
+
+  .Fila{
+    color: yellow;
+  }
+
+  .texto_amarillo{
+    color: yellow;
+  }
+
+#Formulario_entradas,#Informacion_general{
+    text-align: center;
+}
+
+#Informacion_general{
+    color: grey;
+}
+

@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Asap', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    background-color: #969aa1;
+}
+p{
+    font-size: 18px;
+    line-height: 26px;
+}
+h1{
+    margin-bottom: 16px;
+}
+h2{
+    font-size: 22px;
+}
+li{
+    color: white;
+    margin-left: 16px;
+    margin-bottom: 4px;
+}
+.sheet{
+    width: 868px;
+    height: 1227.8px;
+    margin-top: 20px;
+    display: flex;
+    box-shadow: 6px 6px 6px #181a20;
+    background-color: white;
+}
+    .sheet-left{
+        width: 60%;
+        height: 100%;
+        padding: 40px 10px 0px 40px;
+    }
+        .sheet-left p{
+            color: #181a20;
+        }
+        .sheet-left .introduction{
+            margin-bottom: 28px;
+        }
+            .introduction .name p{
+                font-size: 32px;
+                font-weight: bold;
+            }
+            .introduction .degree p{
+                margin-top: 18px;
+                font-size: 24px;
+            }
+        .sheet-left .profile{
+            margin-bottom: 20px;
+        }  
+        .sheet-left .experience h2{
+            margin-top: 12px;
+            margin-bottom: 12px;
+        }
+        .sheet-left .experience h3{
+            margin-bottom: 12px;
+        }
+    .sheet-right{
+        width: 40%;
+        padding: 60px 20px 0px 26px;
+        background-color: #141414;
+    }
+        .sheet-right p{
+            color: white;
+        }
+        .sheet-right h1{
+            color: white;
+        }
+        .sheet-right h2 {
+            color: white;
+        }
+        .sheet-right .contact{
+            margin-bottom: 20px;
+        }
+        .sheet-right .education .education-entry{
+            margin-bottom: 20px;
+        }
+        .sheet-right .softSkills {
+            margin-top: 30px;
+        }
