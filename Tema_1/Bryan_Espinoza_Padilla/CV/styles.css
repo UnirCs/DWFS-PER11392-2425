@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e5d9e;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 75%;
+    margin: 50px auto;
+    background-color: #d6d6d6;
+    padding: 80px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+    padding: 15px;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    background-color: white;
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: #170e6a;
+    font-size: 20px;
+    border-bottom: 2px solid #547aed;
+    padding-bottom: 5px;
+}
+
+h3 {
+    font-size: 18px;
+    color: #333;
+}
+
+p, ul {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+}
+
+strong {
+    color: #000;
+}
+
+.profile-pic {
+    display: block;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
