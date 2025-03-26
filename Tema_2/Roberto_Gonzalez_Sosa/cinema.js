@@ -1,6 +1,7 @@
 
 
-// Función para inicializar la matriz de butacas
+// Función para inicializar la matriz de butacas.
+// Lo modifico para poder definir aleatoriamente asientos ocupados.
 function setup(N, ocupados) {
     // Validar que no se pida ocupar más asientos de los disponibles
     const totalAsientos = N * N;
