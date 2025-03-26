@@ -1,0 +1,18 @@
+﻿.sala-cine {
+    display: grid;
+    grid-template-columns: repeat(10, 40px);
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.butaca {
+    width: 40px;
+    height: 40px;
+    background-color: yellow;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+    .butaca[title="Reservada"] {
+        cursor: default;
+    }
