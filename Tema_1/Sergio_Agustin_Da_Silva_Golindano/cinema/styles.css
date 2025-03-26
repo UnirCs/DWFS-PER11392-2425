@@ -1,0 +1,110 @@
+/* Importing Inter font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+  background-color: #4e0000;
+  color: #eee;
+  font-family: Inter, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 2rem;
+}
+
+.seats {
+  width: 55%;
+  height: 55%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr); /* 10 columns */
+  grid-template-rows: repeat(5, 1fr); /* 5 rows */
+  gap: 1rem; /* Space between elements */
+}
+
+.seats__item {
+  background-color: #bbffd0;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1; /* Makes every element a square */
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease; /* Added for a smooth transition when hovering */
+}
+
+.seats__item:hover {
+  transform: scale(1.1); /* Scales the card 110% of its size */
+  cursor: pointer;
+}
+
+.seats__item--occupied {
+  background-color: #949494; /* Gray color for occupied seats */
+}
+
+.seats__item--occupied:hover {
+  transform: none; /* No hover effect for occupied seats */
+  cursor: not-allowed; /* Cursor not allowed for occupied seats */
+}
+
+.screen {
+  margin-top: 1rem;
+  width: 70%;
+  margin: auto;
+  margin-top: 2rem;
+  background-color: #000;
+  border: 2px solid #eee;
+}
+
+h4 {
+  margin-top: 4rem;
+}
+
+.button {
+  background-color: #0051ff;
+  color: #fff;
+  font-family: Inter, sans-serif;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+/* Media queries for different screen sizes */
+@media (max-width: 599px) {
+  /* Styles for phone only */
+  html {
+    font-size: 9px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 899px) {
+  /* Styles for tablet portrait and up */
+  html {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 900px) {
+  /* Styles for tablet landscape and up */
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* Styles for desktop and up */
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1800px) {
+  /* Styles for big desktop and up */
+  html {
+    font-size: 16px;
+  }
+}
