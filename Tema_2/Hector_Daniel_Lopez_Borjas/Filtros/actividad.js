@@ -121,6 +121,16 @@ function blackAndWhiteConverter() {
     let pixels = handler.getPixels();
 
     //Aqui tu codigo
+    for (let i = 0; i < pixels.length; i++) {
+        for (let j = 0; j < pixels[i].length; j++) {
+            const media = Math.round((pixels[i][j][0] + pixels[i][j][1] + pixels[i][j][2]) / 3);
+            if (media < 128) {
+                pixels[i][j] = [0, 0, 0];
+            } else {
+                pixels[i][j] = [255, 255, 255];
+            }
+        }
+    }
 
     handler.savePixels(pixels, outputPath);
 }
@@ -135,7 +145,16 @@ function scaleDown() {
     let outputPath = 'output/tucan_scale_down.jpg';
     let pixels = handler.getPixels();
 
-    //Aqui tu codigo
+    let scaledPixels = [];
+
+    for (let i = 0; i < pixels.length; i += 2) {
+        let fila = [];
+        for (let j = 0; j < pixels[i].length; j += 2) {
+            fila.push(pixels[i][j]);
+        }
+        scaledPixels.push(fila);
+    }
+    pixels = scaledPixels;
 
     handler.savePixels(pixels, outputPath, handler.getShape()[0] / 2, handler.getShape()[1] / 2);
 }
@@ -210,7 +229,7 @@ function merge(alphaFirst, alphaSecond) {
  *     Negativo: 8
  *     Fusion de imagenes: 9
  */
-let optionN = 4;
+let optionN = 6;
 
 switch (optionN) {
     case 1:
