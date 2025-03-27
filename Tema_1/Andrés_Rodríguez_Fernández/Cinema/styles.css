@@ -1,0 +1,80 @@
+body {
+    margin: 20px;
+    border: 1px solid #ffc107;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.textoUnir {
+    background-color: #333;
+    padding: 20px;
+    margin: 30px;
+    text-align: center;
+}
+.bloqueVacio {
+    padding: 80px;
+    margin: 30px;
+    background-color: lightslategrey;
+}
+
+/* Cine */
+.silla-container {
+    margin: 0 auto;
+    width: fit-content;
+    border-collapse: separate;
+    border-spacing: 10px 15px;
+}
+.row-label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #ffc107;
+    text-align: right;   
+    border: none !important; 
+}
+.silla {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #ffc107 !important; 
+}
+.silla:hover {
+    background-color: rgb(231, 164, 19);
+}
+.sillaOcupada {
+    background-color: #ffc107;
+}
+
+/* Nº asientos a reservar y botón */
+.reserva {
+    padding: 20px;
+    margin: 30px;
+    text-align: center;
+}
+
+.btn-confirmar {
+    background-color: #ffc107;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.btn-confirmar:hover {
+    background-color: blue;
+}
+    
+.form-control{
+    width: 8%;          
+    margin-left: auto;  
+    margin-right: auto; 
+    text-align: center; 
+    margin-bottom: 9px;
+}
+.asientos {
+    color: #ffc107;   
+}
+
+/* Pie */
+footer {
+    background-color: lightslategrey;
+    padding: 20px;
+    margin: 30px;
+    text-align: center;
+}
