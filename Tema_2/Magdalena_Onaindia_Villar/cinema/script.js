@@ -33,47 +33,51 @@ console.log(butacas);
  * @returns {Set} - Conjunto de IDs de asientos sugeridos (vacío si no hay disponibles)
  */
 function suggest(numSeats) {
-    const seats = new Set(); // Conjunto para almacenar los asientos sugeridos
+    const seats = new Set();
 
-    // Validación inicial: número de asientos inválido
     if (numSeats <= 0 || numSeats > N) {
         return seats;
     }
 
-    // Buscar desde la última fila (más lejana) hasta la primera (más cercana)
-    for (let row = butacas.length - 1; row >= 0; row--) {
-        let consecutiveSeats = 0; //Contador de asientos consecutivos libres
-        let startIndex = -1;      //indice donde comienza la secuencia de asientos libres
+    let found = false;
+    let row = butacas.length - 1;  //última fila
 
-        for (let seat = 0; seat < butacas[row].length; seat++) {
-            if (!butacas[row][seat].estado) { //Si el asiento está libre
+    //bucle externo (filas)
+    while (row >= 0 && !found) {
+        let consecutiveSeats = 0;
+        let startIndex = -1;
+        let seat = 0;
+
+        //bucle interno (asientos)
+        while (seat < butacas[row].length && !found) {
+            if (!butacas[row][seat].estado) {
                 if (consecutiveSeats === 0) {
-                    startIndex = seat; //Marca el inicio de una posible secuencia
+                    startIndex = seat;
                 }
                 consecutiveSeats++;
 
-                //Si encontramos suficientes asientos consecutivos
                 if (consecutiveSeats === numSeats) {
-                    //Añadir los IDs de los asientos al conjunto
+                    //asientos encontrados
                     for (let i = startIndex; i < startIndex + numSeats; i++) {
                         seats.add(butacas[row][i].id);
                     }
-                    return seats; //devolver los asientos encontrados
+                    found = true;  //para no romper el invariante
                 }
             } else {
-                //Reiniciar el contador si encontramos un asiento ocupado
                 consecutiveSeats = 0;
                 startIndex = -1;
             }
+            seat++;
         }
+        row--;
     }
 
-    return seats; //Si no se encontraron asientos, devolver conjunto vacío
+    return seats;
 }
 
 // ===== tests=====
 
-// Modificar algunos asientos a ocupados para pruebas
+//modificar algunos asientos a ocupados para pruebas
 butacas[9][0].estado = true;  // Fila 10, Asiento 1
 butacas[9][3].estado = true;  // Fila 10, Asiento 2
 butacas[9][6].estado = true;  // Fila 10, Asiento 5
@@ -83,7 +87,6 @@ butacas[8][5].estado = true;  // Fila 9, Asiento 6
 butacas[7][0].estado = true;  // Fila 8, Asiento 1
 butacas[7][7].estado = true;  // Fila 8, Asiento 8
 
-// Casos de prueba
 console.log("=== Pruebas ===");
 console.log("Buscar 1 asiento:", suggest(1));  //en F9
 console.log("Buscar 3 asientos:", suggest(3)); // en F8
