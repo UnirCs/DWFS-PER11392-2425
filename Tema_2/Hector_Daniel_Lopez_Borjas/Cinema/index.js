@@ -39,9 +39,9 @@ function suggest(butacas, asientos) {
     for (let i = butacas.length - 1; i >= 0 && resultado.size === 0; i--) {
         // obtenemos cada fila
         const fila = butacas[i];
-        // recorremos los grupos de asientos de acorde a la cantidad especificada por el usuario dentro de cada fila
-        // excluyendo las posiciones donde no es posible seleccionar un bloque de asientos debido a la cantidad especificada
-        // siempre y cuando no se haya encontrado un resultado
+        // recorremos los grupos de asientos, siempre y cuando no se haya encontrado un resultado,  
+        // de acorde a la cantidad especificada por el usuario dentro de cada fila excluyendo las posiciones 
+        // donde no es posible seleccionar un bloque de asientos debido a la cantidad especificada
         for (let j = 0; j <= fila.length - asientos && resultado.size === 0; j++) {
             const grupoAsientos = fila.slice(j, j + asientos); // obtenemos un grupo de asientos
 
