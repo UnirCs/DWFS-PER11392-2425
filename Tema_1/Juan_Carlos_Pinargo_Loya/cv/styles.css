@@ -1,0 +1,41 @@
+.contenedor{
+    display: block;
+    position: relative;
+    margin: 0  auto;
+    font-family: Tahoma;
+}
+
+.contenedor > .contenedor_foto{
+    background-color: #00008b;
+}
+
+.contenedor > .contenedor_info{
+    margin: 10px 0;
+    font-size: 12px;
+}
+
+.contenedor > .contenedor_foto,.contenedor > .contenedor_info{
+    padding: 5px ;
+    border: 1px solid #008b8b;
+    border-radius: 5px;
+}
+
+.contenedor_foto > h2, .contenedor_foto > h3{
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.contenedor_foto > img{
+    display: block;
+    width: 10%;
+    height: auto;
+    margin: 0 auto;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+}
+
+.contenedor_info > h4{
+    color: #00008b;
+    font-family: Verdana;
+}
+
