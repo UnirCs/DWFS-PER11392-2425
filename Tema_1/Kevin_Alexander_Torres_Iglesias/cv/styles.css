@@ -1,0 +1,66 @@
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #214480;
+    width: 100%;
+    margin-top: 10px;
+    color: #ffffff;
+    border-radius: 0.5em;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+}
+
+.profile_picture {
+    width: 100px;
+    height: 120px;
+    border-radius: 0.5em;
+    margin: 20px;
+}
+
+.section {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 10px;
+    border: 1px solid #214480;
+    border-radius: 0.5em;
+    margin-bottom: 10px;
+    box-shadow: 0 3px 0 #bdc6d7;
+}
+
+.section h2 {
+    width: 100%;
+    text-align: flex-start;
+    margin-left: 40px;
+    color: #214480;
+    margin-bottom: 15px;
+}
+
+.section p {
+    width: 100%;
+    text-align: flex-start;
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+
+h4 {
+    margin-top: 0;
+}
+
+.skills {
+    margin-left: 10px;
+}
