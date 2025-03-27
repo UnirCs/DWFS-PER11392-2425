@@ -4,38 +4,6 @@ const ImageHandler = require('./ImageHandler.js')
 let path = 'input/tucan.jpg';
 let handler = new ImageHandler(path);
 
-
-/**
- * Ejemplo de construccion de una imagen
- */
-function ejemplo() {
-
-  let outputPath = 'output/ejemplo.jpg';
-  let pixeles = [];
-  let filas = 2;
-  let columnas = 2;
-  for (let i = 0; i < filas; i++) {
-    let nuevaFila = [];
-    console.log("Fila: " + i);
-    for (let j = 0; j < columnas; j++) {
-      console.log("Columna:" + j)
-      let pixel = [0, 0, 0]; // R G B -> Red Green Blue -> Rojo Verde Azul
-      if ((i + j) % 2 === 0) { // Si la suma de la fila y la columna es par....
-        pixel = [255, 255, 255];
-      }
-      console.log("Vamos a añadir el pixel " + pixel + " a la fila " + i + " columna " + j)
-      nuevaFila.push(pixel);
-    }
-    console.log(nuevaFila)
-    pixeles.push(nuevaFila);
-  }
-  console.log(pixeles);
-  handler.savePixels(pixeles, outputPath, filas, columnas);
-}
-
-
-
-
 /**
  * Esta función debe transformar una imagen en escala de rojos.
  *
