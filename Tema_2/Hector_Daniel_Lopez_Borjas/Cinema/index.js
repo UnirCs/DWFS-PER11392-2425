@@ -29,29 +29,32 @@ function setup() {
 
 
 function suggest(butacas, asientos) {
+    let resultado = new Set();
     // cada fila tiene el mismo numero de asientos, por lo que si el numero de asientos seleccionados es mayor 
     // que el length de cualquier fila entonces retornamos un set vacio
     if (asientos > butacas[0].length) {
-        return new Set();
+        return resultado;
     }
-    // recorremos las filas empezando por la ultima
-    for (let i = butacas.length - 1; i >= 0; i--) {
+    // recorremos las filas empezando por la ultima e iteramos mientras no se haya encontrado un resultado
+    for (let i = butacas.length - 1; i >= 0 && resultado.size === 0; i--) {
         // obtenemos cada fila
         const fila = butacas[i];
         // recorremos los grupos de asientos de acorde a la cantidad especificada por el usuario dentro de cada fila
         // excluyendo las posiciones donde no es posible seleccionar un bloque de asientos debido a la cantidad especificada
-        for (let j = 0; j <= fila.length - asientos; j++) {
+        // siempre y cuando no se haya encontrado un resultado
+        for (let j = 0; j <= fila.length - asientos && resultado.size === 0; j++) {
             const grupoAsientos = fila.slice(j, j + asientos); // obtenemos un grupo de asientos
 
-            // evaluamos si cada uno de los asientos dentro del grupo esta disponible y de ser asi retornarmos sus ids
+            // evaluamos si cada uno de los asientos dentro del grupo esta disponible y de ser asi guardamos el set
+            // como el resultado
             if (grupoAsientos.every(asiento => !asiento.estado)) {
-                return new Set(grupoAsientos.map(asiento => asiento.id));
+                resultado = new Set(grupoAsientos.map(asiento => asiento.id));
             }
         }
     }
 
-    // si nunca logramos dar un grupo de asientos disponible retornamos un set vacio
-    return new Set();
+    // retornamos el resultado
+    return resultado;
 }
 
 
