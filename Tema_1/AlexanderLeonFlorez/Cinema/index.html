@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UNIR-Cinema</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/css.css">
+</head>
+<body>
+<div class="cinema">
+  <div class="cinema__header">
+    <h1 class="cinema__title">UNIR-Cinema - Reserva de sillas:</h1>
+    <img src="img/logo.png" alt="Logo UNIR" class="cinema__logo">
+  </div>
+
+  <div class="cinema__controls">
+    <div class="cinema__select-container">
+      <label class="cinema__label" for="seat-count">Cantidad de sillas a reservar:</label>
+      <select class="cinema__select" id="seat-count">
+        <option value="0">Seleccione cantidad</option>
+        <option value="1">1 silla</option>
+        <option value="2">2 sillas</option>
+        <option value="3">3 sillas</option>
+        <option value="4">4 sillas</option>
+        <option value="5">5 sillas</option>
+        <option value="6">6 sillas</option>
+        <option value="7">7 sillas</option>
+        <option value="8">8 sillas</option>
+        <option value="9">9 sillas</option>
+        <option value="10">10 sillas</option>
+      </select>
+    </div>
+    <button class="cinema__button">Confirmar Reserva</button>
+  </div>
+
+  <div class="cinema__message">
+    Seleccione la cantidad de sillas a reservar
+  </div>
+
+  <div class="cinema__screen-container">
+    <div class="cinema__screen">Pantalla</div>
+  </div>
+
+  <div class="cinema__seating">
+    <!-- Fila A -->
+    <div class="cinema__row-label">Fila A</div>
+    <div class="cinema__row">
+      <!-- Grupo 1 -->
+      <div class="cinema__seat-group">
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+      </div>
+      <!-- Grupo 2 -->
+      <div class="cinema__seat-group">
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--selected"></div>
+        <div class="cinema__seat cinema__seat--selected"></div>
+      </div>
+      <!-- Grupo 3 -->
+      <div class="cinema__seat-group">
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+      </div>
+      <!-- Grupo 4 -->
+      <div class="cinema__seat-group">
+        <div class="cinema__seat cinema__seat--reserved"></div>
+        <div class="cinema__seat cinema__seat--reserved"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+      </div>
+    </div>
+
+    <!-- Fila B -->
+    <div class="cinema__row-label">Fila B</div>
+    <div class="cinema__row">
+      <!-- Grupo 1 -->
+      <div class="cinema__seat-group">
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+      </div>
+      <!-- Grupo 2 -->
+      <div class="cinema__seat-group">
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+      </div>
+      <!-- Grupo 3 -->
+      <div class="cinema__seat-group">
+        <div class="cinema__seat cinema__seat--reserved"></div>
+        <div class="cinema__seat cinema__seat--reserved"></div>
+        <div class="cinema__seat cinema__seat--reserved"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+      </div>
+      <!-- Grupo 4 -->
+      <div class="cinema__seat-group">
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+      </div>
+    </div>
+
+    <!-- Fila C -->
+    <div class="cinema__row-label">Fila C</div>
+    <div class="cinema__row">
+      <!-- Grupo 1 -->
+      <div class="cinema__seat-group">
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+      </div>
+      <!-- Grupo 2 -->
+      <div class="cinema__seat-group">
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--selected"></div>
+        <div class="cinema__seat cinema__seat--selected"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+      </div>
+      <!-- Grupo 3 -->
+      <div class="cinema__seat-group">
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+      </div>
+      <!-- Grupo 4 -->
+      <div class="cinema__seat-group">
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+      </div>
+    </div>
+
+    <!-- Fila D -->
+    <div class="cinema__row-label">Fila D</div>
+    <div class="cinema__row">
+      <!-- Grupo 1 -->
+      <div class="cinema__seat-group">
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+      </div>
+      <!-- Grupo 2 -->
+      <div class="cinema__seat-group">
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+      </div>
+      <!-- Grupo 3 -->
+      <div class="cinema__seat-group">
+        <div class="cinema__seat cinema__seat--reserved"></div>
+        <div class="cinema__seat cinema__seat--reserved"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+      </div>
+      <!-- Grupo 4 -->
+      <div class="cinema__seat-group">
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+      </div>
+    </div>
+
+    <!-- Fila E -->
+    <div class="cinema__row-label">Fila E</div>
+    <div class="cinema__row">
+      <!-- Grupo 1 -->
+      <div class="cinema__seat-group">
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+      </div>
+      <!-- Grupo 2 -->
+      <div class="cinema__seat-group">
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+      </div>
+      <!-- Grupo 3 -->
+      <div class="cinema__seat-group">
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+      </div>
+      <!-- Grupo 4 -->
+      <div class="cinema__seat-group">
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+        <div class="cinema__seat cinema__seat--available"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cinema__legend">
+    <div class="cinema__legend-item">
+      <div class="cinema__seat cinema__seat--available cinema__seat--demo"></div>
+      <span class="cinema__legend-text">Disponible</span>
+    </div>
+    <div class="cinema__legend-item">
+      <div class="cinema__seat cinema__seat--selected cinema__seat--demo"></div>
+      <span class="cinema__legend-text">Seleccionado</span>
+    </div>
+    <div class="cinema__legend-item">
+      <div class="cinema__seat cinema__seat--reserved cinema__seat--demo"></div>
+      <span class="cinema__legend-text">Reservado</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>
