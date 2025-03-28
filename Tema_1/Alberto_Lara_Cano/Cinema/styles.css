@@ -1,0 +1,94 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.cinema-container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid yellow;
+}
+
+.cinema-header {
+    background-color: orange;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.screen {
+    background-color: #444;
+    height: 120px;
+    width: 100%;
+    margin: 20px 0;
+    border-radius: 10px;
+    margin-bottom: 60px;
+}
+
+.screen h1{
+    padding: 40px;
+}
+
+.seating {
+    display: flex;
+    flex-direction: column;
+}
+
+.row-label {
+    margin-left: 100px;
+    text-align: left;
+}
+
+.row {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+.seats{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.seat {
+    width: 30px;
+    height: 30px;
+    border: 2px solid yellow;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.occupied {
+    background-color: yellow;
+}
+
+.aisle{
+    width: 50px;
+    height: 40px;
+    margin: 5px;
+    visibility: hidden;
+}
+
+.form-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.form-control{
+    width: 60px;
+    margin-top: 10px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.cinema-footer {
+    background-color: #333;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
