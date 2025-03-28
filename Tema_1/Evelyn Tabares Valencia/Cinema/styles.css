@@ -1,0 +1,111 @@
+.body{
+    background-color:#fff3fe;
+    font-family: 'Courier New', Courier, monospace;
+    color: #ece0e6; 
+}
+
+.square {
+    width: 100%; 
+    padding-top: 100%; 
+    border: 2px solid #8a9b0f; 
+    border-radius: 5px;
+    position: relative;
+}
+.square:hover {
+    background-color: #8a9b0f; 
+    cursor: pointer; 
+    transition: background-color 0.5s ease; 
+}
+
+.row{
+    padding-top: 1%;
+}
+
+.title__container, footer{
+    background-color: #8a9b0f; 
+    margin: 0 auto; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 90%; 
+    height: 12rem; 
+    border-radius: 10px; 
+    margin-top: 20px; 
+    margin-bottom: 20px;
+}
+
+footer{
+    margin-top: 2%;
+    padding-top: 2%;
+    text-align: center;
+}
+
+div > h1, p{
+    font-weight: bold;
+}
+.screen__container{
+    background-color: #490a3d; 
+    border-color: #bd1550;
+    width: 70%; 
+    height: 8rem; 
+    border: 2px solid #bd1550; 
+    box-sizing: border-box; 
+    margin: 0 auto; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    position: relative;
+    overflow: hidden; 
+    border-radius: 10px; 
+    margin-top: 20px; 
+    margin-bottom: 20px;
+}
+.screen__text{
+    color: #f8f4f6; 
+    font-size: 1.5rem; 
+    text-align: center; 
+    margin: 0; 
+    padding: 0; 
+}
+
+.row__number, .booking__text{
+    color: #e45ca0; 
+}
+
+.occupied{
+    background-color: #490A3D; 
+}
+.square.occupied:hover {
+    background-color: #490A3D; 
+    cursor: not-allowed; 
+}
+
+.small-input {
+    width: 250px; 
+    height: 45px; 
+    font-size: 14px;
+    max-width: 150px;
+    border: #8a9b0f 2px solid;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.booking,.booking__number{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.btn {
+    align-items: center;
+    flex: 1;
+    margin-top: 20px;
+}
+
+.booking__button{
+    background-color: #490A3D !important;
+    border: none !important;
+    font-weight: bold !important;
+}
