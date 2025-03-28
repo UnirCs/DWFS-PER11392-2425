@@ -1,0 +1,29 @@
+/* Estilos para el cuerpo del documento */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: powderblue;
+}
+
+/* Estilos para el encabezado */
+header {
+    text-align: center;
+}
+
+/* Estilos para la imagen de perfil */
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+/* Estilos para las secciones */
+section {
+    margin-bottom: 20px;
+}
+
+/* Estilos para los encabezados de nivel 2 */
+h2 {
+    border-bottom: 2px solid #000;
+    padding-bottom: 5px;
+}
