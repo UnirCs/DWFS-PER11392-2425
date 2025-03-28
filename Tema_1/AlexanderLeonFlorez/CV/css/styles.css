@@ -1,0 +1,410 @@
+
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --light-text: #777;
+    --background-color: #f5f5f5;
+    --sidebar-bg: #2c3e50;
+    --sidebar-text: #ecf0f1;
+    --card-bg: #fff;
+    --border-radius: 8px;
+    --shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    --bar-bg: rgba(255, 255, 255, 0.2);
+    --transition: all 0.3s ease;
+}
+
+/*
+ * Reset CSS y Configuración Base
+ * - Se establece 1rem = 10px para facilitar cálculos (62.5% de 16px = 10px)
+ * - Se implementa box-sizing: border-box en todos los elementos
+ */
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Krub', sans-serif;
+    font-size: 16px; /* 1rem = 10px */
+    line-height: 1.6;
+    background-color: var(--background-color);
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 5px;
+    margin-top: 25px;
+}
+
+ul {
+    list-style-position: inside;
+    margin-bottom: 15px;
+}
+
+/*
+ * Layout Principal - Sistema Grid de dos columnas
+ * - Columna izquierda (350px): Barra lateral con información personal
+ * - Columna derecha (flexible): Contenido principal del CV
+ * - El diseño se convierte en una sola columna en pantallas pequeñas
+ */
+.cv {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+/*
+ * Barra Lateral (Sidebar)
+ * Contiene: foto de perfil, información de contacto, habilidades e idiomas
+ * Fondo oscuro para contrastar con el contenido principal
+ */
+.cv__sidebar {
+    background-color: var(--sidebar-bg);
+    color: var(--sidebar-text);
+    padding: 30px;
+    height: 100%;
+}
+
+.sidebar__heading {
+    color: var(--sidebar-text);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 5px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.sidebar__section {
+    margin-bottom: 30px;
+}
+
+/*
+ * Sección de Perfil
+ * Incluye foto circular, nombre y título profesional
+ * Centrada para destacar la identidad visual
+ */
+.profile {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile__image-container {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--secondary-color);
+}
+
+.profile__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile__name {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.profile__title {
+    font-size: 16px;
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+/* Estilos de la sección de contacto */
+.contact__list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/*
+ * Sistema de Iconos para Contacto
+ * Cada ítem de contacto incluye un icono alineado a la izquierda
+ * Se usa flexbox para alinear el icono con el texto
+ */
+.contact__item {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.contact__icon {
+    margin-right: 10px;
+    width: 20px;
+    color: var(--secondary-color);
+}
+
+/* Estilos de la sección de habilidades */
+.skills__list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.skills__item {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 15px;
+    text-align: justify;
+    display: block;
+}
+
+/*
+ * Marcadores de lista personalizados para habilidades
+ * Se usa ::before para crear bullets personalizados con el color secundario
+ * El posicionamiento absoluto permite alinear los bullets sin afectar el flujo del texto
+ */
+.skills__item::before {
+    content: "•";
+    color: var(--secondary-color);
+    position: absolute;
+    left: 0;
+}
+
+/*
+ * Categorías de habilidades
+ * Cada categoría agrupa un conjunto de habilidades relacionadas
+ * con espacio adicional entre categorías para mejor organización visual
+ */
+.skills__category {
+    margin-bottom: 20px;
+}
+
+.skills__subheading {
+    font-size: 16px;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+/*
+ * Sección de idiomas con barras de progreso
+ * Muestra visualmente el nivel de dominio de cada idioma
+ * mediante barras de progreso personalizadas
+ */
+.languages__list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.languages__item {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.languages__item::before {
+    content: none;
+}
+
+.languages__name {
+    font-weight: 500;
+    margin-bottom: 3px;
+}
+
+.languages__level-text {
+    font-size: 14px;
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+}
+
+/*
+ * Barras de progreso para niveles de idioma
+ * - Contenedor gris claro para la barra completa
+ * - Barra interna con color secundario que indica el nivel
+ */
+.languages__progress-container {
+    height: 8px;
+    background-color: var(--bar-bg);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.languages__progress-bar {
+    height: 100%;
+    background-color: var(--secondary-color);
+    border-radius: 4px;
+    transition: width 0.5s ease;
+}
+.progress-bar--100 {
+    width: 100%;
+}
+
+.progress-bar--55 {
+    width: 56%;
+}
+
+/*
+ * Contenido principal del CV
+ * Contiene: resumen profesional, experiencia laboral, educación,
+ * certificaciones y proyectos
+ * Fondo claro para facilitar la lectura del contenido extenso
+ */
+.cv__main {
+    padding: 40px;
+    background-color: var(--card-bg);
+}
+
+.main__heading {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 5px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.main__section {
+    margin-bottom: 30px;
+}
+
+/* Estilos de la sección resumen */
+.summary__text {
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/*
+ * Estructura de experiencia laboral
+ * Cada experiencia incluye: título, empresa, fechas y responsabilidades
+ * Formato jerárquico para facilitar el escaneo visual de la información
+ */
+.experience__item {
+    margin-bottom: 25px;
+}
+
+.experience__header {
+    margin-bottom: 10px;
+}
+
+.experience__title {
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+.experience__company {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.experience__date {
+    color: var(--light-text);
+    font-style: italic;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.experience__responsibilities {
+    padding-left: 20px;
+}
+
+.experience__responsibility {
+    margin-bottom: 5px;
+}
+
+/*
+ * Estructura de educación
+ * Similar a la experiencia laboral pero adaptada para mostrar
+ * grados académicos, instituciones y fechas
+ */
+.education__item {
+    margin-bottom: 25px;
+}
+
+.education__degree {
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+.education__institution {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.education__date {
+    color: var(--light-text);
+    font-style: italic;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Estilos de la sección de certificaciones */
+.certifications__list {
+    list-style-type: none;
+}
+
+.certifications__item {
+    margin-bottom: 15px;
+}
+
+.certifications__name {
+    font-weight: 500;
+    display: block;
+}
+
+.certifications__issuer,
+.certifications__date {
+    color: var(--light-text);
+    font-size: 14px;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+/* Estilos de la sección de proyectos */
+.projects__item {
+    margin-bottom: 25px;
+}
+
+.projects__title {
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+.projects__description {
+    margin-bottom: 10px;
+}
+
+/*
+ * Diseño responsivo
+ * Puntos de quiebre:
+ * - 900px: Cambio de layout de dos columnas a una columna
+ * - 600px: Reducción de padding para optimizar espacio en móviles
+ */
+@media (max-width: 900px) {
+    .cv {
+        grid-template-columns: 1fr;
+    }
+
+    .cv__sidebar {
+        padding-bottom: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .cv__main {
+        padding: 20px;
+    }
+}
