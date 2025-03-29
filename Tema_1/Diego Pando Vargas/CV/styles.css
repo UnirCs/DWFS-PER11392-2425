@@ -1,0 +1,57 @@
+.profile_header {
+    font-family:'Lucida Sans Regular', sans-serif;
+    text-align: center;
+
+
+}
+
+.imagen {
+    width: 200px;
+    border-radius: 50%;
+    aspect-ratio: 1; /* Se ajusta al mismo valor que el width */
+    object-fit: cover;
+
+}
+
+.profile_container {
+    margin: 20px auto;
+    padding: 25px;
+    background-color: #fdeeee; /* Fondo del contenedor en blanco */
+    border-radius: 5px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: darkblue;
+    font-size: 24px;
+    border-bottom: 2px solid #8AB4F8;
+}
+.skills_container_list {
+    background: linear-gradient(135deg, #3B5998, #8B9DC3); /* Degradado azul */
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.skills_container_list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills_container_list li {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 8px;
+    font-size: 22px;
+    color: white;
+    font-weight: bold;
+}
+
+.skills_container_list li:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+}
