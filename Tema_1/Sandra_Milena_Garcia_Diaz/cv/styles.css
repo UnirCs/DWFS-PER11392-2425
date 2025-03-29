@@ -1,0 +1,16 @@
+.seccion {
+    border-color: blue;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 2px;
+    margin-bottom: 20px; 
+    padding: 10px;
+}
+
+#cabecera {
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgb(27, 13, 220);
+    margin-bottom: 20px; 
+    padding: 10px;
+}
