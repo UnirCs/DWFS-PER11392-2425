@@ -1,0 +1,43 @@
+
+
+#cabecera {background-color:rgb(153, 153, 188);
+text-align: center;
+border-radius: 10px;
+border-style: solid;
+/*padding: 10px;*/
+}
+
+#salacine {
+    background-color: rgb(63, 68, 114);
+    border-radius: 10px;
+    border-style: solid;
+    font-family: Arial, sans-serif; 
+    /*padding: 5px;*/
+    color: white; 
+    }
+
+#pantalla {background-color:rgb(64, 64, 135);
+    text-align: center;
+    border-radius: 0% 0% 10% 10%;
+    border-style: solid;  
+    margin-left: 250px; 
+    margin-right: 250px;
+    padding: 10px;  
+
+} 
+#pie {
+    background-color: #333; 
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+}
+.silla
+{
+    border-style: solid;
+    border-width: 1px;
+    display: inline-block;
+    height: 30px;
+    margin: 5px;
+    padding: 5px;
+    width: 30px;
+}
