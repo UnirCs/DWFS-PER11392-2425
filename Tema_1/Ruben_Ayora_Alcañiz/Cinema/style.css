@@ -1,0 +1,27 @@
+.black {
+    background-color: #111111;
+}
+
+.cuadrado {
+    width: 50px;
+    height: 50px;
+    border: 1px solid rgb(223, 171, 0);  /* Borde amarillo */
+}
+
+.cuadrado.relleno {
+    background-color: rgb(223, 171, 0);  /* Fondo azul cuando tiene la clase relleno */
+}
+
+.border-9595 {
+    width: 95vw;
+    height: 95vw;
+}
+
+.rectangle-9515 {
+    width: 95%;
+    height: 15%;
+}
+
+.border-r5 {
+    border-radius: 5px;
+}
