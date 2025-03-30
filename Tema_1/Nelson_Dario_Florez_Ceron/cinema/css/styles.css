@@ -1,0 +1,38 @@
+.screen {
+    background: gray;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+.seat {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+}
+.seat-area {
+    border: 3px solid white;
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+}
+.row-container {
+    display: flex;
+    justify-content: center;
+}
+.seat.selected {
+    background-color: yellow !important;
+}
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
