@@ -1,0 +1,35 @@
+img {
+  height: 150px;
+  width: 150px;
+  margin: auto;
+  display: block;
+}
+
+h3, h4 {
+  margin: auto;
+  display: block;
+  text-align: center;
+}
+
+#encabezado{
+  background-color: rgb(14, 54, 128);
+  margin-block: 5px;
+  text-align: center;
+  color:white;
+}
+
+#encabezado > img {
+  border-radius: 20px;
+}
+
+div {
+  border: 1px solid black;
+}
+p {
+  margin-left: 10px;
+}
+
+.tituloseccion {
+  color: rgb(3, 66, 3);
+  font-style: italic;
+}
