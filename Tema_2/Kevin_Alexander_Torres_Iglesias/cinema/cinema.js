@@ -13,7 +13,7 @@ function setup() {
       // Nuevo asiento
       fila.push({
         id: idContador++,
-        estado: false // Estado inicial libre
+        estado: false, // Estado inicial libre
       });
     }
     butacas.push(fila);
@@ -28,30 +28,44 @@ let butacas = setup();
 console.log(butacas);
 
 // Función que recomienda las butacas
-function suggest(asientos){
+function suggest(asientos) {
   let result = new Set();
+  let encontrado = false;
 
-  if (asientos > butacas.length){
-    return result;
-  }
+  if (asientos <= butacas.length) {
+    for (let i = butacas.length - 1; i >= 0 && !encontrado; i--) {
+      let asientosDisponiblesEnFila = 0;
 
-  for (let i = butacas.length - 1; i >= 0; i--) {
-    let asientosDisponiblesEnFila = 0;
-    for (let j = 0; j < butacas[i].length; j++) {
-      if (!butacas[i][j].estado) {
-        asientosDisponiblesEnFila++;
-      } else {
-        asientosDisponiblesEnFila = 0;
-      }
-      if (asientosDisponiblesEnFila >= asientos){
-        for (let k = j; k > j - asientos; k--) {
-          result.add(butacas[i][k].id);
+      for (let j = 0; j < butacas[i].length; j++) {
+        if (!butacas[i][j].estado) {
+          asientosDisponiblesEnFila++;
+        } else {
+          asientosDisponiblesEnFila = 0;
         }
-        return result;
+
+        if (asientosDisponiblesEnFila >= asientos) {
+          result.clear();
+          for (let k = j - asientos + 1; k <= j; k++) {
+            result.add(butacas[i][k].id);
+          }
+          encontrado = true;
+        }
       }
     }
   }
 
   return result;
-
 }
+
+function testSuggest() {
+  butacas[0][0].estado = true;
+  butacas[0][1].estado = true;
+  butacas[1][0].estado = true;
+  butacas[1][1].estado = true;
+
+  console.log("Sugerencia para 2 asientos:", suggest(2));
+  console.log("Sugerencia para 3 asientos:", suggest(3));
+  console.log("Sugerencia para 4 asientos:", suggest(4));
+}
+
+testSuggest();
