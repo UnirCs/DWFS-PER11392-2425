@@ -1,0 +1,95 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #333;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100dvh;
+}
+
+header {
+  text-align: center;
+  background-color: #343a40;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+footer {
+  text-align: center;
+  background-color: #343a40;
+  color: #fff;
+  padding: 10px 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Main section styles */
+main {
+  padding: 20px;
+}
+
+.choose-chair {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+
+.screen h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #6c757d;
+  text-transform: uppercase;
+  border-bottom: 4px solid #6c757d;
+  width: 100%;
+  margin: 0;
+}
+
+/* Chair styles */
+button {
+  background: none;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+button:hover svg {
+  transform: scale(1.1);
+}
+
+button:active svg {
+  transform: scale(0.9);
+}
+
+button svg {
+  fill: #007bff;
+}
+
+button.selected svg {
+  fill: #28a745;
+}
+
+button.unavailable svg {
+  fill: #dc3545;
+}
