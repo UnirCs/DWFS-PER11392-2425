@@ -1,0 +1,9 @@
+{
+	"dependencies": {
+		"fs": "0.0.1-security",
+		"save-pixels": "^2.3.6",
+		"get-pixels": "^3.3.3",
+		"deasync": "^0.1.30",
+		"ndarray": "^1.0.19"
+	}
+}
