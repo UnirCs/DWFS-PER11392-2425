@@ -39,34 +39,38 @@ function setup() {
 // Función para verificar asientos disponibles
 function verificarAsientos(fila, cantidad) {
     let consecutivos = 0;
+    let asientosEncontrados = false;
 
     for (let asiento of fila) {
         if (!asiento.estado) {
             consecutivos++;
-            if (consecutivos === cantidad) return true;
         } else {
             consecutivos = 0;
         }
+        if (consecutivos === cantidad) {
+            asientosEncontrados = true;
+        }
     }
-    return false;
+    return asientosEncontrados;
 }
 
 // Función para obtener IDs de asientos
 function obtenerIdsAsientos(fila, cantidad) {
     let ids = new Set();
     let consecutivos = 0;
+    let indice = 0;
 
-    for (let asiento of fila) {
-        if (!asiento.estado) {
-            ids.add(asiento.id);
+    while (indice < fila.length && consecutivos < cantidad) {
+        if (!fila[indice].estado) {
+            ids.add(fila[indice].id);
             consecutivos++;
-            if (consecutivos === cantidad) break;
         } else {
             ids.clear();
             consecutivos = 0;
         }
+        indice++;
     }
-    return ids;
+    return consecutivos === cantidad ? ids : new Set();
 }
 
 // Función principal de sugerencia
@@ -74,13 +78,14 @@ function suggest(cantidad) {
     if (cantidad > M) return new Set();
 
     let butacas = setup();
-    let mejorOpcion = new Set();  // Variable para almacenar la mejor opción encontrada
+    let mejorOpcion = new Set();
+    let i = butacas.length - 1;
 
-    for (let i = butacas.length - 1; i >= 0; i--) {
+    while (i >= 0 && mejorOpcion.size === 0) {
         if (verificarAsientos(butacas[i], cantidad)) {
             mejorOpcion = obtenerIdsAsientos(butacas[i], cantidad);
-            break;  // Se detiene después de encontrar la mejor opción
         }
+        i--;
     }
 
     return mejorOpcion;
@@ -104,6 +109,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const asientosSugeridos = suggest(cantidad);
+
+        console.log('Asientos sugeridos:', asientosSugeridos);
 
         if (asientosSugeridos.size === 0) {
             alert('No hay suficientes asientos consecutivos disponibles');
