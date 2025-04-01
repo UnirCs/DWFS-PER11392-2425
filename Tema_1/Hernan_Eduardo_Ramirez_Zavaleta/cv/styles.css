@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ body.cv-body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.cv-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2E4053;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.cv-photo img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    margin-right: 20px;
+}
+
+
+
+.cv-title h1 {
+    font-size: 2em;
+}
+
+.cv-title h3 {
+    font-size: 1.3em;
+    font-weight: 300;
+    text-align: center;
+}
+
+
+
+section {
+    background-color: #fff;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+
+section h4 {
+    font-size: 1.5em;
+    color: #2E4053;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #2E4053;
+    padding-bottom: 5px;
+}
+
+.cv-contact p,
+.cv-summary p,
+.cv-experience p,
+.cv-education p,
+.cv-skills li {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+
+
+
+.cv-experience ul,
+.cv-education ul {
+    margin-left: 1.5em;
+    /* list-style: none; */
+}
+
+
+.cv-experience ul li::marker,
+.cv-education ul li::marker {
+    color: #1A5276;
+}
+
+
+
+.experience-item {
+    margin-bottom: 20px;
+}
+
+
+.experience-item strong {
+    font-size: 1.2em;
+    color: #1A5276;
+}
+
+
+.cv-education li strong {
+    font-size: 1.2em;
+    color: #1A5276;
+}
+
+
+
+.cv-skills li {
+    background-color: #2E4053;
+    color: #fff;
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 20px;
+    margin: 5px;
+}
+
+
+.cv-skills li:hover {
+    background-color: #1A5276;
+    cursor: default;
+}
