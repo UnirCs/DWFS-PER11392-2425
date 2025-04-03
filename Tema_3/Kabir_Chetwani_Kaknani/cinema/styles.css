@@ -1,0 +1,82 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(122, 158, 235);
+    color: white;
+}
+
+footer {
+    margin-top: auto;
+}
+
+.stripes {
+    background: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.8) 0px, rgba(0, 0, 0, 0.8) 10px, rgba(255, 255, 255, 0.2) 10px, rgba(255, 255, 255, 0.2) 20px);
+}
+
+.patio-butacas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.fila {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.butaca {
+    width: 50px;
+    height: 50px;
+    background-color: #2f912f;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.butaca:hover {
+    background-color: #212529;
+}
+
+.leyenda {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    p {
+        margin: 0;
+        margin-right: 40px;
+        text-align: center;
+        font-size: 16px;
+    }
+}
+
+.butaca-leyenda {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.disponible {
+    background-color: #2f912f;
+}
+
+.ocupado {
+    background-color: #b9414d;
+    pointer-events: none;
+}
+
+.seleccionado {
+    background-color: #212529;
+}
