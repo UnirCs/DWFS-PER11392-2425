@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Unir Cinema</title>
+  </head>
+  <body>
+    <header class="container">
+      <h1 class="cinema_title">UNIR-CINEMA</h1>
+    </header>
+
+    <section class="screen"></section>
+
+    <section class="seats">
+      <h2 class="seats-title">Selecciona tus asientos</h2>
+
+      <div class="grid">
+        <div>
+          <p class="row-label">Fila 1:</p>
+          <p class="row-label">Fila 2:</p>
+          <p class="row-label">Fila 3:</p>
+          <p class="row-label">Fila 4:</p>
+          <p class="row-label">Fila 5:</p>
+          <p class="row-label">Fila 6:</p>
+          <p class="row-label">Fila 7:</p>
+          <p class="row-label">Fila 8:</p>
+          <p class="row-label">Fila 9:</p>
+        </div>
+        <div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat selected"></div>
+          <div class="seat selected"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+        </div>
+        <div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat selected"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat selected"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+        </div>
+        <div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat selected"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+        </div>
+        <div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat selected"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+        </div>
+        <div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat selected"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+        </div>
+        <div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+        </div>
+        <div>
+          <div class="seat"></div>
+          <div class="seat selected"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+        </div>
+        <div>
+          <div class="seat"></div>
+          <div class="seat selected"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+        </div>
+      </div>
+
+      <form>
+        <h3 class="form-title">Indica cuantos asientos quieres reservar</h3>
+        <div class="input-container">
+          <input name="seats" id="seats" oninput="suggest(8)" />
+        </div>
+
+        <button type="submit" class="button">Reservar</button>
+      </form>
+    </section>
+
+    <footer class="container">
+      <p>Cine UNIR-CINEMA</p>
+      <p><strong>Dirección:</strong> Calle Avenida de la Paz, 137. Logroño</p>
+      <p><strong>Teléfono:</strong> 941209743</p>
+      <p><strong>Email:</strong> cinefullstack@unircinema.com</p>
+    </footer>
+
+    <script src="cinema.js"></script>
+  </body>
+</html>
