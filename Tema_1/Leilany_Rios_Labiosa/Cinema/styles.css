@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+.screenTitle {
+    width: 100%;
+    height: 127px;
+    background-color: gray;
+    margin: 20px auto;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-weight: bold;
+}
+.screen {
+    width: 100%;
+    height: 179px;
+    background-color: #463f3f;
+    margin: 20px auto;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-weight: bold;
+}
+.cinema {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 10px;
+    width: 50%;
+    margin: auto;
+}
+.seat {
+    width: 30px;
+    height: 30px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.seat-labelBL {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.seat:checked + label {
+    background-color: red;
+}
+.seat-label {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #4CAF50;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.seat:checked + .seat-label {
+    background-color: red;
+}
+input[type="checkbox"] {
+    display: none;
+}
+
+
+.container {
+    width: 50%;
+    margin: auto;
+    background: black;
+    padding: 100px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: 20px;
+    border: 2px solid yellow;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.8em;
+    width: 100%;
+    height: 179px;
+    background-color: #766f6f;
+    margin: 20px auto;
+    border-radius: 10px;
+    line-height: 40px;
+    color: white;
+    font-weight: bold;
+}
+
+.boton {
+    background-color: #4CAF50; 
+    color: white; 
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px; 
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.1s;
+}
+.boton:active {
+    transform: scale(0.95); /* Efecto de clic */
+}
