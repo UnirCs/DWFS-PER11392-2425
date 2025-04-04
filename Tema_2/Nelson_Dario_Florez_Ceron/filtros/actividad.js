@@ -45,11 +45,6 @@ function redConverter() {
   for (let i = 0; i < pixels.length; i++) {
     for (let j = 0; j < pixels[i].length; j++) {
       let pixel = pixels[i][j];
-
-      if (!Array.isArray(pixel) || pixel.length < 3) {
-        console.error(`Error: Formato inesperado en pixels[${i}][${j}]`, pixel);
-        continue;
-      }
     
       pixels[i][j] = [pixel[0], 0, 0];
     }
