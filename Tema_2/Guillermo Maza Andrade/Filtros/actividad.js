@@ -51,7 +51,6 @@ function redConverter() {
       let pixel = [pixels[i][j][0], 0, 0]; // R G B -> Red Green Blue -> Rojo Verde Azul
       nuevaFila.push(pixel);
     }
-    //console.log(nuevaFila);
     pixeles.push(nuevaFila);
   }
 
@@ -77,7 +76,6 @@ function greenConverter() {
       let pixel = [0, pixels[i][j][1], 0]; // R G B -> Red Green Blue -> Rojo Verde Azul
       nuevaFila.push(pixel);
     }
-    //console.log(nuevaFila);
     pixeles.push(nuevaFila);
   }
 
@@ -103,7 +101,6 @@ function blueConverter() {
       let pixel = [0, 0, pixels[i][j][2]]; // R G B -> Red Green Blue -> Rojo Verde Azul
       nuevaFila.push(pixel);
     }
-    //console.log(nuevaFila);
     pixeles.push(nuevaFila);
   }
   handler.savePixels(pixeles, outputPath);
@@ -135,7 +132,6 @@ function greyConverter() {
       let pixel = [media, media, media]; // R G B -> Red Green Blue -> Rojo Verde Azul
       nuevaFila.push(pixel);
     }
-    //console.log(nuevaFila);
     pixeles.push(nuevaFila);
   }
 
@@ -163,10 +159,9 @@ function blackAndWhiteConverter() {
       let sumaPixels = pixels[i][j][0] + pixels[i][j][1] + pixels[i][j][2];
       let media = Math.floor(sumaPixels / 3);
       let coloPixel = media < 128 ? 0 : 255;
-      let pixel = [coloPixel, coloPixel, coloPixel]; //Black
+      let pixel = [coloPixel, coloPixel, coloPixel];
       nuevaFila.push(pixel);
     }
-    //console.log(nuevaFila);
     pixeles.push(nuevaFila);
   }
 
@@ -195,7 +190,6 @@ function scaleDown() {
         nuevaFila.push(pixel);
       }
     }
-    //console.log(nuevaFila);
     if (i % 2 == 0) {
       pixeles.push(nuevaFila);
     }
@@ -229,10 +223,9 @@ function dimBrightness(dimFactor) {
         Math.floor(pixels[i][j][0] / dimFactor),
         Math.floor(pixels[i][j][1] / dimFactor),
         Math.floor(pixels[i][j][2] / dimFactor),
-      ]; //Black
+      ];
       nuevaFila.push(pixel);
     }
-    //console.log(nuevaFila);
     pixeles.push(nuevaFila);
   }
 
@@ -261,10 +254,9 @@ function invertColors() {
         255 - pixels[i][j][0],
         255 - pixels[i][j][1],
         255 - pixels[i][j][2],
-      ]; //Black
+      ];
       nuevaFila.push(pixel);
     }
-    //console.log(nuevaFila);
     pixeles.push(nuevaFila);
   }
   handler.savePixels(pixeles, outputPath);
@@ -301,10 +293,9 @@ function merge(alphaFirst, alphaSecond) {
         Math.floor(
           catPixels[i][j][2] * alphaFirst + dogPixels[i][j][2] * alphaSecond
         ),
-      ]; //Black
+      ];
       nuevaFila.push(pixel);
     }
-    //console.log(nuevaFila);
     pixeles.push(nuevaFila);
   }
 
