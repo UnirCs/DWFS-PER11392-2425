@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Roboto';
+    font-family: 'Roboto','monospace';
     position: absolute;
     display: flex;
     width: 100%;
@@ -20,7 +20,6 @@ body {
     position: relative;
     width: 90%;
     height: 90%;
-    border-radius: 4px;
     background: rgba( 62, 63, 91, 0.25 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 3.5px );
