@@ -1,0 +1,89 @@
+body {
+    display: block;
+    margin: 0;
+    height: 100%;
+    background-color: #333 !important;
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 100%;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 4rem;
+    margin: 0.2em 0rem;
+}
+
+#pantalla {
+    position: relative;
+    background: #fff;
+    height: 35vh;
+    border-bottom-left-radius: 50% 20%;
+    border-bottom-right-radius: 50% 20%;
+    -webkit-box-shadow: 0px 0px 25px 5px rgba(0, 0, 24, 0.52);
+    -moz-box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.52);
+    box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.52);
+}
+
+#wrap-butacas .col-1 {
+    border: 1px solid #616161;
+    min-height: 40px;
+}
+
+#row-1 .col-1:nth-child(2),
+#row-2 .col-1:nth-child(2) {
+    border: none;
+    background-color: transparent !important;
+}
+#row-1 .col-1:last-child,
+#row-2 .col-1:last-child{
+    border: none;
+    background-color: transparent !important;
+}
+
+#wrap-butacas .col-1:hover {
+    background-color: #ffff00;
+}
+
+#wrap-form {
+    background-color: #09f;
+    box-shadow: 0px 0px 25px 5px rgb(0 0 0 / 41%);
+}
+
+.indicador-fila{
+    color: #fff;
+    border: none !important;
+}
+
+.indicador-fila:hover {
+    background-color: transparent !important;
+}
+
+.reservada {
+    background-color: #ffff00;
+}
+
+#form-reserva label {
+    color: #fff !important;
+    font-size: 18px;
+    padding-top: 5px;
+}
+
+.btn-submit {
+    border-radius: 10px;
+    color: #fff !important;
+    background-color: #333 !important;
+}
+
+footer {
+    height: auto;
+    padding: 20px 15px 0;
+}
+.custom-bb{
+    border-bottom: 1px solid #cccccc2e;
+}
+.footer-text {
+    margin-bottom: 5px;
+    color: #ccc;
+}

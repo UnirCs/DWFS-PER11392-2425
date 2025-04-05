@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.cinema.title {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: #fff;
+}
+
+.cinema.title h1 {
+    margin: 0;
+}
+
+.cinema-screen {
+    background-color: #ccc;
+    height: 140px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+}
+
+/* filas */
+.cinema-seats {
+    width: 80%;
+    margin: 0 auto 30px auto;
+}
+
+
+.cinema-seats > div {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.cinema-seats h1 {
+    min-width: 60px;
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Estilo de cada asiento */
+.seat {
+    background-color: #4caf50;
+    height: 50px;
+    width: 70px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.seat:hover {
+    background-color: #45a049;
+}
+
+.seat.occupied {
+    background-color: #e74c3c;
+    cursor: not-allowed;
+}
+
+/* Leyenda de asientos */
+.legend {
+    width: 80%;
+    margin: 40px auto 40px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-size: 0.9rem;
+}
+
+.legend .seat {
+    pointer-events: none;
+    height: 30px;
+    width: 30px;
+}
+
+/* Formulario de reserva */
+.cinema-seats-reserve {
+    width: 80%;
+    margin: 0 auto 30px auto;
+    text-align: center;
+}
+
+.cinema-seats-reserve strong {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.cinema-seats-reserve input[type="number"] {
+    padding: 8px;
+    width: 200px;
+    margin-right: 10px;
+}
+
+.cinema-seats-reserve button {
+    padding: 8px 15px;
+    background-color: #222;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.cinema-seats-reserve button:hover {
+    background-color: #444;
+}
+
+/* Footer */
+.cinema-footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+.cinema-footer p {
+    margin: 5px 0;
+}
