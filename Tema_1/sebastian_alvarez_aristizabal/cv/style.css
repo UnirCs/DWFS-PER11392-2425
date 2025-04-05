@@ -1,0 +1,217 @@
+:root {
+    font-family: 'Montserrat' , Helvetica, sans-serif;
+    --blue-background : rgba(6, 130, 179, 0.808);
+    --title-color-left : var(var(--blue-background));
+    --title-color-right: white;
+    --blue-checked-background : rgba(23, 23, 175, 0.884);
+    --left-font-color: rgba(6, 130, 179, 0.808);
+    --academic-info-title-color: rgb(50, 50, 111);
+    --academic-info-info-color: rgb(67, 67, 67);
+    --checked-border-color: rgba(255, 255, 255, 0.464);
+
+}
+
+body {
+    margin: 0;
+}
+
+.content {
+    display: flex;
+    margin: 0;
+    justify-content: space-between;
+}
+
+.right{
+    background-color: var(--blue-background);
+    width: 25%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.left {
+    position: relative;
+    width: 70%;
+    color: var(--left-font-color);
+    display: flex;
+    flex-direction: column;
+}
+
+
+.profile_img {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: var(--title-color-right) 5px solid;
+}
+
+.skills_container {
+    width: 90%;
+}
+
+.skills_container__title {
+    padding-left: 30px;
+}
+
+.skills_container__list{
+    list-style: none;
+    padding-right: 10px;    
+    width: 80%;
+}
+
+.skills_container__list > li{
+    display: flex;
+    margin: 0;
+}
+
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--title-color-right);
+}
+
+.skill__item{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skill__item__title {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.skills_container__level {
+    position: relative;
+    list-style: none;
+    width: 40%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skill-level__item{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--title-color-right);
+}
+
+.skill_level_checked {
+    border: 1px solid var(--checked-border-color);
+    background-color: var(--blue-checked-background) ;
+}
+
+.no-responsive-modal{
+    display: none;
+}
+
+.no-response-img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid var(--title-color-right);
+}
+
+.no-responsive-container {
+    display: none;
+    height: 500px;
+    width: 500px;
+    -webkit-box-shadow: 0px 0px 35px -11px rgba(77,77,77,1);
+    -moz-box-shadow: 0px 0px 35px -11px rgba(77,77,77,1);
+    box-shadow: 0px 0px 35px -11px rgba(77,77,77,1);
+    border-radius: 20px;
+    background-color: var(--blue-background);
+}
+
+.no-responsive-content {
+    width: 70%;
+    font-size: 14px;
+    text-align: center;
+
+}
+
+.presentation_degree {
+    margin-top: 0;
+    color: black;
+}
+
+.line{
+    width: 90%;
+    height: 1px;
+    background-color: var(--blue-checked-background);
+}
+
+.about-info {
+    margin: 0 0 4px 0;
+    color: black;
+    width: 85%;
+    text-align: start;
+    font-size: 14px;
+}
+
+.about-title {
+    margin: 8px 0 8px 0;
+}
+
+.academic-info-item{
+    font-weight: 500;
+}
+
+.academic-info-item__title{
+    font-size: 14px;
+    margin: 0;
+    color: var(--academic-info-title-color);
+}
+
+.academic-info-item__info{
+    font-size: 12px;
+    margin: 8px 0 0 0;
+    color: var(--academic-info-info-color);
+}
+
+.academic-info-item__end-date{
+    font-size: 10px;
+    margin: 4px 0 8px 0;
+    color: var(--academic-info-info-color);
+}
+
+
+@media (max-width : 1400px) {
+    .content{
+        display: none;
+    }
+
+    .no-responsive-modal {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+    }
+
+    .no-responsive-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .no-responsive-texts{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
