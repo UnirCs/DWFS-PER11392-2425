@@ -1,0 +1,74 @@
+body {
+    background-color: #222;
+    color: #ffffff;
+    font-family: "Times New Roman", sans-serif;
+    text-align: center;
+}
+
+.pantalla {
+    width: 80%;
+    height: 50px;
+    background-color: #444;
+    margin: 20px auto;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    line-height: 50px;
+    font-weight: bold;
+}
+
+.asientos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.row-label {
+    font-weight: bold;
+    width: 20px;
+    text-align: center;
+}
+
+.asiento {
+    width: 40px;
+    height: 40px;
+    background-color: #777;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.asiento:hover {
+    background-color: #81c1dd;
+}
+
+.ocupado {
+    background-color: #bd4f4f;
+    cursor: not-allowed;
+}
+
+#numeroAsientos {
+    width: 25%;
+    margin: 0 auto;
+    display: block;
+}
+
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px;
+    background-color: black;
+    color: #f8f9fa;
+}
