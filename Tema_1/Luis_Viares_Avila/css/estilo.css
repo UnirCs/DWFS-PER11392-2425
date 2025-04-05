@@ -53,6 +53,7 @@
 .contenedor-experiencia {
     display: block;
     flex-wrap: wrap;
+
     justify-content: left;
     align-items: center;
     border: #888888 solid 1px;
