@@ -1,0 +1,51 @@
+ body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        background-color: #121212; /* Fondo oscuro */
+        color: #FFFFFF; /* Texto blanco por defecto */
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    .title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 35vh;
+        width: 100%;
+    }
+    
+    h1 {
+        color: #BB86FC; /* Morado claro */
+        
+        text-align: center;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    button {
+        background-color: #BB86FC; /* Verde azulado */
+        color: #FFFFFF; /* Texto blanco */
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #018786; /* Verde azulado más oscuro para hover */
+    }
+
+
+    p {
+        font-size: 25px;
+        font-family: monospace;
+        margin: 50px 50px;
+    }
+    

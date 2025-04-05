@@ -1,0 +1,126 @@
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  max-height: 470px;
+  overflow: hidden;
+}
+
+.header__content,
+footer {
+  background-color: #92394b;
+  color: #ffffff;
+  text-align: center;
+}
+
+.header__content {
+  padding: 2.5em 2.5em 0.5em;
+}
+
+.header__content > h3 {
+  margin: 0;
+}
+
+.header__image {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 1em auto;
+}
+
+.header__image img {
+  aspect-ratio: 1/1;
+  width: 100%;
+  object-fit: cover;
+}
+
+.header__wave {
+  display: block;
+  position: relative;
+  height: 40px;
+  width: 100%;
+  margin-bottom: 3em;
+  background: #92394b;
+  transform: scale(1, 1);
+  z-index: 1;
+}
+
+.header__wave:before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100%;
+  width: 100%;
+  height: 300px;
+  background-color: white;
+  right: -25%;
+  top: 20px;
+}
+
+.header__wave:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100%;
+  width: 100%;
+  height: 300px;
+  background-color: #92394b;
+  left: -25%;
+  top: -240px;
+  clip-path: ellipse(100% 15% at -15% 100%);
+}
+
+.box {
+  position: relative;
+  margin: 0 10% 1rem;
+  z-index: 2;
+  border-radius: 1rem;
+  padding: 1rem;
+  border: 1px #d1b4a2 solid;
+  color: #352640;
+}
+
+.box p {
+  color: #4e4e4e;
+}
+
+.skills__list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.skill_item {
+  flex: 25%;
+}
+
+.form-date {
+  font-size: 14px;
+  color: #352640;
+  font-style: italic;
+}
+
+strong {
+  color: #92394b;
+}
+
+.footer {
+  padding: 0.5rem 1rem;
+}
+
+.footer .footer__info {
+  font-weight: bold;
+  margin: 0;
+  color: #ffffff;
+}
+
+@media (max-width: 800px) {
+  .skill_item {
+    flex: 50%;
+  }
+}

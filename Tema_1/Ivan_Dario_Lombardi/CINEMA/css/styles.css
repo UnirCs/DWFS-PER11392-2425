@@ -1,0 +1,99 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000 !important;
+}
+ 
+.header{
+    background-image: url('/image/bg.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+}
+  
+.bloque-uno{
+    background-color: #3f3e3e;
+    border: 2px solid rgb(202, 201, 201);
+    border-radius: 0px;
+    padding: 10px 10px;
+    margin: 20px 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    height: 200px;
+}
+
+.bloque-formulario{
+    background-color: #000;
+    height: 600px;
+}
+
+.asientos{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 400px !important;
+    /* background-color: #a72121 !important; */
+}
+
+table{
+    border-collapse: separate !important;
+    border-spacing: 10px !important;
+    background-color: #000000 !important;
+    padding: 5px !important;
+}
+
+td{
+    border: 2px solid yellow !important;
+    padding: 10px !important;
+    text-align: center !important;
+    background-color: rgb(230, 236, 234) !important;
+    border-radius: 5px !important;
+    font-size: 16px !important;
+    width: 50px !important;
+    height: 50px !important;    
+}
+
+td:hover{
+    border-color: #007bff !important; 
+    cursor: pointer !important;
+}
+
+td:focus-within {
+    outline: 2px solid #007bff !important; /* Resalta cuando está "activo" */
+}
+
+td[contenteditable="true"] {
+    cursor: text !important;
+}
+
+.form .titulo{
+    color: yellow;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    /* background-color: #3f3e3e; */
+}
+
+.footer {
+    background-color: #3f3e3e;
+    border: 2px solid rgb(202, 201, 201);
+    border-radius: 0px;
+    padding: 10px 10px;
+    margin: 20px 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    height: auto;
+}
+
+.footer h6{
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+}
+
+

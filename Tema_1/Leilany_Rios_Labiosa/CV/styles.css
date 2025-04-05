@@ -1,0 +1,47 @@
+body {
+    font-family: 'Calibri', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+.container {
+    width: 50%;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.section p {
+    text-align: justify;
+}
+.s_foto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: #6f6f74;
+    color: white;    
+}
+img {
+    width: 100px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+.section {
+    text-align: center;
+    margin-top: 20px;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+footer {
+    text-align: center;
+    font-size: 0.8em;
+    color: #838383;
+    margin-top: 20px;
+}
