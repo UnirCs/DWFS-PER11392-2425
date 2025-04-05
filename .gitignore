@@ -89,3 +89,4 @@ yarn-error.log*
 /.vs/slnx.sqlite
 /.vs/slnx.sqlite-journal
 /.vs/VSWorkspaceState.json
+/.vs/DWFS-PER11392-2425/config/applicationhost.config
