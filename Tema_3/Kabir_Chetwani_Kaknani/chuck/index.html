@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CHUCK</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <h1 class="text-center mt-5 text-dark">Los chistes de Chuck API</h1>
+
+        <div class="d-flex justify-content-center align-items-center">
+            <button id="chuck" type="submit" class="btn bg-dark text-white mt-5 btn-custom">
+                <i class="bi bi-cursor pe-1"></i>
+                Dame un chiste!
+            </button>
+        </div>
+
+        <div class="d-flex justify-content-center align-items-center mt-5">
+            <p id="joke" class="text-center text-white bg-dark"></p>
+        </div>
+
+        <footer class="d-flex justify-content-between align-items-center p-4 bg-dark text-white">
+            <p class="mb-0">@ 2025 CHUCK-API</p>
+
+            <div>
+                <p class="mb-1">🌍 Web API: 
+                    <a href="https://api.chucknorris.io/" class="text-white text-decoration-none">https://api.chucknorris.io/</a>
+                </p>
+            </div>
+
+            <div class="d-flex gap-4">
+                <a href="https://facebook.com" target="_blank" class="text-white text-decoration-none">
+                    <i class="bi bi-facebook"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" class="text-white text-decoration-none">
+                    <i class="bi bi-instagram"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" class="text-white text-decoration-none">
+                    <i class="bi bi-twitter"></i>
+                </a>
+            </div>
+        </footer>
+
+        <script>
+            document.getElementById("chuck").onclick = () => {
+                fetch("https://api.chucknorris.io/jokes/random")
+                    .then(response => response.json())
+                    .then(data => {
+                        document.getElementById("joke").innerText = data.value;
+                        document.getElementById("joke").style.padding = "10px";
+                    })
+                    .catch(() => document.getElementById("joke").innerText = "❌¡Error al cargar el chiste!❌");
+            };
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+
+</html>
