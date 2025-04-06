@@ -1,0 +1,233 @@
+:root {
+    --bg-color: #f5f5f5;
+    --white: #FFFFFF;
+    --text-gray: #333;
+    --light-gray: #f0f0f0;
+    --btn-color: #4CAF50;
+    --btn-hoover: #45a049;
+    --btn-disabled: #cccccc;
+    --screen-color: #524f4f;
+}
+/*  Globales **/
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    font-size: 16px; /* 1rem = 10px */
+    background-color: var(--bg-color);
+    padding: 20px;
+}
+
+.cinema {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cinema__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.cinema__title {
+    margin: 0;
+    color: var(--text-gray);
+    text-align: center;
+    flex-grow: 1;
+}
+
+.cinema__logo {
+    width: 150px;
+    height: auto;
+    position: absolute;
+    right: 0;
+}
+
+.cinema__controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: var(--light-gray);
+    border-radius: 5px;
+}
+
+.cinema__select-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cinema__label{
+    font-weight: bold;
+}
+
+.cinema__select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.cinema__button {
+    padding: 10px 20px;
+    background-color: var(--btn-color);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.cinema__button:hover:not(:disabled) {
+    background-color: var(--btn-hoover);
+}
+
+.cinema__button:disabled {
+    background-color: var(--btn-disabled);
+    cursor: not-allowed;
+}
+
+.cinema__message {
+    text-align: center;
+    margin: 15px 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: var(--light-gray);
+}
+
+.cinema__message--error {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+.cinema__message--success {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.cinema__screen-container {
+    margin: 30px 0;
+}
+
+.cinema__screen {
+    height: 60px;
+    background-color: var(--screen-color);
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 60px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    color: var(--light-gray);
+}
+
+.cinema__seating {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cinema__row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 10px;
+}
+
+.cinema__row-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.cinema__seat-group {
+    display: flex;
+    gap: 5px;
+}
+
+.cinema__seat {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.cinema__seat--available {
+    background-color: #a5d6a7;
+    border: 1px solid #81c784;
+}
+
+.cinema__seat--selected {
+    background-color: #2196f3;
+    border: 1px solid #1976d2;
+}
+
+.cinema__seat--reserved {
+    background-color: #ef5350;
+    border: 1px solid #e53935;
+    cursor: not-allowed;
+}
+
+.cinema__seat:hover:not(.cinema__seat--reserved):not(.cinema__seat--demo) {
+    transform: scale(1.1);
+}
+
+.cinema__legend {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.cinema__legend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cinema__seat--demo {
+    cursor: default;
+}
+
+.cinema__legend-text {
+    font-size: 14px;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .cinema__controls {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .cinema__row {
+        gap: 15px;
+    }
+
+    .cinema__seat {
+        width: 25px;
+        height: 25px;
+    }
+
+    .cinema__seat-group {
+        gap: 3px;
+    }
+}

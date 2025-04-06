@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de Butacas - UNIR-CINEMA</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- Header -->
+<header class="header">
+    <div class="container text-center">
+        <h1>UNIR-CINEMA</h1>
+        <p>Reserva de butacas</p>
+    </div>
+</header>
+
+<main class="container">
+    <!-- Pantalla de cine -->
+    <div class="screen-container">
+        <div class="screen">
+            <h2>PANTALLA</h2>
+        </div>
+    </div>
+
+    <!-- Butacas -->
+    <section class="seats-section">
+        <h3 class="text-center">Selecciona tus butacas</h3>
+
+        <div class="seats-container">
+            <!-- Fila 1 -->
+            <div class="seat-row">
+                <div class="row-label">Fila1</div>
+                <div class="seat available" data-seat="1A">A</div>
+                <div class="seat available" data-seat="1B">B</div>
+                <div class="seat available" data-seat="1C">C</div>
+                <div class="seat occupied" data-seat="1D">D</div>
+                <div class="seat available" data-seat="1E">E</div>
+                <div class="seat available" data-seat="1F">F</div>
+            </div>
+
+            <!-- Fila 2 -->
+            <div class="seat-row">
+                <div class="row-label">Fila2</div>
+                <div class="seat available" data-seat="2A">A</div>
+                <div class="seat occupied" data-seat="2B">B</div>
+                <div class="seat occupied" data-seat="2C">C</div>
+                <div class="seat available" data-seat="2D">D</div>
+                <div class="seat available" data-seat="2E">E</div>
+                <div class="seat available" data-seat="2F">F</div>
+            </div>
+
+            <!-- Fila 3 -->
+            <div class="seat-row">
+                <div class="row-label">Fila3</div>
+                <div class="seat available" data-seat="3A">A</div>
+                <div class="seat available" data-seat="3B">B</div>
+                <div class="seat available" data-seat="3C">C</div>
+                <div class="seat available" data-seat="3D">D</div>
+                <div class="seat available" data-seat="3E">E</div>
+                <div class="seat occupied" data-seat="3F">F</div>
+            </div>
+
+            <!-- Fila 4 -->
+            <div class="seat-row">
+                <div class="row-label">Fila4</div>
+                <div class="seat occupied" data-seat="4A">A</div>
+                <div class="seat occupied" data-seat="4B">B</div>
+                <div class="seat available" data-seat="4C">C</div>
+                <div class="seat available" data-seat="4D">D</div>
+                <div class="seat available" data-seat="4E">E</div>
+                <div class="seat available" data-seat="4F">F</div>
+            </div>
+
+            <!-- Fila 5 -->
+            <div class="seat-row">
+                <div class="row-label">Fila5</div>
+                <div class="seat available" data-seat="5A">A</div>
+                <div class="seat available" data-seat="5B">B</div>
+                <div class="seat available" data-seat="5C">C</div>
+                <div class="seat occupied" data-seat="5D">D</div>
+                <div class="seat occupied" data-seat="5E">E</div>
+                <div class="seat available" data-seat="5F">F</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario de reserva -->
+    <section class="booking-form">
+        <h3 class="text-center">Información de reserva</h3>
+        <form id="reservationForm">
+            <div class="mb-3">
+                <label >Número de asientos:</label>
+                <input type="number" id="tentacles" name="tentacles" min="1" max="26" />
+
+            </div>
+
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary">Confirmar reserva</button>
+            </div>
+        </form>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h4>UNIR-CINEMA</h4>
+                <p>La mejor experiencia cinematográfica</p>
+            </div>
+            <div class="col-md-4">
+                <h5>Contacto</h5>
+                <p><i class="bi bi-geo-alt"></i> Calle del Cine, 123, Madrid</p>
+                <p><i class="bi bi-telephone"></i> +34 910 123 456</p>
+                <p><i class="bi bi-envelope"></i> info@unir-cinema.com</p>
+            </div>
+            <div class="col-md-4">
+                <h5>Horario</h5>
+                <p>Lunes a Viernes: 16:00 - 00:00</p>
+                <p>Sábados y Domingos: 12:00 - 00:00</p>
+            </div>
+        </div>
+        <div class="text-center mt-3">
+            <p class="mb-0">&copy; 2025 UNIR-CINEMA. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

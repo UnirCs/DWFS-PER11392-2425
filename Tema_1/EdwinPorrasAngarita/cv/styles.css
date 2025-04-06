@@ -1,0 +1,47 @@
+.cargo{
+    text-align: center;
+    font-family: cursive;
+}
+.titulo{
+    font-weight: bold;
+}
+
+h1{
+    text-align: center;
+    font-family: cursive;
+}
+li{
+    font-weight: bold;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+table{
+    width: 100%; /* Ancho de la tabla */
+    border-collapse: collapse; /* Elimina espacios entre celdas */
+    margin: 20px 0; /* Margen exterior */
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden; /* Asegura que los bordes redondeados se apliquen correctamente */
+}
+
+table th, td {
+    padding: 12px 15px; /* Espaciado interno */
+    text-align: left;
+}
+table th {
+    background-color: #f8f9fa; /* Color de fondo del encabezado */
+    font-weight: bold;
+}
+
+table > thead > tr > th {
+    text-align: left;
+    font-family: "Comic Sans MS", cursive;
+    color: blue;
+}

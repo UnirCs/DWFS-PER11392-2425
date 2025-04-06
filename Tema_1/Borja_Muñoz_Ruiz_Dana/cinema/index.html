@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cine Moderno</title>
+</head>
+<body class="bg-gray-900 text-yellow-300 min-h-screen flex justify-center items-center">
+  <div class="w-full max-w-5xl bg-gray-800 rounded-lg shadow-xl p-6">
+    <header class="text-center mb-6">
+      <h1 class="text-4xl font-bold text-white">CINE MODERNO</h1>
+      <p class="text-sm text-gray-400">Reserva tu asiento</p>
+    </header>
+    <div class="bg-yellow-400 text-black text-center py-2 rounded mb-4 font-semibold">
+      PANTALLA
+    </div>
+
+    <div class="space-y-4">
+      <div class="flex items-center gap-4">
+        <span class="w-16 text-right">Fila 1</span>
+        <div class="grid grid-cols-10 gap-2">
+          <div class="w-8 h-8 border border-yellow-400 cursor-pointer"></div>
+          <div class="w-8 h-8 border border-yellow-400 cursor-pointer"></div>
+          <div class="w-8 h-8 bg-red-500"></div>
+          <div class="w-8 h-8 border border-yellow-400 cursor-pointer"></div>
+          <div class="w-8 h-8 border border-yellow-400 cursor-pointer"></div>
+          <div class="w-8 h-8 bg-red-500"></div>
+          <div class="w-8 h-8 border border-yellow-400 cursor-pointer"></div>
+          <div class="w-8 h-8 border border-yellow-400 cursor-pointer"></div>
+          <div class="w-8 h-8 border border-yellow-400 cursor-pointer"></div>
+          <div class="w-8 h-8 border border-yellow-400 cursor-pointer"></div>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <span class="w-16 text-right">Fila 2</span>
+        <div class="grid grid-cols-10 gap-2">
+          <div class="w-8 h-8 border border-yellow-400 cursor-pointer"></div>
+          <div class="w-8 h-8 border border-yellow-400 cursor-pointer"></div>
+          <div class="w-8 h-8 border border-yellow-400 cursor-pointer"></div>
+          <div class="w-8 h-8 bg-red-500"></div>
+          <div class="w-8 h-8 bg-red-500"></div>
+          <div class="w-8 h-8 border border-yellow-400 cursor-pointer"></div>
+          <div class="w-8 h-8 border border-yellow-400 cursor-pointer"></div>
+          <div class="w-8 h-8 border border-yellow-400 cursor-pointer"></div>
+          <div class="w-8 h-8 border border-yellow-400 cursor-pointer"></div>
+          <div class="w-8 h-8 border border-yellow-400 cursor-pointer"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-6">
+      <label for="cantidad" class="block mb-2">¿Cuántos asientos deseas reservar?</label>
+      <input id="cantidad" type="number" min="1" max="10" class="w-24 px-2 py-1 rounded text-black text-center">
+      <button class="ml-4 bg-yellow-400 text-black px-4 py-2 rounded font-semibold">Reservar</button>
+    </div>
+
+    <footer class="mt-10 text-center text-sm text-gray-500">
+      Cine Moderno - Calle Ficticia 123, Ciudad Imaginaria • contacto@cinemoderno.com
+    </footer>
+  </div>
+</body>
+</html>
