@@ -63,6 +63,10 @@ function seleccionarButacas(numeroButacas, butacasArray) {
     if (nButacas !== 0) {
         return selectedButacas;
     }
+
+    //Devuelve las butacas seleccionada por la operacion
+    selectedButacas = butacasArray;
+    return selectedButacas;
 }
 
 //Mostar butacas seleccionadas (aquellas con TRUE en el estado)
@@ -89,7 +93,7 @@ rl.question(`Numero de butacas que desa reservar: `, numButacas => {
         rl.close();
         return;
     }
-    seleccionarButacas(numButacas, butacas);
+    butacas = seleccionarButacas(numButacas, butacas);
     mostrarButacasSeleccionadas(butacas);
     rl.close();
 });
