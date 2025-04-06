@@ -1,0 +1,97 @@
+.head_container {
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    font-size: 50px;
+    font-family:"Roboto", sans-serif;
+    text-align: center;
+    background: #3B5998;
+    justify-content: center;
+    font-style: italic;
+}
+
+.screen_container {
+    margin: 30px auto;
+    padding: 90px;
+    background-color: #98543b;
+    border-radius: 5px;
+    text-align: center;
+
+}
+
+h1 {
+    color:darkgoldenrod;
+    font-size: 24px;
+    border-bottom: 2px solid #8AB4F8;
+}
+
+
+.seat{
+    appearance: none;
+    cursor: pointer;
+    background-color: white;
+    width: 60px;
+    height: 50px;
+    border: 3px solid #175229;
+}
+
+.seat:checked  {
+    appearance: none;
+    cursor: pointer;
+    background-color: saddlebrown;
+}
+
+.not-free{
+    appearance: none;
+    cursor: pointer;
+    background-color: saddlebrown;
+    width: 60px;
+    height: 50px;
+    border: 3px solid #175229;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+
+
+.cine_table {
+    align-self: center;
+}
+
+
+.seat-container{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.input-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+button {
+    background: #faa5a5;
+
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #faa5a5;
+    color: white;
+}
+
+.container p{
+    color: white;
+    width: 100%;
+    text-align: center;
+}

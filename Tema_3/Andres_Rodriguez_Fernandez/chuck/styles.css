@@ -1,0 +1,27 @@
+body {
+    margin: 20px;
+    background-color: black;
+    color: white;
+}
+.chiste_text {
+    width: 90%;
+    height: 50px;
+    text-align: center;
+    color: #ffc107;
+}
+.chiste_div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.chiste_div button {
+    background-color: #ffc107;
+    color: black;
+    font-weight: bold;
+    width: 200px;
+    height: 50px;;
+}
+footer {
+    text-align: center;
+    font-size: 12px;
+}

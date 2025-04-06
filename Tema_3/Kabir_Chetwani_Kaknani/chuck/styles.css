@@ -1,0 +1,21 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(122, 158, 235);
+    color: white;
+}
+
+footer {
+    margin-top: auto;
+}
+
+.btn-custom:hover {
+    transform: scale(1.2);
+}

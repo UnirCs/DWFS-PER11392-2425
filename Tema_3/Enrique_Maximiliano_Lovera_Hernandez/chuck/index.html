@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Chistes de chuck :P</title>
+  </head>
+  <body>
+    <button onclick="onClick()">Dame un chiste</button>
+    <p id="chiste"></p>
+
+    <script>
+      const button = document.querySelector("button");
+      const chiste = document.querySelector("#chiste");
+      const chuckURL = "https://api.chucknorris.io/jokes/random";
+
+      const onClick = () => {
+        fetch("https://api.chucknorris.io/jokes/random")
+          .then((response) => response.json())
+          .then((data) => {
+            chiste.innerHTML = data.value;
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          });
+      };
+
+      // otra forma de crear la funcion usando async/await
+
+      /*       
+      async function onClick(params) {
+        try {
+          const response = await fetch(chuckURL);
+          const data = await response.json();
+          chiste.innerHTML = data.value;
+        } catch (error) {
+          console.error("Error:", error);
+        }
+      } */
+
+      // otra opcion de subscribirse al evento
+      //button.addEventListener("click", onClick);
+    </script>
+  </body>
+</html>
