@@ -1,0 +1,28 @@
+.contenedor{
+    width: 80%;
+    margin-top: 50px;
+    margin-left: 10%;
+ }
+
+ .titulo {
+    color: rgb(8, 55, 109);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+button {
+    background-color: rgb(2, 28, 58);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 15px 10px 15px  10px;
+    cursor: pointer;
+}
+button:hover{
+    cursor: pointer;
+    background-color: rgb(8, 55, 109);
+}
+
+.parrafo{
+    color: rgb(8, 55, 109);
+    font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+}

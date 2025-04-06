@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>UNIR CINEMA</title>
+</head>
+<body>
+    
+    <div class="banner centro" >
+
+        <strong>UNIR Cinema</strong>
+    </div>
+    <div class="contenedor-pantalla" >
+        
+        <img class="pantalla" src="https://cdn.prod.website-files.com/63c2c7b1f3d9c5a405335fd5/64772110420a98691946fdca_full-stack-tenologies.jpeg" alt="">
+        
+
+    </div>
+
+    <form action="">
+    <div class="contenedor-butaca">
+        <table class="centro" >
+            <tr>
+                <td>Fila 1 </td>
+                <td> <input id="1"  name="1" class=" ocupado" type="checkbox"  > </td>
+                <td> <input id="2"  name="2" class="asiento" type="checkbox"  ></td>
+                <td> <input id="3"  name="3" class="asiento" type="checkbox"  ></td>
+                <td> <input id="4"  name="4" class="asiento" type="checkbox"  ></td>
+                <td> <input id="5"  name="5" class="  ocupado" type="checkbox"  ></td>
+                <td> <input id="6"  name="6" class="asiento" type="checkbox"  ></td>
+                <td> <input id="7"  name="7" class="  ocupado" type="checkbox"  ></td>
+                <td> <input id="8"  name="8" class="  ocupado" type="checkbox"  ></td>
+                <td> <input id="9"  name="9" class="asiento" type="checkbox"  ></td>
+                <td> <input id="10" name="10"class="asiento"  type="checkbox" ></td>
+                <td> <input id="11" name="11"class="asiento"  type="checkbox" ></td>
+            </tr>
+            <tr>
+                <td>Fila 2 </td>
+                <td> <input id="12" name="12"  class=" ocupado" type="checkbox"  > </td>
+                <td> <input id="13" name="13"  class="asiento" type="checkbox"  ></td>
+                <td> <input id="14" name="14"  class="asiento" type="checkbox"  ></td>
+                <td> <input id="15" name="15"  class="asiento" type="checkbox"  ></td>
+                <td> <input id="16" name="16"  class="  ocupado" type="checkbox"  ></td>
+                <td> <input id="17" name="17"  class="asiento" type="checkbox"  ></td>
+                <td> <input id="18" name="18"  class="  ocupado" type="checkbox"  ></td>
+                <td> <input id="19" name="19"  class="  ocupado" type="checkbox"  ></td>
+                <td> <input id="20" name="20"  class="asiento" type="checkbox"  ></td>
+                <td> <input id="21" name="21" class="asiento"  type="checkbox" ></td>
+                <td> <input id="22" name="22" class="asiento"  type="checkbox" ></td>
+            </tr>
+            <tr>
+                <td>Fila 3 </td>
+                <td> <input id="23" name="23"  class=" ocupado" type="checkbox"  > </td>
+                <td> <input id="24" name="24"  class="asiento" type="checkbox"  ></td>
+                <td> <input id="25" name="25"  class="asiento" type="checkbox"  ></td>
+                <td> <input id="26" name="26"  class="asiento" type="checkbox"  ></td>
+                <td> <input id="27" name="27"  class="  ocupado" type="checkbox"  ></td>
+                <td> <input id="28" name="28"  class="asiento" type="checkbox"  ></td>
+                <td> <input id="29" name="29"  class="  ocupado" type="checkbox"  ></td>
+                <td> <input id="30" name="30"  class="  asiento" type="checkbox"  ></td>
+                <td> <input id="31" name="31"  class="asiento" type="checkbox"  ></td>
+                <td> <input id="32" name="32" class="asiento"  type="checkbox" ></td>
+                <td> <input id="33" name="33" class="asiento"  type="checkbox" ></td>
+            </tr>
+            <tr>
+                <td>Fila 4 </td>
+                <td> <input id="34" name="34"  class=" ocupado" type="checkbox"  > </td>
+                <td> <input id="35" name="35"  class="asiento" type="checkbox"  ></td>
+                <td> <input id="36" name="36"  class="asiento" type="checkbox"  ></td>
+                <td> <input id="37" name="37"  class="asiento" type="checkbox"  ></td>
+                <td> <input id="38" name="38"  class="  asiento" type="checkbox"  ></td>
+                <td> <input id="39" name="39"  class="asiento" type="checkbox"  ></td>
+                <td> <input id="40" name="40"  class="  asiento" type="checkbox"  ></td>
+                <td> <input id="41" name="41"  class="  asiento" type="checkbox"  ></td>
+                <td> <input id="42" name="42"  class="ocupado" type="checkbox"  ></td>
+                <td> <input id="43" name="43" class="asiento"  type="checkbox" ></td>
+                <td> <input id="44" name="44" class="asiento"  type="checkbox" ></td>
+            </tr>
+       
+        </table>
+
+        <br>
+        <div class="centro">
+            <label for="asientos" >Indica la cantidad de asientos</label><br>
+            <input id="txtNumAsientos" name="asientos" type="number" value="0" onchange="suggest(2)" ><br>
+            <input type="submit" class="send" value="Enviar" >
+         </div>
+    </div>
+</form>
+<script src="cinema.js"></script>
+
+</body>
+<footer>
+
+    <p>Cine UNIR-CINEMA</p>
+    <p>Dirección: Calle Av. la paz, 137 -  Logroño</p>
+    <p>  <i class="fa fa-phone"></i> +51 956 797 341</p>
+    <p><i class="far fa-envelope"></i>  cine@unir.cinema.com</p>
+</footer>
+
+</html>

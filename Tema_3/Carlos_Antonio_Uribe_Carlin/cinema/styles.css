@@ -1,0 +1,34 @@
+body {
+    background-color: black;
+}
+
+.border-total {
+    border-color: #FFD700;
+}
+
+.fondo-header {
+    background-color: #2D3339;
+}
+
+header, main {
+    margin: 15px;
+}
+
+main > section {
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.pantalla {
+    background-color: #333333;
+}
+
+.fondo-asientos-reservados {
+    background-color: #FFD700;
+}
+
+.fondo-footer {
+    background-color: #2D3339;
+}
+
