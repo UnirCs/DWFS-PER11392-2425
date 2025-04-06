@@ -27,26 +27,24 @@ console.log(asientos);
 function suggest(numero_asientos_solicitados){
     let set_salida=new Set();
     for (let i = asientos.length - 1; i >= 0; i--){
-        let contador=0;
         for (j=0; j<asientos[i].length;j++){
-            if (asientos[i][j].ocupado==false){
-                contador++;
-                set_salida.add(asientos[i][j].id);
-                if (contador==numero_asientos_solicitados){
-                    return set_salida;
+            if(set_salida.size!=numero_asientos_solicitados){//Si no se han encontrado los asientos todavia, se buscan.
+                if (asientos[i][j].ocupado==false){
+                    set_salida.add(asientos[i][j].id);
+                    console.log(set_salida.size);
+                    console.log(numero_asientos_solicitados);
                 }
+                else {
+                    set_salida.clear();
+                }    
             }
-            else{
-                contador=0;
-                set_salida.clear();
-            }
-            }
+        }
+        if(set_salida.size!=numero_asientos_solicitados){ //Si al cambiar de linea no se han encontrado asientos, se elimina datos de set_salida
             set_salida.clear();
         }
-        set_salida.clear();
-        return(set_salida);
     }
-
+    return(set_salida);
+}
 //Para probar la función.
-console.log(suggest(8));
+console.log(suggest(9));
 
