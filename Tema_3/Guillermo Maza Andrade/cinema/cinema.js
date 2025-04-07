@@ -23,29 +23,32 @@ function setup() {
 
 // Inicializar la matriz
 let butacas = setup();
-
+function ValidarCantidadAsientos(numAsientos) {
+  if (numAsientos > N) {
+    return false;
+  }
+  return true;
+}
 function suggest(numAsientos) {
-  let asientosSugeridos = []; // Array para almacenar los asientos sugeridos
   let seReservoAsientos = false; // Variable para verificar si se reservaron asientos
   let butacasSeleccionadas = []; // Array para almacenar los asientos seleccionados
-  if (numAsientos > N) {
+  if (!ValidarCantidadAsientos(numAsientos)) {
     console.log("No hay suficientes asientos disponibles.");
     return [];
   }
+  // Recorrer la matriz de butacas desde la última fila hacia la primera
   for (let i = N - 1; i >= 0 && !seReservoAsientos; i--) {
     let asientosDisponibles = 0;
+    // Recorrer la fila de derecha a izquierda
     for (let j = 0; j < N && !seReservoAsientos; j++) {
       if (butacas[i][j].estado === false) {
         asientosDisponibles++;
       } else {
         asientosDisponibles = 0; // Reiniciar el contador si encontramos un asiento reservado
       }
+
       if (asientosDisponibles === numAsientos) {
-        // Reservar asientos
-        for (let k = j - numAsientos + 1; k <= j; k++) {
-          butacas[i][k].estado = true; // Cambiar el estado a reservado
-          butacasSeleccionadas.push(butacas[i][k].id); // Agregar el ID del asiento reservado
-        }
+        AgregarAsientos(numAsientos, i, j);
         seReservoAsientos = true;
       }
     }
@@ -58,4 +61,11 @@ function suggest(numAsientos) {
   }
 
   return console.log("Asientos sugeridos:", butacasSeleccionadas); // Imprimir los asientos sugeridos
+}
+function AgregarAsientos(numAsientos, fila, columna) {
+  // Reservar asientos
+  for (let k = columna - numAsientos + 1; k <= columna; k++) {
+    butacas[fila][k].estado = true; // Cambiar el estado a reservado
+    butacasSeleccionadas.push(butacas[fila][k].id); // Agregar el ID del asiento reservado
+  }
 }
