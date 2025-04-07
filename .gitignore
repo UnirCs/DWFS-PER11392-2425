@@ -83,10 +83,4 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .vscode/launch.json
-/.vs/DWFS-PER11392-2425/FileContentIndex
-/.vs/DWFS-PER11392-2425/v17/.wsuo
-/.vs/DWFS-PER11392-2425/v17/DocumentLayout.json
-/.vs/slnx.sqlite
-/.vs/slnx.sqlite-journal
-/.vs/VSWorkspaceState.json
-/.vs/DWFS-PER11392-2425/config/applicationhost.config
+
