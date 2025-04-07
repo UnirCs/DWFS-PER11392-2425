@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<head>
+    <meta charset='utf-8'>
+     <title>Chistes</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+ </head>
+<body>
+    
+    <div class="contenedor">
+
+    
+    <h1 class="titulo">App de chistes</h1>
+
+    <br>
+    <button id="btnChiste" onclick="getChiste()" >Dame un chiste</button>
+
+    <p class="parrafo" id="txtResultado">texto de prueba</p>
+    </div>
+
+    <script>
+      
+        
+        function getChiste()
+        {  
+             let chiste=null;           
+                    let url = "https://api.chucknorris.io/jokes/random";
+                    fetch(url).then(
+                        response=>response.json()).then(
+                            data => {
+                        chiste =   data.value;
+                         document.getElementById("txtResultado").innerText =chiste;
+                     });
+          }
+        //opcion 2
+        async function fetchSincrono() {
+            let url = "https://api.chucknorris.io/jokes/random";
+            let fetchResponse = await fetch(url);
+            let response = await fetchResponse.json();
+            let chiste = response.value;
+            console.log("Fact sincrono: " + chiste);
+            document.getElementById("txtResultado").innerText =chiste;
+            
+        }
+    </script>
+
+</body>
+</html>
