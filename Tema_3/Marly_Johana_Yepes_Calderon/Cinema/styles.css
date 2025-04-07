@@ -1,0 +1,91 @@
+body {
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    width: 100%;
+}
+
+.container {
+    width: 80%;
+}
+
+.screen-container {
+    margin: 10px auto;
+    background-color: #888;
+    width: 50%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.screen {
+    background-color: #bbb;
+    height: 30px;
+    margin: 10px auto;
+    width: 70%;
+    text-align: center;
+    line-height: 30px;
+    font-weight: bold;
+    color: black;
+}
+
+.cinema-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 3px;
+}
+
+.row-label {
+    margin-right: 3px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.seat {
+    width: 35px;
+    height: 35px;
+    margin: 5px;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.available {
+    background-color: green;
+    color: white;
+}
+
+.aisle {
+    width: 20px;
+}
+
+.occupied {
+    background-color: red;
+    color: white;
+}
+
+.premium {
+    background-color: blue;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+
