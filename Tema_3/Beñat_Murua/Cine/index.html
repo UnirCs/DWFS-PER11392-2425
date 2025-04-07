@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <title> UNIR Cine </title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     </head>
+    <body>
+      <div class="container-fluid main">
+        <br>
+        <div class="container text-center" id="unir_cinema"> UNIR-CINEMA
+        </div>
+        <br>
+        <div class="container" id="cuadro_negro">
+        </div>
+        <br>
+        <div class="container asientos">
+          <div class="row gap-3 fila_asientos">
+            <div class="col-1 text-center Fila">Fila 1</div>
+            <div class="col-1 btn-custom"></div>
+            <div class="col-1 btn-custom"></div>
+            <div class="col-1 btn-custom"></div>
+            <div class="col-1 btn-custom"></div>
+            <div class="col-1 btn-custom"></div>
+            <div class="col-1 btn-custom"></div>
+            <div class="col-1 btn-custom"></div>
+            <div class="col-1 btn-custom"></div>
+            <div class="col-1 btn-custom"></div>
+          </div>
+          <div class="row gap-3 fila_asientos">
+            <div class="col-1 text-center Fila">Fila 2</div>
+            <div class="col-1 btn-custom"></div>
+            <div class="col-1 btn-custom"></div>
+            <div class="col-1 btn-custom"></div>
+            <div class="col-1 btn-custom"></div>
+            <div class="col-1 btn-custom"></div>
+            <div class="col-1 btn-custom"></div>
+            <div class="col-1 btn-custom"></div>
+            <div class="col-1 btn-custom"></div>
+            <div class="col-1 btn-custom"></div>
+          </div>
+          <div class="row gap-3 fila_asientos">
+            <div class="col-1 text-center Fila">Fila 3</div>
+            <div class="col-1 btn-custom"></div>
+            <div class="col-1 btn-custom"></div>
+            <div class="col-1 btn-custom"></div>
+            <div class="col-1 btn-custom"></div>
+            <div class="col-1 btn-custom"></div>
+            <div class="col-1 btn-custom"></div>
+            <div class="col-1 btn-custom"></div>
+            <div class="col-1 btn-custom"></div>
+            <div class="col-1 btn-custom"></div>
+          </div>
+          <div class="row gap-3 fila_asientos">
+            <div class="col-1 text-center Fila">Fila 4</div>
+            <div class="col-1 btn-custom"></div>
+            <div class="col-1 btn-custom"></div>
+            <div class="col-1 btn-custom"></div>
+            <div class="col-1 btn-custom"></div>
+            <div class="col-1 btn-custom"></div>
+            <div class="col-1 btn-custom"></div>
+            <div class="col-1 btn-custom"></div>
+            <div class="col-1 btn-custom"></div>
+            <div class="col-1 btn-custom"></div>
+          </div>
+          <br>
+          <br>
+        </div>
+
+
+        <div class="container" id="Formulario_entradas">
+          <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label texto_amarillo">Indica cuántos asientos quieres reservar:</label>
+              <input class="text" oninput="suggest(6)" id="exampleFormControlInput1" placeholder="N asientos">
+              <button type="button" class="btn btn-warning btn-sm">Confirmar reserva</button>
+          </div>
+        </div>
+        
+        
+        <div class="container" id="Informacion_general">
+          <label>Cine UNIR-CINEMA</label>
+          <br>
+          <label>Dirección: Calle Avenida de la Paz, 137. Logroño</label>
+          <br>
+          <label>Teléfono: 123456789</label>
+          <br>
+          <a href="mailto:cineinventado@gmail.com">cineinventado@gmail.com</a>
+        </div>
+        </div>
+      </div>
+      <script src="Cinema.js"></script>    
+    </body>
+</html>

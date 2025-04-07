@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CHUCK</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="menu">
+    <header>
+      <h1>TEMA 3: CHUCK</h1>
+      <p>Autor: Luis F. Granados</p>
+    </header>
+    <main>
+      <p id="chiste"></p>
+    </main>
+    <footer>
+      <button onclick="fnOnClick()">Dame Un Chiste</button>
+    </footer>
+  </div>
+  <script>
+    let url = "https://api.chucknorris.io/jokes/random";
+    function fnOnClick() {
+      fetch(url)
+      .then(response => response.json())
+      .then(json => {
+        document.getElementById("chiste").innerHTML = json.value;
+      });
+    }
+  </script>
+</body>
+</html>
