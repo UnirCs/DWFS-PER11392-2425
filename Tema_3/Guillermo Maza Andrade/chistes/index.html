@@ -1,0 +1,49 @@
+<!Doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chistes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="container__chistes">
+            <div class="container__chistes--header">
+                <h1>Chistes de ChuckNurrys</h1>
+            </div>
+            <div class="container__chistes--body">
+                <img src="https://media.tenor.com/d_QpoFfLIlQAAAAM/smiling-cordell-walker.gif" alt="chisteGif"
+                    class="container__chistes--body__img">
+                <p class="container__chistes--body__p" id="parrafoChistes">
+
+                </p>
+            </div>
+            <div class="container__chistes--footer">
+                <button class="btnContarChiste" onclick="ObtenerChiste()">Cuentáme un chiste</button>
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+        function ObtenerChiste() {
+            let url = "https://api.chucknorris.io/jokes/random";
+            fetch(url).then(response => response.json()).then(data => {
+                let chiste = data.value;
+                document.getElementById("parrafoChistes").innerText = chiste;
+            });
+        }
+        async function ObtenerChistesAsync() {
+            let url = "https://api.chucknorris.io/jokes/random";
+            let fetchResponse = await fetch(url);
+            let response = await fetchResponse.json();
+            let chiste = response.value;
+            document.getElementById("parrafoChistes").innerText = chiste;
+        }
+    </script>
+</body>
+
+</html>
