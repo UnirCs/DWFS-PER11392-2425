@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>UNIR-CINEMA</title>
+</head>
+<body>
+    <div class="cinema title">
+        <h1>UNIR - CINEMA 🎬</h1>
+    </div>
+
+    <div class="cinema-screen"></div>
+    
+    <div class="cinema-seats">
+        <div class="row">
+            <h1>Fila 01</h1>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+
+        <div class="row">
+            <h1>Fila 02</h1>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+
+        <div class="row">
+            <h1>Fila 03</h1>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+
+
+        <div class="row">
+            <h1>Fila 04</h1>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+
+        <div class="row">
+            <h1>Fila 05</h1>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+    </div>
+
+    <section class="legend">
+        <div class="seat"></div> Disponible
+        <div class="seat occupied"></div> Ocupado
+    </section>
+
+    <section class="cinema-seats-reserve">
+        <strong>Indica cuántos asientos quieres reservar</strong>
+        <form>
+            <input type="number" min="1" max="10" placeholder="N° de asientos" oninput="probarSugerencia(this.value)">
+            <button type="submit">Confirmar Reserva</button>
+        </form>
+    </section>
+
+    <footer class="cinema-footer">
+        <p>&copy; 2025 Cine UNIR - CINEMA 🎬</p>
+        <p>Dirección: Calle avenida de la Paz, 137. Logroño</p>
+        <p>Teléfono: 941209743</p>
+        <p>Email: cinefullstack@unircinema.com</p>
+    </footer>
+
+    <script src="cinema.js"></script>
+</body>
+</html>
