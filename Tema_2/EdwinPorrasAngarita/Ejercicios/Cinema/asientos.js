@@ -1,5 +1,7 @@
 
 function getEstadoRandom() {
+    // Uso deliberado de Math.random: No se requiere seguridad criptográfica aquí.
+    // Solo simulamos disponibilidad de asientos (no afecta seguridad).
     return Math.random() < 0.3; // 30% true (ocupado), 70% false (libre)
 }
 
