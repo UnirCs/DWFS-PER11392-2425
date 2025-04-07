@@ -33,18 +33,19 @@ let butacas = setup();
 
 
 // Ocupar algunas butacas para hacer pruebas
-butacas[8][1].estado = true; // Fila 10, columna 2 ocupada
-butacas[8][2].estado = true; // Fila 10, columna 3 ocupada
-butacas[8][3].estado = true; // Fila 10, columna 4 ocupada
-butacas[8][4].estado = true; // Fila 10, columna 5 ocupada
+// butacas[8][1].estado = true; // Fila 10, columna 2 ocupada
+// butacas[8][2].estado = true; // Fila 10, columna 3 ocupada
+// butacas[8][3].estado = true; // Fila 10, columna 4 ocupada
+// butacas[8][4].estado = true; // Fila 10, columna 5 ocupada
 
-butacas[9][1].estado = true; // Fila 10, columna 2 ocupada
-butacas[9][2].estado = true; // Fila 10, columna 3 ocupada
-butacas[9][3].estado = true; // Fila 10, columna 4 ocupada
-butacas[9][4].estado = true; // Fila 10, columna 5 ocupada
+// butacas[9][1].estado = true; // Fila 10, columna 2 ocupada
+// butacas[9][2].estado = true; // Fila 10, columna 3 ocupada
+// butacas[9][3].estado = true; // Fila 10, columna 4 ocupada
+// butacas[9][4].estado = true; // Fila 10, columna 5 ocupada
 
 // Comprobamos visualmente los nuevos estados de las butacas
-console.log(butacas)
+//console.log(butacas)
+console.log("Butacas incializadas")
 
 // Desarrollar en JavaScript la función suggest que recibe como argumento el número de asientos que se desea reservar
 // Función para sugerir asientos:
@@ -87,5 +88,11 @@ function suggest(cantidad) {
 
 }
 
-// Prueba con 3 asientos
-console.log(suggest(6));
+
+function probarSugerencia(valor) {
+    const cantidad = parseInt(valor);
+    if (!isNaN(cantidad)) {
+        const resultado = suggest(cantidad);
+        console.log("Butacas sugeridas:", resultado);
+    }
+}
