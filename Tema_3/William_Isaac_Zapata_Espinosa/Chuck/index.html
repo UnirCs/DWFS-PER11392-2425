@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Tells Jokes</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet"/>
+</head>
+
+<body class="bg-light d-flex justify-content-center align-items-center min-vh-100">
+<div class="card shadow p-4 text-center" style="max-width: 600px; width: 100%;">
+    <h1 class="mb-4" style="font-family: 'Bungee', cursive;">Tells Jokes 🤪</h1>
+    <button class="btn btn-primary btn-lg mb-3" onclick="tellMeAJoke()" id="jokeButton">Give me a joke!</button>
+    <div id="loadingContainer" class="mb-3 visually-hidden">
+        <div class="d-flex align-items-center justify-content-center">
+            <strong>Loading...</strong>
+            <div class="spinner-border ml-auto" role="status" aria-hidden="true"></div>
+        </div>
+    </div>
+    <p class="fs-5 text-body" id="joke"></p>
+    <p class="text-danger fw-semibold" id="error"></p>
+</div>
+
+<script>
+    const paragraph = document.getElementById('joke');
+    const error = document.getElementById('error');
+    const jokeButton = document.getElementById('jokeButton');
+    const loadingContainer = document.getElementById('loadingContainer');
+
+    const tellMeAJoke = () => {
+        paragraph.innerHTML = '';
+        error.innerHTML = '';
+        jokeButton.disabled = true;
+        loadingContainer.classList.remove('visually-hidden');
+
+        fetch('https://api.chucknorris.io/jokes/random')
+            .then((response) => {
+                if (response.status === 200) {
+                    return response.json();
+                } else {
+                    window.alert('Something went wrong on API chucknorris!');
+                }
+            })
+            .then((data) => {
+                paragraph.innerHTML = data.value;
+            })
+            .catch((err) => {
+                error.innerHTML = err.message ?? 'Try again later';
+            })
+            .finally(() => {
+                jokeButton.disabled = false;
+                loadingContainer.classList.add('visually-hidden');
+            });
+    };
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
