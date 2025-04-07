@@ -1,4 +1,7 @@
 const ImageHandler = require('./ImageHandler.js')
+const CANAL_RED = 0
+const CANAL_GREEN = 1
+const CANAL_BLUE =  2
 
 
 let path = 'input/tucan.jpg';
@@ -51,7 +54,7 @@ function redConverter() {
   for (let i = 0; i < filas; i++) {
     let nuevaFila = [];
     for (let j = 0; j < columnas; j++) {
-      let pixel = [255, pixels[i][j][1], pixels[i][j][2]];
+      let pixel = [255, pixels[i][j][CANAL_GREEN], pixels[i][j][CANAL_BLUE]];
       nuevaFila.push(pixel);
     }
     pixeles.push(nuevaFila);
@@ -77,7 +80,7 @@ function greenConverter() {
   for (let i = 0; i < filas; i++) {
     let nuevaFila = [];
     for (let j = 0; j < columnas; j++) {
-      let pixel = [pixels[i][j][0], 255, pixels[i][j][2]];
+      let pixel = [pixels[i][j][CANAL_RED], 255, pixels[i][j][CANAL_BLUE]];
       nuevaFila.push(pixel);
     }
     pixeles.push(nuevaFila);
@@ -104,7 +107,7 @@ function blueConverter() {
   for (let i = 0; i < filas; i++) {
     let nuevaFila = [];
     for (let j = 0; j < columnas; j++) {
-      let pixel = [0, 0, pixels[i][j][2]];
+      let pixel = [CANAL_RED, CANAL_GREEN, pixels[i][j][CANAL_BLUE]];
       nuevaFila.push(pixel);
     }
     pixeles.push(nuevaFila);
@@ -134,7 +137,7 @@ function greyConverter() {
   for (let i = 0; i < filas; i++) {
     let nuevaFila = [];
     for (let j = 0; j < columnas; j++) {
-      let media = ((pixels[i][j][0] + pixels[i][j][1] + pixels[i][j][2]) / 3);
+      let media = ((pixels[i][j][CANAL_RED] + pixels[i][j][CANAL_GREEN] + pixels[i][j][CANAL_BLUE]) / 3);
       let pixel = [media, media, media];
       nuevaFila.push(pixel);
     }
@@ -165,8 +168,8 @@ function blackAndWhiteConverter() {
   for (let i = 0; i < filas; i++) {
     let nuevaFila = [];
     for (let j = 0; j < columnas; j++) {
-      let media = ((pixels[i][j][0] + pixels[i][j][1] + pixels[i][j][2]) / 3);
-      let pixel = media < 128 ? [0, 0, 0] :  [255, 255, 255];
+      let media = ((pixels[i][j][CANAL_RED] + pixels[i][j][CANAL_GREEN] + pixels[i][j][CANAL_BLUE]) / 3);
+      let pixel = media < 128 ? [CANAL_RED, CANAL_GREEN, CANAL_BLUE] :  [255, 255, 255];
       nuevaFila.push(pixel);
     }
     pixeles.push(nuevaFila);
@@ -186,8 +189,25 @@ function scaleDown() {
   let pixels = handler.getPixels();
 
   //Aqui tu codigo
+  let pixeles = [];
+  let filas = pixels.length;
+  let columnas = pixels[0]?.length || 0;
 
-  handler.savePixels(pixels, outputPath, handler.getShape()[0] / 2, handler.getShape()[1] / 2);
+
+  for (let i = 0; i < filas; i++) {
+    if ((i % 2) !== 0){
+      let nuevaFila = [];
+      for (let j = 0; j < columnas; j++) {
+        if ((j % 2) !== 0){
+          let pixel = pixels[i][j];
+          nuevaFila.push(pixel);
+        }
+      }
+      pixeles.push(nuevaFila);
+    }
+  }
+
+  handler.savePixels(pixeles, outputPath, handler.getShape()[0] / 2, handler.getShape()[1] / 2);
 }
 
 /**
@@ -200,8 +220,20 @@ function dimBrightness(dimFactor) {
   let pixels = handler.getPixels();
 
   //Aqui tu codigo
+  let pixeles = [];
+  let filas = pixels.length;
+  let columnas = pixels[0]?.length || 0;
 
-  handler.savePixels(pixels, outputPath);
+  for (let i = 0; i < filas; i++) {
+    let nuevaFila = [];
+    for (let j = 0; j < columnas; j++) {
+      let pixel = [(pixels[i][j][CANAL_RED])/dimFactor, (pixels[i][j][CANAL_GREEN])/dimFactor, (pixels[i][j][CANAL_BLUE])/dimFactor];
+      nuevaFila.push(pixel);
+    }
+    pixeles.push(nuevaFila);
+  }
+
+  handler.savePixels(pixeles, outputPath);
 }
 
 /**
@@ -217,7 +249,21 @@ function invertColors() {
 
   //Aqui tu codigo
 
-  handler.savePixels(pixels, outputPath);
+  let valorMaximoCanal = 255;
+  let pixeles = [];
+  let filas = pixels.length;
+  let columnas = pixels[0]?.length || 0;
+
+  for (let i = 0; i < filas; i++) {
+    let nuevaFila = [];
+    for (let j = 0; j < columnas; j++) {
+      let pixel = [valorMaximoCanal - pixels[i][j][CANAL_RED], valorMaximoCanal - pixels[i][j][CANAL_GREEN], valorMaximoCanal - pixels[i][j][CANAL_BLUE]];
+      nuevaFila.push(pixel);
+    }
+    pixeles.push(nuevaFila);
+  }
+
+  handler.savePixels(pixeles, outputPath);
 }
 
 /**
@@ -238,7 +284,25 @@ function merge(alphaFirst, alphaSecond) {
 
   //Aqui tu codigo
 
-  dogHandler.savePixels(pixels, outputPath);
+  let pixeles = [];
+  let catFilas = catPixels.length;
+  let dogFilas = dogPixels.length;
+
+  let columnas = catPixels[0]?.length || 0;
+
+  for (let i = 0; i < catFilas; i++) {
+    let nuevaFila = [];
+    for (let j = 0; j < columnas; j++) {
+
+      let pixel = [(catPixels[i][j][CANAL_RED] * alphaSecond) + (dogPixels[i][j][CANAL_RED] * alphaFirst),
+                            (catPixels[i][j][CANAL_GREEN] * alphaSecond) + (dogPixels[i][j][CANAL_GREEN] * alphaFirst),
+                            (catPixels[i][j][CANAL_BLUE] * alphaSecond) + (dogPixels[i][j][CANAL_BLUE] * alphaFirst)];
+
+      nuevaFila.push(pixel);
+    }
+    pixeles.push(nuevaFila);
+  }
+  dogHandler.savePixels(pixeles, outputPath);
 }
 
 
@@ -260,7 +324,7 @@ function merge(alphaFirst, alphaSecond) {
  *     Negativo: 8
  *     Fusion de imagenes: 9
  */
-let optionN = 5;
+let optionN = 9;
 
 switch (optionN) {
   case 1: redConverter(); break;
