@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Chuck Norris</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container__image">
+            <img src="./image/meme.png" alt="Chistes">
+        </div>
+
+        <h1 class="container__title">Chistes de Chuck Norris</h1>
+
+        <button id="btn-get-joke" class="container__button">Dame un chiste!</button>
+
+        <p id="lbl-joke" class="container__joke"></p>
+    </div>
+</body>
+
+<script>
+    const buttonJoke = document.querySelector('#btn-get-joke');
+
+    buttonJoke.addEventListener('click', () => {
+        fetchJoke();
+    })
+
+    function fetchJoke() {
+        fetch("https://api.chucknorris.io/jokes/random")
+            .then((response) => response.json())
+            .then((data) => {
+                const joke = document.querySelector("#lbl-joke");
+                joke.innerHTML = data.value;
+            });
+    }
+</script>
+
+</html>
