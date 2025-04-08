@@ -13,7 +13,6 @@ window.addEventListener("load", (event) => {
 
         let errorMessages = document.querySelectorAll('.is-invalid');
         if (errorMessages.length === 0) {
-            // redirigir a la siguiente pagina
             window.location.replace("./cinema.html");
         } else {
             alert('Por favor, corrija los errores antes de enviar el formulario.');
