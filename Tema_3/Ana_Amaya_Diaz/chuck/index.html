@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chuck Api</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container" id="wrap-form">       
+            <div class="grid-row">
+                <div class="grid-item"><button class="btn btn-submit" id="get_chiste">Dame un chiste!</button></div>
+                <div class="grid-item" id="show_chiste"></div>
+            </div>
+    </div>
+    <script>
+        let setChiste = new Set();
+        let url = "https://api.chucknorris.io/jokes/random";
+
+        const showchiste = document.getElementById("show_chiste");
+        const getChisteBtn = document.getElementById("get_chiste");
+
+       function getChiste() {
+            return new Promise((resolve, reject) => {
+                fetch(url)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error("Api no response");
+                        }
+                        return response.json();
+                    })
+                    .then(data => resolve(data.value))
+                    .catch(error => reject(error));
+            });
+        } 
+        
+        async function showChiste(){  
+            try {
+                let chiste = await getChiste();
+                console.log("Chiste obtenido: " + chiste);
+
+                if (!setChiste.has(chiste)) {
+                    setChiste.add(chiste);
+                    showchiste.innerHTML = `<p>${chiste}</p>`;
+                } else {
+                    console.log("Chiste duplicado");
+                    showChiste(); 
+                }
+
+            } catch (error) {
+                console.error("Error", error);
+                showchiste.innerHTML = "<p>No chiste encontrado</p>";
+            }
+        };
+        getChisteBtn.onclick = function (){ 
+            showChiste() 
+        };
+        //getChisteBtn.addEventListener("click", getChiste);
+     
+   </script>
+</body>
+
+</html>
