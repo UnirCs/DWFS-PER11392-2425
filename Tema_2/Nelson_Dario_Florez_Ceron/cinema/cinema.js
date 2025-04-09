@@ -21,7 +21,7 @@ function setup() {
     return butacas;
 }
 
-// Marca los asientos ocupados según sus IDs
+
 function ocuparAsientosPorId(butacas, ids) {
     for (let i = 0; i < butacas.length; i++) {
         for (let j = 0; j < butacas[i].length; j++) {
@@ -34,7 +34,7 @@ function ocuparAsientosPorId(butacas, ids) {
     }
 }
 
-// Revisa si hay un bloque de asientos consecutivos libres en una fila
+
 function buscarConsecutivosLibres(fila, numAsientos) {
     let contador = 0;
 
@@ -46,7 +46,7 @@ function buscarConsecutivosLibres(fila, numAsientos) {
         }
 
         if (contador === numAsientos) {
-            // Recolectar los IDs desde la posición actual hacia atrás
+            
             let ids = [];
             for (let j = i - numAsientos + 1; j <= i; j++) {
                 ids.push(fila[j].id);
@@ -58,12 +58,12 @@ function buscarConsecutivosLibres(fila, numAsientos) {
     return [];
 }
 
-// Función principal que sugiere asientos
+
 function suggest(butacas, numAsientos) {
     let resultado = new Set();
 
     if (numAsientos <= N) {
-        // Empezar desde la última fila (más alejada)
+        
         for (let i = butacas.length - 1; i >= 0; i--) {
             let idsLibres = buscarConsecutivosLibres(butacas[i], numAsientos);
             if (idsLibres.length > 0) {
@@ -76,7 +76,7 @@ function suggest(butacas, numAsientos) {
     return resultado;
 }
 
-// 🔹 Inicializar y probar
+
 const butacas = setup();
 ocuparAsientosPorId(butacas, [99, 98, 97, 90, 93]);
 
