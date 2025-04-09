@@ -3,95 +3,81 @@ const ImageHandler = require('./ImageHandler.js')
 let path = 'input/tucan.jpg';
 let handler = new ImageHandler(path);
 
+function validatePixels(pixels) {
+  return Array.isArray(pixels) && pixels.length > 0;
+}
+
+function transformPixels(pixels, transformFn) {
+  return pixels.map((row, i) =>
+    row.map((pixel, j) =>
+      Array.isArray(pixel) && pixel.length >= 3
+        ? transformFn(pixel, i, j)
+        : (console.error(`Pixel inválido en [${i}][${j}]`, pixel), pixel)
+    )
+  );
+}
+
 function transformImagePixels(handler, outputPath, transformFn) {
   let pixels = handler.getPixels();
+  if (!validatePixels(pixels)) return;
 
-  if (!Array.isArray(pixels) || pixels.length === 0) {
-    console.error("Error: pixels no es una matriz válida");
-    return;
-  }
-
-  for (let i = 0; i < pixels.length; i++) {
-    for (let j = 0; j < pixels[i].length; j++) {
-      let pixel = pixels[i][j];
-
-      if (!Array.isArray(pixel) || pixel.length < 3) {
-        console.error(`Error: Formato inesperado en pixels[${i}][${j}]`, pixel);
-        continue;
-      }
-
-      pixels[i][j] = transformFn(pixel, i, j);
-    }
-  }
-
-  handler.savePixels(pixels, outputPath);
+  let newPixels = transformPixels(pixels, transformFn);
+  handler.savePixels(newPixels, outputPath);
 }
 
 function ejemplo() {
   let outputPath = 'output/ejemplo.jpg';
-  let pixeles = [];
-  let filas = 2;
-  let columnas = 2;
-  for (let i = 0; i < filas; i++) {
-    let nuevaFila = [];
-    for (let j = 0; j < columnas; j++) {
-      let pixel = [0, 0, 0];
-      if ((i + j) % 2 === 0) {
-        pixel = [255, 255, 255];
-      }
-      nuevaFila.push(pixel);
-    }
-    pixeles.push(nuevaFila);
-  }
+  let filas = 2, columnas = 2;
+  let pixeles = Array.from({ length: filas }, (_, i) =>
+    Array.from({ length: columnas }, (_, j) =>
+      (i + j) % 2 === 0 ? [255, 255, 255] : [0, 0, 0]
+    )
+  );
   handler.savePixels(pixeles, outputPath, filas, columnas);
 }
 
 function redConverter() {
-  transformImagePixels(handler, 'output/tucan_red.jpg', (pixel) => [pixel[0], 0, 0]);
+  transformImagePixels(handler, 'output/tucan_red.jpg', (p) => [p[0], 0, 0]);
 }
 
 function greenConverter() {
-  transformImagePixels(handler, 'output/tucan_green.jpg', (pixel) => [0, pixel[1], 0]);
+  transformImagePixels(handler, 'output/tucan_green.jpg', (p) => [0, p[1], 0]);
 }
 
 function blueConverter() {
-  transformImagePixels(handler, 'output/tucan_blue.jpg', (pixel) => [0, 0, pixel[2]]);
+  transformImagePixels(handler, 'output/tucan_blue.jpg', (p) => [0, 0, p[2]]);
 }
 
 function greyConverter() {
-  transformImagePixels(handler, 'output/tucan_grey.jpg', (pixel) => {
-    let avg = Math.round((pixel[0] + pixel[1] + pixel[2]) / 3);
+  transformImagePixels(handler, 'output/tucan_grey.jpg', (p) => {
+    let avg = Math.round((p[0] + p[1] + p[2]) / 3);
     return [avg, avg, avg];
   });
 }
 
 function blackAndWhiteConverter() {
-  transformImagePixels(handler, 'output/tucan_black_and_white.jpg', (pixel) => {
-    let avg = Math.round((pixel[0] + pixel[1] + pixel[2]) / 3);
+  transformImagePixels(handler, 'output/tucan_black_and_white.jpg', (p) => {
+    let avg = Math.round((p[0] + p[1] + p[2]) / 3);
     return avg < 128 ? [0, 0, 0] : [255, 255, 255];
   });
 }
 
 function dimBrightness(dimFactor) {
-  transformImagePixels(handler, 'output/tucan_dimed.jpg', (pixel) =>
-    pixel.map((value) => Math.max(0, Math.min(255, Math.floor(value / dimFactor))))
+  transformImagePixels(handler, 'output/tucan_dimed.jpg', (p) =>
+    p.map((v) => Math.max(0, Math.min(255, Math.floor(v / dimFactor))))
   );
 }
 
 function invertColors() {
-  transformImagePixels(handler, 'output/tucan_inverse.jpg', (pixel) =>
-    pixel.map((value) => 255 - value)
+  transformImagePixels(handler, 'output/tucan_inverse.jpg', (p) =>
+    p.map((v) => 255 - v)
   );
 }
 
 function scaleDown() {
   let outputPath = 'output/tucan_scale_down.jpg';
   let pixels = handler.getPixels();
-
-  if (!Array.isArray(pixels) || pixels.length === 0) {
-    console.error("Error: pixels no es una matriz válida");
-    return;
-  }
+  if (!validatePixels(pixels)) return;
 
   let newPixels = [];
   for (let i = 0; i < pixels.length; i += 2) {
@@ -113,39 +99,25 @@ function merge(alphaFirst, alphaSecond) {
   let catPixels = catHandler.getPixels();
   let dogPixels = dogHandler.getPixels();
 
+  if (!validatePixels(catPixels) || !validatePixels(dogPixels)) return;
   if (catPixels.length !== dogPixels.length || catPixels[0].length !== dogPixels[0].length) {
-    console.error("Error: Las imágenes no tienen el mismo tamaño.");
+    console.error("Imágenes con tamaño diferente");
     return;
   }
 
-  let pixels = [];
-
-  for (let i = 0; i < catPixels.length; i++) {
-    let row = [];
-    for (let j = 0; j < catPixels[i].length; j++) {
-      let catPixel = catPixels[i][j];
+  let mergedPixels = catPixels.map((row, i) =>
+    row.map((catPixel, j) => {
       let dogPixel = dogPixels[i][j];
+      return Array(3).fill(0).map((_, k) =>
+        Math.min(255, catPixel[k] * alphaFirst + dogPixel[k] * alphaSecond)
+      );
+    })
+  );
 
-      if (!Array.isArray(catPixel) || catPixel.length < 3 || !Array.isArray(dogPixel) || dogPixel.length < 3) {
-        console.error(`Error: Formato inesperado en pixels[${i}][${j}]`, catPixel, dogPixel);
-        continue;
-      }
-
-      let mergedPixel = [];
-      for (let k = 0; k < 3; k++) {
-        let mergedValue = (catPixel[k] * alphaFirst) + (dogPixel[k] * alphaSecond);
-        mergedPixel.push(Math.min(255, mergedValue));
-      }
-
-      row.push(mergedPixel);
-    }
-    pixels.push(row);
-  }
-
-  dogHandler.savePixels(pixels, outputPath);
+  dogHandler.savePixels(mergedPixels, outputPath);
 }
 
-// Cambia este número según la función que deseas probar
+// Selección
 let optionN = 9;
 
 switch (optionN) {
