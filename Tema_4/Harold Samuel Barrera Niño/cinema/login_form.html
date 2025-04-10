@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="form_styles.css">
+</head>
+<body>
+    <div id="form-container">
+        <form id="form-login" action="">
+
+            <label for="user_nombre_apellido"></label>
+            <input type="text" placeholder="Nombre y apellidos" name="user_nombre_apellido" class="form_input_text">
+
+            <label for="user_nombre_usuario"></label>
+            <input type="text" placeholder="Nombre de usuario" name="user_nombre_usuario" class="form_input_text">
+
+            <label for="user_clave"></label>
+            <input type="password" placeholder="Contraseña" name="user_clave" class="form_input_text">
+
+            <label for="user_clave_confirmar"></label>
+            <input type="password" placeholder="Confirmar contraseña" name="user_clave_confirmar" class="form_input_text">
+
+            <label for="user_correo"></label>
+            <input type="email" placeholder="Email" name="user_correo" class="form_input_text">
+
+            <input type="submit" value="Registrar" id="form_submit_btn" onclick="loginAndRedirect()">
+
+        </form>
+    </div>
+</body>
+<script src="form.js"></script>
+</html>
