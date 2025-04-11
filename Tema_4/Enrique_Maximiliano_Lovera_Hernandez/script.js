@@ -41,8 +41,11 @@ const validatePasswordMatch = () => {
   return password === confirmPassword;
 };
 
-const validateEmailFormat = (value) => /\S+@\S+\.\S+/.test(value);
-
+const validateEmailFormat = (value) => {
+  if (value.length > 254) return false;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(value);
+};
 const formFields = [
   {
     id: "fullName",
