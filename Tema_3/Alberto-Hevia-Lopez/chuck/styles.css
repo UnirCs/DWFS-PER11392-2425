@@ -1,0 +1,18 @@
+.seccion {
+    background-color: black;
+    width: 80%;
+    margin: 10;
+    padding: 20px;
+}
+.boton {
+    background-color: whitesmoke;
+    border-radius: 15px;
+    font-size: 20px;
+    padding: 10px 20px;
+}
+.texto {
+    font-size: 20px;
+    color: yellow;
+    max-width: 600px;
+}
+
