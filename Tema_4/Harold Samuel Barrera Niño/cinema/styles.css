@@ -96,3 +96,20 @@ footer{
     justify-content: center;
     text-align: center;
 }
+
+/* Estilos para asientos ocupados */
+.checkmark.occupied {
+    background-color: #ccc;
+    border-color: #ccc;
+    cursor: not-allowed;
+}
+
+.checkbox-container input:disabled ~ .checkmark {
+    background-color: #ccc;
+    border-color: #ccc;
+}
+
+.checkbox-container input:checked:not(:disabled) ~ .checkmark {
+    background-color: gold;
+    border-color: gold;
+}

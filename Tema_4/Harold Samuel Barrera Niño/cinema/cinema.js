@@ -1,17 +1,72 @@
 // Definir el tamaño de la matriz de butacas
-const N = 10; // Número de filas y columnas
+const rows = 5; // Número de filas
+const columns = 12; // Número de columnas
+const seatMap = Array(rows).fill().map(() => Array(columns).fill(false)); //Array de sillas
+let N = rows * columns; // Número de butacas totales
+let butacas;
 
-console.log("Butacas inicializadas");
+document.addEventListener('DOMContentLoaded', function() {
+
+    //Generamos los asientos
+    generateSeats();
+
+    //Contamos el total de asientos
+    butacas = setup();
+    console.log("Butacas inicializadas");
+    console.log(butacas);
+});
+
+
+//Generamos los asientos dinamicamente en el DOM
+function generateSeats(){
+    const container = document.getElementById("cinema_form_seats");
+    container.innerHTML = '';
+
+    // Generar cada fila
+    for (let row = 0; row < rows; row++) {
+        // Crear elemento de fila
+        const rowLabel = document.createElement('label');
+        rowLabel.className = 'cinema_checkbox';
+        rowLabel.textContent = `Fila ${row + 1}`;
+        container.appendChild(rowLabel);
+        
+        // Generar asientos para esta fila
+        for (let seat = 0; seat < columns; seat++) {
+            const isOccupied = seatMap[row][seat];
+            
+            const containerLabel = document.createElement('label');
+            containerLabel.className = 'checkbox-container';
+            
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            if (isOccupied) {
+                checkbox.disabled = true;
+                checkbox.checked = true;
+            }
+            
+            const checkmark = document.createElement('span');
+            checkmark.className = 'checkmark' + (isOccupied ? ' occupied' : '');
+            
+            containerLabel.appendChild(checkbox);
+            containerLabel.appendChild(checkmark);
+            container.appendChild(containerLabel);
+        }
+        
+        // Agregar salto de línea
+        container.appendChild(document.createElement('br'));
+    }
+    
+}
 
 // Función para inicializar la matriz de butacas
 function setup() {
     let idContador = 1; // Iniciar el contador de IDs en 1 (los humanos no empezamos a contar desde 0)
     let butacas = [];
 
-    for (let i = 0; i < N; i++) {
+    for (let i = 0; i < rows; i++) {
         // Nueva fila
         let fila = [];
-        for (let j = 0; j < N; j++) {
+        for (let j = 0; j < columns; j++) {
             // Nuevo asiento
             fila.push({
                 id: idContador++,
@@ -23,14 +78,7 @@ function setup() {
     return butacas;
 }
 
-/*
-Realizar Logica de la actividad.
-
-    Si el número de asientos solicitados excede el tamaño máximo de la fila, la función debe devolver un set vacío.
-    Si en ninguna fila hay suficientes asientos disponibles juntos, la función debe devolver un set vacío.
-    Se comenzará a buscar asientos juntos en la fila más lejana a la pantalla, por lo que si varias filas pudiesen albergar el número de asientos solicitado, se elegiría siempre la más lejana a la pantalla. El resultado debe ser un Set con los ids de los asientos pre-seleccionados.
-
- */
+//Seleccion de butacas (Actividad 2)
 function seleccionarButacas(numeroButacas, butacasArray) {
     let selectedButacas = [];
     let nButacas = numeroButacas
@@ -93,6 +141,3 @@ function suggest(numButacas) {
     butacas = seleccionarButacas(numButacas, butacas);
     mostrarButacasSeleccionadas(butacas);
 }
-
-// Inicializar la matriz
-//let butacas = setup();
