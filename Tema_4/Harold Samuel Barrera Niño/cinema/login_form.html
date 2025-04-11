@@ -1,35 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Form</title>
-    <link rel="stylesheet" href="form_styles.css">
-</head>
-<body>
-    <div id="form-container">
-        <form id="form-login" action="" onsubmit="return loginAndRedirect()">
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>UNIR Cinema - Registro</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" href="form_styles.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </head>
+    <body>
 
-            <label for="user_nombre_apellido"></label>
-            <input type="text" placeholder="Nombre y apellidos" name="user_nombre_apellido" class="form_input_text">
+        <div class="container">
+            <h3>Registro de Usuario</h3>
+            <form id="userForm">
+                <div class="input-field">
+                    <input id="fullName" type="text" name="fullName" class="validate" required>
+                    <label for="fullName">Nombre y apellidos</label>
+                </div>
 
-            <label for="user_nombre_usuario"></label>
-            <input type="text" placeholder="Nombre de usuario" name="user_nombre_usuario" class="form_input_text">
+                <div class="input-field">
+                    <input id="username" type="text" name="username" class="validate" required>
+                    <label for="username">Nombre de usuario</label>
+                </div>
 
-            <label for="user_clave"></label>
-            <input type="password" placeholder="Contraseña" name="user_clave" class="form_input_text">
-            <p id="error_msg"></p>
+                <div class="input-field">
+                    <input id="password" type="password" name="password" class="validate" required>
+                    <label for="password">Contraseña</label>
+                </div>
 
-            <label for="user_clave_confirmar"></label>
-            <input type="password" placeholder="Confirmar contraseña" name="user_clave_confirmar" class="form_input_text">
+                <div class="input-field">
+                    <input id="confirmPassword" type="password" name="confirmPassword" class="validate" required>
+                    <label for="confirmPassword">Confirmar contraseña</label>
+                </div>
 
-            <label for="user_correo"></label>
-            <input type="email" placeholder="Email" name="user_correo" class="form_input_text">
+                <div class="input-field">
+                    <input id="email" type="email" name="email" class="validate" required>
+                    <label for="email">Email</label>
+                </div>
 
-            <input type="submit" value="Registrar" id="form_submit_btn">
-
-        </form>
-    </div>
-</body>
-<script src="form.js"></script>
+                <button type="submit" class="btn waves-effect waves-light">
+                    Registrar
+                    <i class="material-icons right">send</i>
+                </button>
+            </form>
+        </div>
+        <script src="script.js"></script>
+    </body>
 </html>

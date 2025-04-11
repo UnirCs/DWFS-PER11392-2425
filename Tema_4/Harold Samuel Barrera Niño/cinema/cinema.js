@@ -1,19 +1,14 @@
 // Definir el tamaño de la matriz de butacas
 const rows = 5; // Número de filas
-const columns = 12; // Número de columnas
-const seatMap = Array(rows).fill().map(() => Array(columns).fill(false)); //Array de sillas
-let N = rows * columns; // Número de butacas totales
-let butacas;
+const columns = 5; // Número de columnas
+let seatMap = Array(rows).fill().map(() => Array(columns).fill(false)); //Array de sillas
+let selectedSeats = new Set();
 
 document.addEventListener('DOMContentLoaded', function() {
 
     //Generamos los asientos
     generateSeats();
 
-    //Contamos el total de asientos
-    butacas = setup();
-    console.log("Butacas inicializadas");
-    console.log(butacas);
 });
 
 
@@ -43,9 +38,15 @@ function generateSeats(){
                 checkbox.disabled = true;
                 checkbox.checked = true;
             }
+            checkbox.dataset.row = row;
+            checkbox.dataset.seat = seat;
             
             const checkmark = document.createElement('span');
             checkmark.className = 'checkmark' + (isOccupied ? ' occupied' : '');
+
+            checkbox.addEventListener('change', function(){
+                updateSelectedSeats(this);
+            });
             
             containerLabel.appendChild(checkbox);
             containerLabel.appendChild(checkmark);
@@ -58,86 +59,65 @@ function generateSeats(){
     
 }
 
-// Función para inicializar la matriz de butacas
-function setup() {
-    let idContador = 1; // Iniciar el contador de IDs en 1 (los humanos no empezamos a contar desde 0)
-    let butacas = [];
+function updateSelectedSeats(checkbox){
 
-    for (let i = 0; i < rows; i++) {
-        // Nueva fila
-        let fila = [];
-        for (let j = 0; j < columns; j++) {
-            // Nuevo asiento
-            fila.push({
-                id: idContador++,
-                estado: false // Estado inicial libre
-            });
-        }
-        butacas.push(fila);
+    const row = parseInt(checkbox.dataset.row);
+    const seat = parseInt(checkbox.dataset.seat);
+
+    if(checkbox.checked){
+        selectedSeats.add(`${row}-${seat}`);
+    } else {
+        selectedSeats.delete(`${row}-${seat}`);
     }
-    return butacas;
+
+    document.querySelector('input[name="indic_seats"]').value = selectedSeats.size;
+
 }
 
-//Seleccion de butacas (Actividad 2)
-function seleccionarButacas(numeroButacas, butacasArray) {
-    let selectedButacas = [];
-    let nButacas = numeroButacas
-
-    //Devuelve set vacio si el numero de asientos solicitados excede el tamaño maximo de la fila
-    if (numeroButacas > N) {
-        return selectedButacas;
-    }
-
-    //Comienza a buscar asientos juntos desde la fila mas lejana a la pantalla
-    for (let i = butacasArray.length - 1; i > 0; i--) {
-        for (let j = butacasArray.length - 1; j > 0; j--) {
-            if (!butacasArray[i][j].estado && //Revisar si la butaca actual esta libre9
-                !butacasArray[i - 1][j - 1].estado && //Se revisa que el siguiente asiento tambien este vacio para asegurar que queden juntos
-                nButacas > 0 //No debe pasarse del numero de butacas seleccionado
-            ) {
-                butacasArray[i][j].estado = true;
-                nButacas--;
-            }
-        }
-    }
-
-    //Si en ninguna fila hay asientos disponibles, se devuelve un set vacio
-    if (nButacas !== 0) {
-        return selectedButacas;
-    }
-
-    //Devuelve las butacas seleccionada por la operacion
-    selectedButacas = butacasArray;
-    return selectedButacas;
+function resetSeatMap(){
+    seatMap = Array(rows).fill().map(() => Array(columns).fill(false));
 }
 
-//Mostar butacas seleccionadas (aquellas con TRUE en el estado)
-function mostrarButacasSeleccionadas(butacasArray) {
-    let butacasSeleccionadas = [];
-    for (let i = 0; i < butacasArray.length; i++) {
-        for (let j = 0; j < butacasArray.length; j++) {
-            if (butacasArray[i][j].estado) {
-                butacasSeleccionadas.push(butacasArray[i][j].id);
-            }
-        }
-    }
-    console.log(butacasSeleccionadas);
+function updateCheckboxes(){
+
+    const checkboxes = document.querySelectorAll('#cinema_form_seats input[type="checkbox"]');
+
+    checkboxes.forEach(checkbox => {
+        const row = parseInt(checkbox.dataset.row);
+        const seat = parseInt(checkbox.dataset.seat);
+
+        checkbox.checked = seatMap[row][seat];
+        checkbox.disabled = seatMap[row][seat];
+
+        const checkmark = checkbox.nextElementSibling;
+        checkmark.className = 'checkmark' + (seatMap[row][seat] ? ' occupied' : '' );
+    });
 }
 
 //Actividad tema 3
 function suggest(numButacas) {
-    /*
-    Por el momento, se inicializara las butacas siempre
-    que se llame el metodo porque se observo en las imagenes de
-    la actividad que siempre debia dar el mismo resultado sin
-    importar el input
-     */
-    butacas = setup();
-
-    if (isNaN(numButacas)) {
-        console.log(`Error. Porfavor, digite un numero.`);
-        return;
+    
+    if(isNaN(numButacas)){
+        return false;
     }
-    butacas = seleccionarButacas(numButacas, butacas);
-    mostrarButacasSeleccionadas(butacas);
+
+    selectedSeats.clear();
+    resetSeatMap();
+
+    let seatsToSelect = Math.min(numButacas, rows * columns);
+    let seatsSelected = 0;
+
+    // Seleccionar asientos de atrás hacia adelante
+    for (let row = rows - 1; row >= 0 && seatsSelected < seatsToSelect; row--) {
+        for (let seat = 0; seat < columns && seatsSelected < seatsToSelect; seat++) {
+            if (!seatMap[row][seat]) {
+                seatMap[row][seat] = true;
+                selectedSeats.add(`${row}-${seat}`);
+                seatsSelected++;
+            }
+        }
+    }
+
+    updateCheckboxes();
+    console.log(`Asientos seleccionados ${Array.from(selectedSeats).join(', ')}`);
 }
