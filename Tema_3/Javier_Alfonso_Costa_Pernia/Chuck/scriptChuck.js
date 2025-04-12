@@ -1,6 +1,3 @@
-//const myResponse = document.querySelector("mensaje");
-//const myRequest = new Request("products.json");
-
 let parrafo = document.getElementById("mensaje");
 
 fetch(url)
@@ -15,15 +12,6 @@ async function chuckJoke() {
     console.log("Response: " + json);
     return json;
 }
-
-/*(async () => {
-
-    console.log("Ejecutando funcion fetchSincrono");
-    let factSincrono = await fetchSincrono();
-    console.log(factSincrono);
-    console.log("fetchSincrono ha terminado");
-
-})();*/
 
 
 

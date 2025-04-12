@@ -83,16 +83,3 @@ function getSelectionIdsFilteringByProperty(array, valProp, value){
     }
     return filtered;
 }
-
-// Inicializar la matriz
-//let butacas = setup();
-// Imprimir la matriz
-//console.log(butacas);
-
-/*let optionN = 1;
-
-switch (optionN) {
-    case 1: suggest(3, butacas); break;
-    case 2: console.log(setup()); break;
-    default: //ejemplo();
-}*/
