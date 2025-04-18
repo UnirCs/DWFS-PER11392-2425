@@ -1,0 +1,97 @@
+body {
+    background-color: #000000;
+    color: white;
+    font-family: "Times New Roman", sans-serif;
+    text-align: center;
+}
+
+.cine-container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+.cine-header {
+    background-color: #42a2c7;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.pantalla {
+    background-color: #090909;
+    height: auto;
+    width: 100%;
+    margin: 20px 0 60px 0;
+    border-radius: 10px;
+}
+
+.pantalla img{
+    align-content: stretch;
+    width: 50%;
+    height: auto;
+    margin: auto;
+    display: block;
+
+}
+
+.distribucion {
+    display: flex;
+    flex-direction: column;
+}
+
+.row-label {
+    margin-left: 100px;
+    text-align: left;
+}
+
+.row {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+.asientos{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.asiento {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #42a2c7;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.ocupado {
+    background-color: #42a2c7;
+}
+
+.aisle{
+    width: 50px;
+    height: 40px;
+    margin: 5px;
+    visibility: hidden;
+}
+
+.form-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.form-control{
+    width: 60px;
+    margin-top: 10px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.cine-footer {
+    background-color: #42a2c7;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
