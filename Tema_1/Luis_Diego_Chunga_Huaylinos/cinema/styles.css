@@ -1,0 +1,63 @@
+.contenedorBienvenida{
+    background-color: #28306f;
+    padding: 20px;
+}
+
+.tituloWeb{
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contenedorDescripcion{
+    background-color: #28306f;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.parrafo{
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contenedorFooter{
+    background-color: #28306f;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.lineaFooter{
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.formatoTabla{
+    text-align: center;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table{
+    margin: auto;
+}
+
+.lineaTabla{
+    text-align: center;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button{
+    padding: 10px;
+    background-color: #28306f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
