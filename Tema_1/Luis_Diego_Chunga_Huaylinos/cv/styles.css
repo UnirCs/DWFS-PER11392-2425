@@ -1,0 +1,35 @@
+.subEL{
+    font-weight: bold;
+}
+
+.contenedorLDCH{
+    border: 10px solid black;
+}
+
+.formatoFoto{
+    text-align: center;
+    background-color: #2f912f;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.formatoCuadro{
+    border: 1px solid black;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nombreTrabajador{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.carreraTrabajador{
+    font-weight: bold;
+}
+
+.cargoEL{
+    font-style: italic;
+}
