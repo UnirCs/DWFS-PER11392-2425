@@ -1,0 +1,39 @@
+#profile{
+    text-align: center;
+    border: 1px solid black;
+    background: #1F618D;
+    color: white;
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+
+#picture-profile{
+    width: 200px;
+    border-radius: 100px;
+    border: 3px solid black;
+}
+
+.container{
+    border: 1px solid gray;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.title-container{
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #1F618D;
+}
+
+#experience li{
+    font-weight: bold;
+    color: #1e293b;
+}
+
+#studies li{
+    font-weight: bold;
+}
+
+#skills li{
+    font-weight: bold;
+}
