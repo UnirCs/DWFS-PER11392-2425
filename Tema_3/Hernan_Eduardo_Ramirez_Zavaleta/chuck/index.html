@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Chistes de Gatos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="contenedor">
+        <h1>¡Chistes randoms de gatos!</h1>
+        <p id="chiste">Haz clic en el botón para ver un chiste sobre gatos</p>
+        <button onclick="obtenerChiste()">Mostrar chiste</button>
+    </div>
+
+    <script>
+        const obtenerChiste = () => {
+            fetch("https://catfact.ninja/fact")
+                .then(respuesta => respuesta.json())
+                .then(data => {
+                    document.getElementById("chiste").innerHTML = data.fact;
+                })
+                .catch(error => {
+                    document.getElementById("chiste").innerHTML = "¡Algo salió mal! Intenta de nuevo.";
+                    console.error("Error al obtener el chiste:", error);
+                });
+        };
+    </script>
+</body>
+</html>
