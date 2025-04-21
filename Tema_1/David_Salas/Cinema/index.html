@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UNIR-CINEMA - Reserva de Butacas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-black text-white">
+    <div class="container py-4 border border-warning mt-3">
+
+        <div class="text-center bg-secondary p-3 rounded">
+            <h1 class="mb-0">UNIR - CINE</h1>
+            <h4 class="text-dark">COLOMBIA - BOGOTA D.C</h4>
+        </div>
+
+        <div class="screen bg-dark mt-4 mb-4 p-4 rounded text-center">
+            <h5>PANTALLA</h5>
+        </div>
+
+        <div class="text-center mb-3 mx-auto">
+            <div class="d-flex flex-column align-items-center gap-2">
+                <div class="seat-row d-flex align-items-center">
+                    <span class="me-2">Fila 1</span>
+                    <div class="seats d-flex flex-wrap gap-1">
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat seat-occupied"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat seat-occupied"></div>
+                    </div>
+                </div>
+                <div class="seat-row d-flex align-items-center">
+                    <span class="me-2">Fila 2</span>
+                    <div class="seats d-flex flex-wrap gap-1">
+                        <div class="seat seat-occupied"></div>
+                        <div class="seat seat-occupied"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                    </div>
+                </div>
+                <div class="seat-row d-flex align-items-center">
+                    <span class="me-2">Fila 3</span>
+                    <div class="seats d-flex flex-wrap gap-1">
+                        <div class="seat seat-occupied"></div>
+                        <div class="seat"></div>
+                        <div class="seat seat-occupied"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                    </div>
+                </div>
+                <div class="seat-row d-flex align-items-center">
+                    <span class="me-2">Fila 4</span>
+                    <div class="seats d-flex flex-wrap gap-1">
+                        <div class="seat seat-occupied"></div>
+                        <div class="seat seat-occupied"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                    </div>
+                </div>
+                <div class="seat-row d-flex align-items-center">
+                    <span class="me-2">Fila 5</span>
+                    <div class="seats d-flex flex-wrap gap-1">
+                        <div class="seat seat-occupied"></div>
+                        <div class="seat seat-occupied"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center my-4">
+            <label for="asientos" class="form-label text-warning">Indica cuántos asientos quieres reservar</label>
+            <input type="number" class="form-control w-25 mx-auto text-center" id="asientos" min="1" max="10">
+            <button class="btn btn-warning mt-3">Confirmar Reserva</button>
+        </div>
+
+        <footer class="bg-secondary text-center text-white p-4 rounded">
+            <p class="mb-1">Cine UNIR - COLOMBIA</p>
+            <p class="mb-1">Dirección: Calle Avenida Boyaca, Bogotá D.C</p>
+            <p class="mb-1">Teléfono: 941209743</p>
+            <p class="mb-0">Email: davidalejandro.salas143@comunidadunir.net</p>
+        </footer>
+
+    </div>
+</body>
+
+</html>
