@@ -1,0 +1,88 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.cv {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+.cv__header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.cv__photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.cv__info h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.cv__info p {
+    margin: 4px 0 0;
+    font-weight: 500;
+}
+
+.cv__section {
+    margin-top: 40px;
+}
+
+.cv__section-title {
+    color: #0056b3;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.cv__job {
+    margin-bottom: 25px;
+}
+
+.cv__job-title {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.cv__job-info {
+    font-weight: 500;
+    color: #555;
+}
+
+.cv__job-list {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.cv__education-item {
+    margin-bottom: 15px;
+}
+
+.cv__skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.cv__skill {
+    background: #0056b3;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+}
