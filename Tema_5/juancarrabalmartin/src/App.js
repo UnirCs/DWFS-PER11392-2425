@@ -9,6 +9,7 @@ function App() {
             <Header />
             <p>Lista de pel&#205;culas</p>
             <MovieList />
+            <button onclick="window.location.href='index.html';">Elige Asiento</button>  
             <Footer />
             {/* otros componentes */}
         </div>
