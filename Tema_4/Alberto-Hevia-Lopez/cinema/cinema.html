@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Unir-Cinema</title>
+    <link rel="stylesheet" href="cinema.css">
+</head>
+
+<body>
+    <header class="cabecera">
+        <h1>UNIR-CINEMA</h1>
+    </header>
+
+    <section class="pantalla">   
+    </section>
+
+    <br>
+    <table class="tabla" id="matrizButacas">
+        <tbody>
+        <tr>
+            <th id="f1">Fila 1</th>
+            <th class="asiento" id="1_1"></th>
+            <th class="asiento" id="1_2"></th>
+            <th class="asiento" id="1_3"></th>
+            <th class="asiento" id="1_4"></th>
+            <th class="asiento" id="1_5"></th>
+            <th class="asiento ocupado" id="1_6"></th>
+            <th class="asiento ocupado" id="1_7"></th>
+            <th class="asiento" id="1_8"></th>
+            <th class="asiento" id="1_9"></th>
+            <th class="asiento" id="1_10"></th>
+            <th class="asiento" id="1_11"></th>
+            <th class="asiento" id="1_12"></th>
+            <th class="asiento" id="1_13"></th>
+        </tr>
+        <tr>
+            <th id="f2">Fila 2</th>
+            <th class="asiento ocupado" id="2_1"></th>
+            <th class="asiento ocupado" id="2_2"></th>
+            <th class="asiento" id="2_3"></th>
+            <th class="asiento" id="2_4"></th>
+            <th class="asiento" id="2_5"></th>
+            <th class="asiento" id="2_6"></th>
+            <th class="asiento" id="2_7"></th>
+            <th class="asiento" id="2_8"></th>
+            <th class="asiento" id="2_9"></th>
+            <th class="asiento" id="2_10"></th>
+            <th class="asiento" id="2_11"></th>
+            <th class="asiento" id="2_12"></th>
+            <th class="asiento" id="2_13"></th>
+        </tr>
+        <tr>
+            <th id="f3">Fila 3</th>
+            <th class="asiento" id="3_1"></th>
+            <th class="asiento ocupado" id="3_2"></th>
+            <th class="asiento ocupado" id="3_3"></th>
+            <th class="asiento" id="3_4"></th>
+            <th class="asiento" id="3_5"></th>
+            <th class="asiento" id="3_6"></th>
+            <th class="asiento" id="3_7"></th>
+            <th class="asiento" id="3_8"></th>
+            <th class="asiento" id="3_9"></th>
+            <th class="asiento" id="3_10"></th>
+            <th class="asiento" id="3_11"></th>
+            <th class="asiento" id="3_12"></th>
+            <th class="asiento" id="3_13"></th>
+        </tr>
+        <tr>
+            <th id="f4">Fila 4</th>
+            <th class="asiento" id="4_1"></th>
+            <th class="asiento" id="4_2"></th>
+            <th class="asiento ocupado" id="4_3"></th>
+            <th class="asiento ocupado" id="4_4"></th>
+            <th class="asiento" id="4_5"></th>
+            <th class="asiento" id="4_6"></th>
+            <th class="asiento" id="4_7"></th>
+            <th class="asiento" id="4_8"></th>
+            <th class="asiento" id="4_9"></th>
+            <th class="asiento" id="4_10"></th>
+            <th class="asiento" id="4_11"></th>
+            <th class="asiento" id="4_12"></th>
+            <th class="asiento" id="4_13"></th>
+        </tr>
+        <tr>
+            <th id="f5">Fila 5</th>
+            <th class="asiento" id="5_1"></th>
+            <th class="asiento" id="5_2"></th>
+            <th class="asiento ocupado" id="5_3"></th>
+            <th class="asiento ocupado" id="5_4"></th>
+            <th class="asiento" id="5_5"></th>
+            <th class="asiento" id="5_6"></th>
+            <th class="asiento" id="5_7"></th>
+            <th class="asiento" id="5_8"></th>
+            <th class="asiento" id="5_9"></th>
+            <th class="asiento" id="5_10"></th>
+            <th class="asiento" id="5_11"></th>
+            <th class="asiento" id="5_12"></th>
+            <th class="asiento" id="5_13"></th>
+        </tr>
+        </tbody>
+    </table>
+    <br>
+
+    <section class="formulario">   
+        <form>
+            <label class="fila" for ="numAsientos">Indica cuantos asientos quieres reservar</label><br>
+            <input type="number" name="numAsientos" id="numAsientos" min="1" max="10"><br><br>
+            <button type="submit" class="Reservar" id="reservar">Reservar</button>
+        </form>       
+    </section>
+
+    <footer class="pie">
+        <p><strong>Cine UNIR-CINEMA</strong></p>
+        <p>Dirección: Calle Avenida de la Paz, 137. Logroño</p>
+        <p>Teléfono: 941209743</p>
+        <p>Email: cinefullstack@unircinema.com</p>
+    </footer>
+
+    <script src = "cinema.js"></script>
+
+</body>
+
+</html>

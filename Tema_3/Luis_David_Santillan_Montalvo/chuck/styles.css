@@ -1,0 +1,37 @@
+* {
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+}
+
+h1{
+    color: #34495e;
+    text-align: center;
+}
+
+.chuck__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8px 2px;
+}
+
+button {
+    background-color: #4CAF50; /* Green background */
+    border: none; /* Remove border */
+    color: white; /* White text */
+    padding: 12px 24px; /* Add padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Inline-block for layout */
+    font-size: 16px; /* Font size */
+    margin: 8px 2px; /* Add margin */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add shadow */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
