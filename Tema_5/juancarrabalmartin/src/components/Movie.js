@@ -1,4 +1,4 @@
-import React from 'react';
+ï»¿import React from 'react';
 import '../styles/MovieList.css';
 
 const Movie = ({ titulo, sinopsis, genero, duracion, puntuacion, imagen }) => {
@@ -7,9 +7,9 @@ const Movie = ({ titulo, sinopsis, genero, duracion, puntuacion, imagen }) => {
             <img src={imagen} alt={titulo} className="movie-image" />
             <h2>{titulo}</h2>
             <p><strong>Sinopsis:</strong> {sinopsis}</p>
-            <p><strong>Género:</strong> {genero}</p>
-            <p><strong>Duración:</strong> {duracion}</p>
-            <p><strong>Puntuación:</strong> {puntuacion}</p>
+            <p><strong>GÃ©nero:</strong> {genero}</p>
+            <p><strong>DuraciÃ³n:</strong> {duracion}</p>
+            <p><strong>PuntuaciÃ³n:</strong> {puntuacion}</p>
         </div>
     );
 };

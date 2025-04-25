@@ -1,4 +1,4 @@
-import React from 'react';
+Ôªøimport React from 'react';
 import Movie from './Movie';
 
 import movie1 from '../assets/movie1.jpg';
@@ -10,15 +10,15 @@ import movie5 from '../assets/movie5.jpg';
 const movies = [
     {
         titulo: 'Inception',
-        sinopsis: 'Un ladrÛn que roba secretos corporativos a travÈs de sueÒos.',
-        genero: 'Ciencia FicciÛn',
+        sinopsis: 'Un ladr√≥n que roba secretos corporativos a trav√©s de sue√±os.',
+        genero: 'Ciencia Ficci√≥n',
         duracion: '2h 28min',
         puntuacion: '8.8',
         imagen: movie1
     },
     {
         titulo: 'Interstellar',
-        sinopsis: 'Un grupo de astronautas viaja a travÈs de un agujero de gusano.',
+        sinopsis: 'Un grupo de astronautas viaja a trav√©s de un agujero de gusano.',
         genero: 'Aventura, Drama',
         duracion: '2h 49min',
         puntuacion: '8.6',
@@ -27,14 +27,14 @@ const movies = [
     {
         titulo: 'The Matrix',
         sinopsis: 'Un hacker descubre la verdad sobre su realidad.',
-        genero: 'AcciÛn, Sci-Fi',
+        genero: 'Acci√≥n, Sci-Fi',
         duracion: '2h 16min',
         puntuacion: '8.7',
         imagen: movie3
     },
     {
         titulo: 'The Godfather',
-        sinopsis: 'La historia de una familia mafiosa en AmÈrica.',
+        sinopsis: 'La historia de una familia mafiosa en Am√©rica.',
         genero: 'Crimen, Drama',
         duracion: '2h 55min',
         puntuacion: '9.2',
@@ -42,7 +42,7 @@ const movies = [
     },
     {
         titulo: 'Pulp Fiction',
-        sinopsis: 'Historias entrelazadas de crimen en Los ¡ngeles.',
+        sinopsis: 'Historias entrelazadas de crimen en Los √Ångeles.',
         genero: 'Crimen, Drama',
         duracion: '2h 34min',
         puntuacion: '8.9',
