@@ -1,12 +1,14 @@
 import React from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import MovieList from './components/MovieList';
 
 function App() {
     return (
         <div>
             <Header />
             <p>Lista de pel&#205;culas</p>
+            <MovieList />
             <Footer />
             {/* otros componentes */}
         </div>
