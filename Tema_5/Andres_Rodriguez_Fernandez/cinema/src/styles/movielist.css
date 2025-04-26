@@ -1,0 +1,14 @@
+.movie-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.movie-container>* {
+    flex: 1 1 90%;
+    /* Esto hará que los elementos ocupen aproximadamente el 90% del ancho del contenedor, pero se ajustarán para evitar el desbordamiento */
+    max-width: 90%;
+    /* Esto limitará el ancho de los elementos al 90% del contenedor */
+    margin: 10px;
+    /* Esto agregará un poco de espacio alrededor de los elementos */
+    margin-left: 5%;;
+}
