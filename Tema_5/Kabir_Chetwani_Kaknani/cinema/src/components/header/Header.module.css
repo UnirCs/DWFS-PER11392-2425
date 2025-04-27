@@ -1,0 +1,16 @@
+header {
+    background-color: rgb(122, 158, 235);
+    color: #fff;
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.title {
+    font-size: 24px;
+    margin: 0;
+}
