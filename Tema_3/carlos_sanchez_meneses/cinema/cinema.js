@@ -137,6 +137,5 @@ const suggest = (numButacas) => {
 }
 
 document.getElementById("input_reserva").oninput = (e) => {
-  console.log("sugerencia",suggest(Number(e.target.value)));
-  console.log(e.target.value);
+  console.log("Asientos sugeridos:",JSON.stringify(suggest(Number(e.target.value))));
 }
