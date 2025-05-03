@@ -1,10 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>🎞️ Cinema</title>
+  </head>
+  <body>
+    <main class="container overflow-auto">
+      <div class="row">
+        <h1 class="text-center">Pantalla</h1>
+        <div class="pantalla">
+          <div class="pantalla_sombra"></div>
+        </div>
+      </div>
+      <div id="contenedor"></div>
+    </main>
+    <div class="position-sticky bottom-0 bg-light mt-5">
+      <div class="row p-4 justify-content-center">
+        <div class="col-13 col-md-5 mb-2 mb-md-0">
+          <div class="input-group flex-nowrap">
+            <span class="input-group-text" id="addon-wrapping">
+              ¿Cuántos deseas reservar?
+            </span>
+            <input
+              id="input_reserva"
+              type="number"
+              class="form-control"
+              placeholder="1"
+              min="1"
+              aria-label="numberOfChair"
+              aria-describedby="addon-wrapping"
+            />
+          </div>
+        </div>
+        <div class="col col-md-4">
+          <button type="button" class="btn w-100 btn-primary">
+            Crear reserva
+          </button>
+        </div>
+      </div>
+    </div>
+    <footer class="bg-dark text-white text-center py-4">
+      <div class="container">
+        <p class="mb-1">🎞️ <strong>UNIR-CINEMA</strong></p>
+        <p class="mb-1">Dirección: Calle 123 A , Ciudad Villa Quien</p>
+        <p class="mb-1">Teléfono: +34 123 456 789</p>
+        <p class="mb-0">
+          Correo electrónico:
+          <a href="mailto:contacto@unir-cinema.com">
+            contacto@unir-cinema.com
+          </a>
+        </p>
+      </div>
+    </footer>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"
+  ></script>
+  <script src="cinema.js"></script>
 </html>
