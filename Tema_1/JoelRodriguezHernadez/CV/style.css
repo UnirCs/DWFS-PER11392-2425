@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+/* ENCABEZADO */
+.encabezado {
+    background-color: #2c3e50; /* Color más profesional */
+    color: white;
+    padding: 20px;
+}
+
+.encabezado__foto {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    object-fit: cover;
+    object-position: top;
+    border: 5px solid #ecf0f1; /* Borde blanco para un look más limpio */
+}
+
+.encabezado__titulo {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+/* SECCIONES */
+section {
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+section h2 {
+    color: #2c3e50; /* Color más profesional */
+    border-bottom: 2px solid #ecf0f1; /* Línea inferior para separar secciones */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+section p, section li {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* LISTAS */
+ul, ol {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* CONTACTO */
+.contacto__dato strong {
+    display: inline-block;
+    width: 100px;
+}
+
+/* HABILIDADES */
+.habilidades__lista {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.habilidades__item {
+    background: #ecf0f1; /* Fondo más claro */
+    padding: 10px 15px;
+    border-radius: 5px;
+    flex: 1 1 calc(50% - 10px);
+    text-align: center;
+}
+
+/* REDES SOCIALES */
+.redes-sociales__dato a {
+    color: #2980b9; /* Color de enlace */
+    text-decoration: none;
+}
+
+.redes-sociales__dato a:hover {
+    text-decoration: underline;
+}
+
+.educacion_lista{
+    font-weight: bold;
+}

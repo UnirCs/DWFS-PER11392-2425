@@ -1,0 +1,77 @@
+body {
+    background-color: black;
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+
+.seccion {
+    color: white;
+    background-color: rgb(29, 29, 29);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.cabecera {
+    color: white;
+    background-color: rgb(29, 29, 29);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.pie {
+    color: white;
+    background-color: rgb(29, 29, 29);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.pantalla {
+    background-color: rgb(29, 29, 29);
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 20px;
+    height: 200px;
+}
+
+.fila {
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+.asiento {
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    margin: 3px;
+}
+
+
+.ocupado {
+    background-color: blue;
+}
+
+.tabla {
+    margin: 0 auto;
+    color: white
+}
+
+.formulario {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}

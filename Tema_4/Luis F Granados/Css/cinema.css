@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #706f6f; /*#333*/
+    color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Add css for container with all page and background color in blue*/
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid orange;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+    background-color: #706f6f;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+}
+
+.custom-middle{
+    background-color: #686887;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    display: block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.custom-top{
+    background-color: #34a3d5;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    display: block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.custom-button{
+    background-color: #34a3d5;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    display: block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 5px;
+}
+
+.custom-form {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    color: orange;
+    padding-top: 30px;
+    margin-bottom: 10px;
+}
+
+.square {
+    border: 2px solid orange;
+    width: 25px;
+    height: 25px;
+    margin: 4px;
+}
+
+.custom-square {
+    width: 100%;
+    max-width: 800px;
+    margin: 0px;
+}
+
+.custom-label {
+    color: orange;
+    padding-top: 20px;
+    font-size: 16px;
+}
+
+.btn {
+    background-color: orange;
+    color: #333; /* Texto del botón en oscuro */
+    border-radius: 10px;
+}
+
+.btn:hover {
+    background-color: orange;
+}
+
+form {
+    padding: 30px;
+}
+
+#lstbutacas {
+    width: 80px;
+    height: 25px;
+    font-size: 14px;
+    border: 1px solid orange;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+
+.butacaOcupada {
+    background-color: #ff4444;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro Cinema LuisGrFe</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="../Css/formulario.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h3>Crea tu usuario</h3>
+        <form id="userForm">
+            <div class="row">
+                <div class="col s11 input-field">
+                    <input id="firstName" type="text" name="firstName" class="validate" required>
+                    <label for="firstName">Nombres</label>
+                </div>
+                <div class="col s11 input-field">
+                    <input id="lastName" type="text" name="lastName" class="validate" required>
+                    <label for="lastName">Apellidos</label>
+                </div>
+                <div class="col s11 input-field">
+                    <input id="username" type="text" name="username" class="validate" required>
+                    <label for="username">Nombre de usuario</label>
+                </div>
+                <div class="col s1">
+                    <a href="#helpModal" class="help-icon modal-trigger"data-message="El nombre de usuario debe ser único y contener entre 4 y 20 caracteres.">
+                        <i class="material-icons iconHelp">help_outline</i>
+                    </a>
+                </div>
+                <div class="col s11 input-field">
+                    <input id="password" type="password" name="password" class="validate" required>
+                    <label for="password">Contraseña</label>
+                </div>
+                <div class="col s1 btn-padding">
+                    <button type="button" id="togglePassword" class="btn-flat waves-effect waves-light custom-flat">
+                        <i class="material-icons left">visibility</i>
+                    </button>
+                </div>
+                <!--<div class="col s1">
+                    <a href="#helpModal" class="help-icon modal-trigger" data-message="La contraseña debe tener mínimo 8 caracteres y contener números y letras.">
+                        <i class="material-icons iconHelp">help_outline</i>
+                    </a>
+                </div>-->
+                <div class="col s11 input-field">
+                    <input id="confirmPassword" type="password" name="confirmPassword" class="validate" required>
+                    <label for="confirmPassword">Confirmar contraseña</label>
+                </div>
+                <div class="col s1 btn-padding">
+                    <button type="button" id="togglePassword1" class="btn-flat waves-effect waves-light custom-flat">
+                        <i class="material-icons left">visibility</i>
+                    </button>
+                </div>
+                <div class="col s11 input-field">
+                    <input id="email" type="email" name="email" class="validate" required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="col s1">
+                    <a href="#helpModal" class="help-icon modal-trigger" data-message="El email debe tener la estructura de un correo electrónico.">
+                        <i class="material-icons iconHelp">help_outline</i>
+                    </a>
+                </div>
+                <div class="col s12 center-align">
+                    <button type="submit" class="btn waves-effect waves-light">
+                        Registrar
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+            </div>
+
+        </form>
+        <!-- Modal -->
+        <div id="helpModal" class="modal">
+            <div class="modal-content">
+                <h4>Ayuda</h4>
+                <p id="modalMessage"></p>
+            </div>
+            <button class="modal-close btn waves-effect waves-light">
+                <i class="material-icons">close</i>
+            </button>
+        </div>
+    </div>
+    <script src="../Script/formulario.js"></script>
+</body>
+</html>
