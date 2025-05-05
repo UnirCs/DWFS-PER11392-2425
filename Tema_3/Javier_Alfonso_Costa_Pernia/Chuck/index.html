@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Promesas en JS - Chuck</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8">
+</head>
+<body>
+<h1>Ejercicio de Chuck</h1>
+
+<div id="contenedor">
+    <button onclick="chuckJoke()">Dame un chiste!</button>
+    <p id="mensaje"></p>
+</div>
+
+<script>
+    let parrafo = document.getElementById("mensaje");
+    let url = "https://api.chucknorris.io/jokes/random";
+
+    fetch(url)
+        .then((response) => response.json())
+        .catch(console.error);
+
+
+    async function chuckJoke() {
+        try{
+            const response = await fetch(url);
+            const data = await response.json();
+            parrafo.innerHTML = data.value;
+        }
+        catch(e){
+            console.error("Error:", e);
+        }
+    }
+</script>
+</body>
+</html>
