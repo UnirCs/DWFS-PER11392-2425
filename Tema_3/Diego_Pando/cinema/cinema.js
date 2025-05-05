@@ -35,7 +35,7 @@ function suggest  (numeroReserva){
             return new Set();
         }
 
-        for (let i = butacas.length-1; i >0 && !encontrados ; i--) {
+        for (let i = butacas.length-1; i >=0 && !encontrados ; i--) {
             let asientosJuntos=0;
             asientos.clear();
             for (let j = 0; j < butacas[i].length && !encontrados; j++) {

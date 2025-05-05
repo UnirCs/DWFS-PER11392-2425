@@ -39,20 +39,24 @@ console.log("Los ids de asientos reservados son:", resultado)
 
 function suggest  (numeroReserva){
     let asientos= new Set();
+    let encontrados=false;
     if (numeroReserva!= null){
         if (numeroReserva>N ){
             return new Set();
         }
 
-        for (let i = butacas.length-1; i >0 ; i--) {
+        for (let i = butacas.length-1; i >0 && !encontrados ; i--) {
             let asientosJuntos=0;
             asientos.clear();
-            for (let j = 0; j < butacas[i].length; j++) {
+            for (let j = 0; j < butacas[i].length && !encontrados; j++) {
                 if (!butacas [i][j].estado){
-                    asientos.add(butacas [i][j].id);
                     asientosJuntos++;
-                    if(asientosJuntos==numeroReserva){
-                        return asientos;
+                    if(asientosJuntos===numeroReserva){
+                        encontrados=true;
+                        for (let k = j+1-numeroReserva; k <=j ; k++) {
+                            butacas [i][k].estado=true;
+                            asientos.add(butacas [i][k].id);
+                        }
                     }
                 }
                 else{
@@ -66,4 +70,5 @@ function suggest  (numeroReserva){
 
 
     }
-};
+    return asientos;
+}
