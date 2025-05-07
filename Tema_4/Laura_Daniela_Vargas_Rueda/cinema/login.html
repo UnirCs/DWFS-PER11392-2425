@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UNIR-CINEMA</title>
+    <!-- Material CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="src/css/login.css">
+</head>
+
+<body>
+    <div class="main__content">
+        <div class="row z-depth-3 main__content__login grey">
+            <section class="col s12 l6 box-welcome grey">
+                <span>Bienvenido a</span>
+                <h3><b>UNIR-CINEMA</b></h3>
+                <img src="src/img/cine.svg" alt="Cine" class="responsive-img">
+            </section>
+
+            <section class="col s12 l6 grey-text text-darken-2 white">
+                <h5 class="grey-text text-darken-3"><b>Registro</b></h5>
+
+                <div class="row">
+                    <form id="form" class="col s12">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">account_circle</i>
+                                <input id="name" type="text" required>
+                                <label for="name">Nombre y apellidos</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">account_circle</i>
+                                <input id="user_name" type="text" required>
+                                <label for="user_name">Nombre de usuario</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">lock_outline</i>
+                                <input id="password" type="password" required>
+                                <label for="password">Contraseña</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">lock_outline</i>
+                                <input id="confirm_password" type="password" required>
+                                <label for="confirm_password">Confirmar contraseña</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">email</i>
+                                <input id="email" type="email" required>
+                                <label for="email">Email</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <button type="submit" class="waves-effect waves-light btn grey darken-3 btn-send">
+                                <i class="material-icons right">send</i>
+                                Registrar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Material JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- JS personalizado -->
+    <script src="src/js/login.js"></script>
+</body>
+
+</html>

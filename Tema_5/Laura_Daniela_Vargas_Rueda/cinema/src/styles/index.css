@@ -1,0 +1,9 @@
+:root {
+  color-scheme: light dark;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+}

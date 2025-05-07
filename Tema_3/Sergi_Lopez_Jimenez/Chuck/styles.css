@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0d1042;
+    color: #edf512;
+    text-align: center;
+}
+
+#chiste{
+    display: flex; /* Crea un contenedor flexible */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en varias líneas */
+    justify-content: space-around; /* Distribuye los elementos de forma equitativa */
+    padding: 20px;
+    
+}
+
+button {
+    background-color: #818385;
+    color: rgb(24, 22, 22);
+    border: solid;
+    border-radius: 5px;
+    border-color: antiquewhite;
+    padding: 10px 20px;
+    cursor: pointer;
+    align-items: center;
+    margin: auto;
+    display: block;
+}
+
+button:hover{
+    background-color: antiquewhite;
+}
+
+button:active{
+    margin-left: 1px 1px 0;
+    box-shadow: -1px -1px 1px #000;
+    outline: 1px solid black;
+    background-color: grey;
+    transition-delay: 50ms;
+}
