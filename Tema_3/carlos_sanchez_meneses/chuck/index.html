@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+ <header>
+     <h1>Chuck Norris Chistes en ingles</h1>
+ </header>
+<main>
+    <div id="lista_chuck">
+        <div id="loader"></div>
+    </div>
+    <button type="button"
+    id="btn_chuck"
+    >
+        Obtener chiste</button>
+
+</main>
+
+<script>
+
+    const button = document.getElementById("btn_chuck")
+    const listaChistes = document.getElementById("lista_chuck");
+    const loading = document.getElementById("loader")
+    loading.style.display = "none"
+    const fetchChiste = async () => {
+        loading.style.display = "block"
+        try {
+            const response = await fetch("https://api.chucknorris.io/jokes/random", {
+                method: "GET"
+            })
+            const data = await response.json()
+            const paragraph = document.createElement("p")
+            paragraph.innerText = data.value
+            listaChistes.appendChild(paragraph)
+        }catch(error) {
+            console.log(error)
+        }finally{
+            loading.style.display = "none"
+        }
+
+    }
+    button.addEventListener("click",
+        fetchChiste
+    )
+</script>
+</body>
+</html>

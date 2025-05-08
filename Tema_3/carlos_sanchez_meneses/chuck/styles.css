@@ -1,0 +1,36 @@
+html{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+body{
+    color: white;
+    background: #1a1a1a;
+}
+button{
+    border: none;
+    padding: 12px;
+    font-weight: bold;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+#lista_chuck{
+    border: 1px solid white;
+    border-radius: 12px;
+    padding: 12px;
+}
+
+#loader{
+    width: 50px;
+    height: 50px;
+    border-top: 12px solid white;
+    border-left: 12px solid white;
+    border-right: 12px solid white;
+    border-bottom: 12px solid #1a1a1a;
+    border-radius: 50%;
+    animation: spin 0.5s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
