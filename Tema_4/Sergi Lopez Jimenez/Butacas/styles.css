@@ -1,0 +1,148 @@
+.normal_text{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 10px;
+    color: white;
+}
+
+p[textType="type1"] {
+    color: white;
+    font-weight: 300;
+    text-align: center;
+    font-size: x-large;
+}
+
+p[textType="type2"] {
+    color: rgb(222, 194, 17);
+    font-weight: 300;
+    text-align: center;
+    font-size:small;
+}
+
+h1[textType="type3"] {
+    color: whitesmoke;
+    font-weight: 600;
+    text-align:center;
+    font-size: large;
+}
+
+p[textType="type4"], ul li{
+    color: whitesmoke;
+    font-weight: 150;
+    text-align: center;
+    font-size:small;
+}
+
+.encabezado_foto--picture{
+    margin: auto;
+    margin-top: 10px;
+    display: block;
+    height: 250px;
+    border-radius: 10px;
+
+}
+
+.encabezado_foto--texto{
+    color: whitesmoke;
+    text-align: center;
+    margin: 0;
+
+}
+
+.encabezado{
+    background-color: rgb(68, 76, 79);
+    margin-bottom: 30px;
+    padding: 100px;
+}
+.body{
+    margin: 8;
+    background-color: black;
+    border: solid yellow 0.05px;
+    border-radius: 10px;
+}
+
+.box{
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
+
+.box[boxType="type1"] {
+
+    background-color:  rgb(65, 63, 63);
+
+}
+
+div.form
+{
+    display: block;
+    text-align: center;
+}
+form
+{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.infoContacto{
+    padding: 100px;
+    background-color: rgb(57, 55, 55);
+    margin-top: 30px;
+}
+
+button{
+    background-color: rgb(222, 194, 17);
+    border-radius: 5px;
+    padding: 10px;
+
+    display: inline-block;
+}
+
+div.button{
+    text-align: center;
+}
+
+div.butacas{
+    text-align: center;
+}
+
+table.butacas_tabla{
+    display: inline-block;
+    border-spacing: 10px;
+}
+
+button:hover{
+    background-color: rgb(114, 97, 8);
+}
+
+.butacas_tabla--texto{
+    color: rgb(222, 194, 17);
+    font-size: small;
+}
+
+td.butacas{
+    border: 0.5px solid;
+    width: 25px;
+    height: 25px;
+    border-color: rgb(222, 194, 17);
+}
+
+td.ocupada{
+    border: 0.5px solid;
+    width: 25px;
+    height: 25px;
+    border-color: rgb(222, 194, 17);
+    background-color:rgb(132, 132, 128);
+}
+
+td.butacas:hover{
+    background-color:  rgb(222, 194, 17);
+}
+
+td.butacas:active{
+    background-color: rgb(242, 242, 236);
+}
