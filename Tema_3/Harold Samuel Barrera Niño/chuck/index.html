@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuck</title>
+  <link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+<body>
+  <button id="button_chiste" onclick="obtenerChiste()">Dame un chiste!</button>
+  <p id="p_chiste"></p>
+</body>
+<script>
+  const url = "https://api.chucknorris.io/jokes/random"; //API de chistes malos
+
+  function mostrarChiste(chiste){
+    document.getElementById("p_chiste").innerHTML = chiste;
+  }
+
+  async function obtenerChiste(){
+
+    try{
+
+      const response = await fetch(url);  //Consumimos el servicio
+
+      if(!response.ok){
+        throw new Error(response.statusText);
+      }
+      const json = await response.json();
+      console.log(json);
+      mostrarChiste(json.value);
+
+    } catch(error){
+
+      console.error(error);
+
+    }
+
+  }
+</script>
+</html>

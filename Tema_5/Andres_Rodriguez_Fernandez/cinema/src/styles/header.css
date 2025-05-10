@@ -1,0 +1,20 @@
+header {
+    background-color: #222;
+    padding: 10px;
+    text-align: center;
+}
+header h1 {
+    color: #ffc107;
+    font-size: 2.5em;
+    margin: 0;
+}
+header h2 {
+    background-color: #222;
+    padding: 10px;
+    text-align: center;
+}
+.bloqueVacio {
+    padding: 25px;
+    margin: 10px;
+    background-color: lightslategrey;
+}
