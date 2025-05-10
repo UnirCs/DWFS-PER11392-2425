@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/Seats.css">
+    <link rel="stylesheet" href="css/Commons.css">
+    <meta charset="UTF-8">
+    <title>Cinema</title>
+</head>
+<body>
+<div class="page">
+    <header>Cinema</header>
+    <main>
+        <article id="cinema" class="cinema">
+            <section class="screen">
+              <h1>PANTALLA</h1>
+            </section>
+            <div id="hall" class="hall"></div>
+            <article id="seatsContainer" class="seatsContainer">
+                <article id="seats" class="seats">
+                </article>
+            </article>
+            <section class="booker">
+                <form class="bookForm" id="bookForm">
+                    <label for="seatsAmount" id="seatsAmountText">Cuantas sillas quires reservar?</label>
+                    <input id="seatsAmount" type="number" min="0" max="10" value="0">
+                    <input type="submit" value="Reservar">
+                </form>
+                <span id="seatsAmountError" hidden>**No hay la cantidad de sillas seguidas que indicas</span>
+            </section>
+            <div id="hall2" class="hall"></div>
+            <article id="infoTable" class="infoTable">
+                <section class="indicators">
+                    <div class="takenIndicator"></div>
+                    <div class="unavailableIndicator"></div>
+                    <div class="selectedIndicator"></div>
+                    <div class="generalIndicator"></div>
+                    <div class="specialChairIndicator">♿</div>
+                    <div class="careGiverIndicator"></div>
+                </section>
+                <section class="textIndicators">
+                    <label>Silla Ocupada</label>
+                    <label>No disponible</label>
+                    <label>Mi selección</label>
+                    <label>Disponible</label>
+                    <label>Discapacitado</label>
+                    <label>Acompañante</label>
+                </section>
+            </article>
+            <div id="hall3" class="hall"></div>
+        </article>
+    </main>
+    <footer class="footer">
+        <section class="contact">Contacto</section>
+        <ul class="menu">
+            <li><a class="menuItem">Dirección: Calle 35 # 72 - 16, Soacha, Colombia</a></li>
+            <li><a class="menuItem">Telefono: 5593173113</a></li>
+            <li><a class="menuItem">e-mail: cinemaunir@unircinema.ia</a></li>
+        </ul>
+        <p>&copy;2025 Cinema UNIR | All Rights Reserved</p>
+    </footer>
+</div>
+<script src="src/FillSeats.js"></script>
+<script src="src/Seats.js"></script>
+</body>
+</html>
