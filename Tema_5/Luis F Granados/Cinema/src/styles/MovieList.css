@@ -1,0 +1,11 @@
+.center-text {
+    text-align: center;
+}
+
+.movie-list {
+    flex: 1 1 40%;
+    max-width: 40%;
+    margin: 10px;
+    border-radius: 15px;
+    background-color: #878686;
+}
