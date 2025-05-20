@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #0f739f;
+}
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid rgb(45, 79, 102);
+    outline: none;
+    font-size: 15px;
+    font-family: "Lucida Console", Monaco, monospace;
+}
+.element-form-container{
+    font-family: "Lucida Console", Monaco, monospace;
+    display: block;
+    margin-top: 10px;
+}
+.error {
+    color: red;
+    font-size: 0.85em;
+    margin-top: 2px;
+}
+#container-register-form{
+    display: table;
+    justify-content: center;
+    align-items: center;
+}
+#register-form {
+    padding: 20px 30px;
+    border-radius: 10px;
+    display: table;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.3);
+}
+#register-form > * {
+    border: 0;
+    padding: 0 0 0 10px;
+    background: #fff;
+    line-height: 20px;
+    font-size: 15px;
+    border-radius: 0;
+    outline: 0;
+}
+#form-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(45, 79, 102);
+    font-size: 35px;
+    padding-bottom: 45px;
+    font-family: "Arial Narrow", Arial, sans-serif;
+    letter-spacing: 10px;
+}
+#buttonRegister {
+    background: #F08080;
+    border: 1px solid #F08080;
+    color: #fff;
+    padding: 0 30px;
+    cursor: pointer;
+    transition: all 0.2s;
+    height: 35px;
+    width: 150px;
+    font-size: 16px;
+}
+#buttonRegister:hover {
+    background: #d73851;
+    border: 1px solid #d73851;
+}
