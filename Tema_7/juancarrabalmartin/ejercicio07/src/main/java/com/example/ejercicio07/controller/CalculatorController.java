@@ -16,7 +16,7 @@ public class CalculatorController {
         return "Bienvenido a la API de Calculadora. Usa /sumar, /restar, /multiplicar, /dividir.";
     }
 
-    // Si quieres que el mensaje de bienvenida esté en http://localhost:8080/
+    // Si quieres mensaje de bienvenida esté en http://localhost:8080/
     // Podrías crear una nueva clase HomeController.java:
     /*
     @RestController
