@@ -20,7 +20,7 @@ Nuestra calculadora tendrá memoria y siempre se podrán consultar los datos de 
 - **Divide (divide)**: Recurso para operaciones de división
 - **RaizN-ésima (raizNesima)**: Recurso para cálculo de raíces
 - **Potencia (elevaPotencia)**: Recurso para cálculo de potencias
-- **Detalle (operacion) **: Recurso para obtener la información de una operación realizada previamente
+- **Detalle (operacion)**: Recurso para obtener la información de una operación realizada previamente
 
 ## Operaciones
 | Método HTTP | URI                    | Query Params | Request Body                  | Response Body                                                                                                    | Códigos de Respuesta |
@@ -31,4 +31,4 @@ Nuestra calculadora tendrá memoria y siempre se podrán consultar los datos de 
 | POST        | /divide                |              | { "numeros": [2, 2] }         | { "id": "5", "numeros": [2, 2], "resultado": 1, "mensaje": "Division exitosa" }                                  | 200, 400             |
 | POST        | /raizNesima            |              | { "numero": 4, "indice": 2 }  | { "id": "6", "numeros": [4, 2], "resultado": 2, "mensaje": "Raíz N-ésima exitosa" }                              | 200, 400             |
 | POST        | /elevaPotencia         |              | { "base": 2, "exponente": 2 } | { "id": "7", "numeros": [2, 2], "resultado": 4, "mensaje": "Potencia exitosa" }                                  | 200, 400             |
-| GET         | /operacion/{id}        |              |                               | { "id": "7", "operacion": "elevaPotencia", "numeros": [2, 2], "resultado": 4, "mensaje": "Operación encontrada" }| 200, 400,            |
+| GET         | /operacion/{id}        |              |                               | { "id": "7", "operacion": "elevaPotencia", "numeros": [2, 2], "resultado": 4, "mensaje": "Operación encontrada" }| 200, 400             |
