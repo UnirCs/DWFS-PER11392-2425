@@ -61,13 +61,14 @@ public class CalculatorServiceImpl implements CalculatorService {
 				break;
 			}
 			
-			CalculatorOperation operation = CalculatorOperation.builder().operation(request.getOperation()).numbers(request.getNumbers().toString()).result(result).build();
-			return repository.save(operation);
+			if(result != null) {			
+				CalculatorOperation operation = CalculatorOperation.builder().operation(request.getOperation()).numbers(request.getNumbers().toString()).result(result).build();
+				return repository.save(operation);
+			}
 			
 		}
-		else {
-			return null;
-		}
+		return null;
+
 		
 	}
 
