@@ -1,0 +1,57 @@
+body{
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(236,249,255,1) 50%, rgba(230,249,255,1) 100%);
+}
+h1{
+    text-align: center;
+    color: #1e5d9e;
+    font-size: 35px;
+    font-family: "Gujarati Sangam MN", cursive;
+}
+h2{
+    text-align: center;
+    color: #1A5276;
+    font-size: 20px;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+}
+h3{
+    color: #1b3462;
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+}
+h4{
+    color: #28306f;
+    font-size: 17px;
+    font-family: "Roboto", sans-serif;
+}
+h5{
+    color: #1a1a1a;
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+}
+img{
+    border-radius: 5%;
+    border: #2D3339 0.5px outset;
+}
+#firsSection{
+    text-align: center;
+}
+.mainContainer{
+    width: 50%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section {
+    color: #2D3339;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    text-align: justify;
+    flex-grow: 1;
+}
+.list{
+    list-style-type: square;
+}
