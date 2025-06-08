@@ -1,0 +1,21 @@
+#Spring Configuration
+spring:
+  application:
+    name: calculator
+  datasource:
+    url: jdbc:h2:mem:testdb;Mode=MySQL
+  jpa:
+    show-sql: true #show sql query formed
+    hibernate:
+      ddl-auto: create-drop #create table on init and erase on app closing
+    defer-datasource-initialization: true #Get the data.sql file on the resources
+#User is: sa, no passwd
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        web-allow-others: true
+#Port and server configuration
+server:
+  port: 8085
