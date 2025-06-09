@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+button {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 1rem 0;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#chiste {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    min-height: 50px;
+}

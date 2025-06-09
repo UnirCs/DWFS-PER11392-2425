@@ -1,0 +1,37 @@
+.container__main {
+  height: calc(100dvh - 100px);
+  overflow-y: scroll;
+  background-color: #000000;
+}
+
+.container__main h2 {
+  text-align: center;
+}
+
+.loading__box {
+  height: 100%;
+}
+
+.container__main__view,
+.container__main__movie {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.container__main__movie {
+  background-color: #000000;
+  position: relative;
+}
+
+.container__main__view {
+  padding: 0 10%;
+  padding-top: 30px;
+  padding-bottom: 40px;
+  background-color: #616161;
+}
+
+.card__movie {
+  max-width: 300px;
+}
