@@ -1,0 +1,5 @@
+.contenedor_peliculas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

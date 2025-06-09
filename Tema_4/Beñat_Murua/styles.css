@@ -1,0 +1,12 @@
+
+#formulario{
+    width: 300px;
+}
+
+h1, label{
+    color: yellow;
+}
+
+.pantalla{
+    background-color: dimgray;
+}

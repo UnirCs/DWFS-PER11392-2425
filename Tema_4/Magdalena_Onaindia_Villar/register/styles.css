@@ -1,0 +1,52 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.register-card {
+    margin-top: 50px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card .card-title {
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.input-field {
+    margin-bottom: 5px;
+}
+
+.btn {
+    margin: 20px 0;
+    width: 100%;
+    max-width: 300px;
+}
+
+input:not([type]):focus:not([readonly]),
+input[type=text]:focus:not([readonly]),
+input[type=password]:focus:not([readonly]),
+input[type=email]:focus:not([readonly]) {
+    border-bottom: 1px solid #6a0dad;
+    box-shadow: 0 1px 0 0 #6a0dad;
+}
+
+
+.input-field label.active {
+    color: #6a0dad !important;
+}
+
+.error-message {
+    color: #f44336;
+    font-size: 0.8rem;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .register-card {
+        margin-top: 20px;
+    }
+}

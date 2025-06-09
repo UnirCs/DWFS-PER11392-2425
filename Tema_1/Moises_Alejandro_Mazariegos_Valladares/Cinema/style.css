@@ -1,0 +1,16 @@
+
+#address-footer i{
+    padding: 5px;
+}
+
+#phone-footer i{
+    padding: 5px;
+}
+
+#email-footer{
+    text-decoration: underline;
+}
+
+#email-footer i{
+    padding: 5px;
+}

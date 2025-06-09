@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #616161;
+  font-family: "Open Sans", sans-serif;
+}
+
+.main__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.main__content__login {
+  text-align: center;
+  width: 70%;
+}
+
+.main__content__login section {
+  padding: 2em !important;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row > [class*="col-"] {
+  display: flex;
+  flex-direction: column;
+}
+
+.responsive-img {
+  padding: 15%;
+}
+
+.box-welcome {
+  display: none;
+}
+
+.error-text {
+  /* width: 80%; */
+  color: red;
+  font-size: 0.8em;
+}
+
+.btn-send {
+  margin: auto;
+}
+
+@media (min-width: 1024px) {
+  .content__img {
+    display: block;
+  }
+  .box-welcome {
+    display: grid;
+    align-self: center;
+  }
+}

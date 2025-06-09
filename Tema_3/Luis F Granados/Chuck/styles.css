@@ -1,0 +1,40 @@
+#menu{
+    width: auto;
+    height: auto;
+    border: 2px solid black;
+    box-sizing: border-box;
+    margin: 10px;
+    border-color: orange;
+}
+
+header {
+    background-color: lightgray;
+    padding: 10px;
+    text-align: center;
+    color: darkblue;
+}
+
+main {
+    padding: 10px;
+    text-align: center;
+    font-family: 'Roboto';
+    font-style: oblique;
+}
+
+footer {
+    background-color: lightgray;
+    padding: 10px;
+    text-align: center;
+}
+
+button {
+    border: 1px solid red;
+    border-radius: 5px;
+    background-color: lemonchiffon;
+    color: darkblue;
+    padding: 10px 20px;
+    font-size: 24px;
+    font-family: 'Roboto';
+    font-style: oblique;
+    cursor: pointer;
+}
