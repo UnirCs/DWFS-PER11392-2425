@@ -1,0 +1,16 @@
+.pelicula{
+    max-width: 280px;
+    max-height: 400px;
+    padding: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    object-fit: contain;
+}
+
+.imagen{
+    max-width: 250px;
+    max-height: 200px;
+}

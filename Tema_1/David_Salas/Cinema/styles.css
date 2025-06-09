@@ -1,0 +1,23 @@
+.seat {
+    width: 35px;
+    height: 35px;
+    border: 2px solid gold;
+    border-radius: 4px;
+    background-color: black;
+    cursor: pointer;
+}
+
+.seat-occupied {
+    background-color: gold;
+    cursor: not-allowed;
+}
+
+.screen {
+    height: 100px;
+    background-color: #444;
+}
+
+.seat-row span {
+    width: 60px;
+    text-align: right;
+}
