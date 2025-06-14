@@ -1,7 +1,7 @@
 #Spring Configuration
 spring:
   application:
-    name: calculator
+    name: ms-calculator
   datasource:
     url: jdbc:h2:mem:testdb;Mode=MySQL
   jpa:
@@ -18,4 +18,16 @@ spring:
         web-allow-others: true
 #Port and server configuration
 server:
-  port: 8085
+  port: 8088
+
+#Eureka
+## Configuration for Eureka
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    service-url:
+      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: true # For local development. Set to false if you want to use the hostname in a DNS-enabled environment
+    hostname: ${HOSTNAME:ms-calculator}
