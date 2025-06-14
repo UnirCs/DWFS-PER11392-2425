@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yelmo UNIR-Cinema</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body onload="setup()">
+    <div class="header">
+        <div class="textoUnir">
+            <h1>YELMO UNIR-CINEMA MAX</h1>
+        </div>
+        <div class="bloqueVacio"></div>
+    </div>
+
+    <div class="container">
+        <table class="silla-container" id="tabla">
+            <tr id="fila_01">
+                <td class="row-label">Fila 1</td>
+                <td class="silla"></td>
+                <td class="silla"></td>
+                <td class="sillaOcupada"></td>
+                <td class="silla"></td>
+                <td class="silla"></td>
+                <td class="sillaOcupada"></td>
+                <td class="sillaOcupada"></td>
+                <td class="silla"></td>
+                <td class="sillaOcupada"></td>
+                <td class="silla"></td>
+            </tr>
+            <tr id="fila_02">
+                <td class="row-label">Fila 2</td>
+                <td class="sillaOcupada"></td>
+                <td class="sillaOcupada"></td>
+                <td class="silla"></td>
+                <td class="silla"></td>
+                <td class="silla"></td>
+                <td class="sillaOcupada"></td>
+                <td class="silla"></td>
+                <td class="silla"></td>
+                <td class="silla"></td>
+                <td class="sillaOcupada"></td>
+            </tr>
+            <tr id="fila_03">
+                <td class="row-label">Fila 3</td>
+                <td class="silla"></td>
+                <td class="sillaOcupada"></td>
+                <td class="sillaOcupada"></td>
+                <td class="silla"></td>
+                <td class="silla"></td>
+                <td class="silla"></td>
+                <td class="silla"></td>
+                <td class="silla"></td>
+                <td class="sillaOcupada"></td>
+                <td class="sillaOcupada"></td>
+            </tr>
+            <tr id="fila_04">
+                <td class="row-label">Fila 4</td>
+                <td class="sillaOcupada"></td>
+                <td class="sillaOcupada "></td>
+                <td class="sillaOcupada"></td>
+                <td class="sillaOcupada"></td>
+                <td class="silla"></td>
+                <td class="silla"></td>
+                <td class="silla"></td>
+                <td class="silla"></td>
+                <td class="silla"></td>
+                <td class="silla"></td>
+            </tr>
+            <tr id="fila_05">
+                <td class="row-label">Fila 5</td>
+                <td class="silla"></td>
+                <td class="silla"></td>
+                <td class="sillaOcupada"></td>
+                <td class="sillaOcupada"></td>
+                <td class="silla"></td>
+                <td class="silla"></td>
+                <td class="silla"></td>
+                <td class="silla"></td>
+                <td class="silla"></td>
+                <td class="silla"></td>
+            </tr>
+        </table>
+        <div class="reserva" id="reserva">
+            <label for="cantidad" class="asientos">Indica cuántos asientos quieres reservar</label> <br />
+            <input type="number" id="cantidad" class="form-control" oninput="suggest(8)"> <br />
+            <button type="submit" class="btn-confirmar">Confirmar Reserva</button>
+        </div>
+    </div>
+    <footer class="">
+        <p>Cine YELMO UNIR-CINEMA MAX</p>
+        <p>Dirección: Calle Avenida de la Paz, 137, Logroño</p>
+        <p>Teléfono: 941209743</p>
+        <p>Email: cinefullstack@unircinema.com</p>
+    </footer>
+    <script src="cinema.js"></script>
+</body>
+</html>

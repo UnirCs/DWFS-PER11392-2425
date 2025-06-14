@@ -1,0 +1,36 @@
+.movie-details {
+    flex: 1 1 40%;
+    max-width: 40%;
+    margin: 10px;
+    text-align: center;
+    border: 2px solid #007bff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    background-color: #878686;
+}
+
+.card-image {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.align-text {
+    text-align: justify;
+}
+
+.seat-selection-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.seat-selection-button:hover {
+    background-color: #0056b3;
+}

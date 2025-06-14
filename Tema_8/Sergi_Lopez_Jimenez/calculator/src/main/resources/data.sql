@@ -1,0 +1,1 @@
+INSERT INTO operations (id, operation, numbers, result) VALUES (1, 'Suma','[2,2]', 4);

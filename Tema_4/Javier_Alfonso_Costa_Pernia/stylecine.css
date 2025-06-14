@@ -1,0 +1,137 @@
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(255, 255, 255);
+}
+
+.encabezado {
+    margin: 10px;
+    color: rgb(77, 3, 3);
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: rgb(137, 169, 190);
+    text-align: center;
+    vertical-align: middle;
+    line-height: 150px;
+    height: 150px;    
+}
+
+.reservatexto {
+    color: #ffffff;
+}
+
+.cinema
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    background-color: black;
+    border: 1px;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+}
+
+.pantalla {
+    margin: 15px;
+    border-radius: 5px;
+    background-color: gray;
+    vertical-align: middle;
+    line-height: 150px;
+    height: 150px;
+}
+
+
+/*.reservacion {
+    color: rgb(104, 10, 65);
+    border-radius: 5px;
+    background-color: black;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 35px;
+    height: 170px;
+	width: 50%;
+    font-size: 16px;
+	padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}*/
+
+table
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    vertical-align: middle;
+    margin-top: 20px;
+}
+
+
+.footer {
+    line-height: 40px;
+    height: 150px;
+    font-size: 18px;
+    margin: 10px;
+    color: rgb(30, 5, 77);
+    border-radius: 5px;
+    background-color: rgb(214, 214, 223);
+    text-align: center;
+    vertical-align: middle;
+}
+
+/*.silla {
+    border: 1px;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    background-color: aquamarine;
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+}*/
+
+.fila {
+    color: rgb(255, 255, 255);
+}
+
+/*----------------------------------------------------------*/
+
+/*And you CSS whould be like this:*/
+
+.silla:hover {
+    background-color: rgb(77, 190, 115);
+}
+
+.silla  {
+    border: 1px;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    background-color: aquamarine;
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+}
+
+.reservada {
+    border: 1px;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+    background-color: rgb(95, 11, 81);
+}
+
+.reservada:hover {
+    background-color: rgb(104, 106, 109);
+}
+
+.content.Hover{
+    background-color: red;
+}
+
+.content.Hover h2{
+    background-color : yellow;
+}

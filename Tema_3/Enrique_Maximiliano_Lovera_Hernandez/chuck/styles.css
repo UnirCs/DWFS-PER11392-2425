@@ -1,0 +1,18 @@
+body {
+  background-color: rgb(98, 98, 238);
+  p {
+    color: rgb(0, 0, 0);
+  }
+  button {
+    background-color: rgb(200, 222, 255);
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    &:hover {
+      background-color: rgb(157, 157, 202);
+      color: rgb(200, 222, 255);
+    }
+  }
+}
