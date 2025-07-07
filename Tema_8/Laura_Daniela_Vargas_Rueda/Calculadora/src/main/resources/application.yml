@@ -1,0 +1,25 @@
+## Configuracion de Spring
+spring:
+  application:
+    name: ms-calculadora
+  datasource:
+    url: jdbc:h2:mem:operations;Mode=MySQL
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+    defer-datasource-initialization: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        web-allow-others: true
+
+## Configuracion de Instancia 
+server:
+  port: 8082
+  error:
+    include-stacktrace: never
+    include-message: always
+    include-binding-errors: always
